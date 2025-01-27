@@ -1,0 +1,16 @@
+.caja {
+    background-color: rgb(213, 236, 239);
+    border: 5px solid black;
+    padding: 10px;
+    margin: 10px;
+    width: 400px;
+}
+.alternativa {
+    background-color: rgb(237, 245, 198);
+    border-top-color: 5px dashed rgb(46, 46, 185);
+    border-style: double;
+    box-sizing: border-box;
+}
+img {
+width: 50%;
+}

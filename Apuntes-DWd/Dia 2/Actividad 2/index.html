@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Título</title>
+    <style>
+bac
+.container { /*Container se usa para crear  class contenedor*/
+      display: flex; /* Usamos Flexbox para crear las columnas */
+      gap: 20px; /* Espacio entre las columnas */
+    }
+
+    .column {
+      flex: 1; /* Cada columna ocupa el mismo espacio disponible */
+      padding: 20px; /* Relleno interno de cada columna */
+      border: 1px solid #ccc; /* Borde para diferenciar las columnas */
+      text-align: justify;
+    }
+
+    .columnsf {
+      flex: 1; /* Cada columna ocupa el mismo espacio disponible */
+      padding: 20px; /* Relleno interno de cada columna */
+      border: 1px solid #cccccc00; /* Borde transparente */
+    }
+    
+table{
+    padding: 20px;
+    
+}
+
+    /*color celda y texto-->*/
+    th { 
+        background-color:#57076b;
+        color: white;
+        border: 1px solid black
+    }
+    /*alinear al centro y bordes internos-->*/
+    td{
+        text-align: center;
+        padding: 10px;
+        border: 1px solid black
+    }
+    /*centrar titulo y cambiar fuente de tiutulo-->*/
+     h1,h3 {
+        text-align: center;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     }
+     /*tamaño imagen-->*/
+    img {
+        width: 200px; 
+        height: 280px;
+        padding: 20px; 
+        border: 5px solid #57076b;
+    }
+    ol,ul{
+       word-spacing: 50%;
+    }
+    </style>
+</head>
+<body>
+    <!--centre titulo e imagenes -->
+    <div style="text-align: center">  
+        <h1>MI MORITA</h1>
+        <img src="./img/mora bebe.jpg" alt="Morita">
+        <img src="./img/mora seria.jpg" alt="Morita2">
+        <img src="./img/mora grande.jpg" alt="Morita3">
+    </div>
+
+
+    <H3>MORITA ES:</H3>
+    <div class="container">
+        <div class="column">
+          <p>Pura energía y curiosidad. No hay un rincón en la casa que no haya explorado, siempre está pendiente de cualquier movimiento o sonido, como si cada cosa nueva fuera un misterio por resolver. Es increíblemente juguetona no importa si es una cuerda, una caja o incluso un rayo de luz, todo se convierte en su juguete favorito. Me encanta verla saltar y correr de un lado a otro, siempre inventando nuevas formas de entretenerse. A veces pienso que nunca se cansa, pero es parte de lo que lo hace tan especial.
+          </p>
+        </div>
+
+        <div class="column">
+          <p>Aunque siempre está en movimiento, también tiene su lado dulce y cariñoso. Después de tanto explorar y jugar, le encanta buscar un lugar cómodo para acurrucarse, y muchas veces ese lugar soy yo. En esos momentos, su ronroneo suave y relajado me hace sentir que confía completamente en mí. Es curiosa y activa, pero también sabe cómo transmitir paz cuando más lo necesito. Es mi compañera perfecto, siempre llenando la casa de vida y alegría.
+          </p>
+        </div>
+      </div>
+    
+<!--creacion de la tabla-->
+<table  width=" 100%" height="10%">
+    <!--negrita--> 
+    
+    <tr>
+      
+        <th>Edad</th>
+        <th>Raza</th>
+        <th>Color</th>
+        <th>Personalidad</th>
+        <th>Alimento Fav</th>
+    </tr>
+<!--texto normal-->
+<tr>
+        <td>  3 años  </td>
+        <td>Criollita</td>
+        <td>Gris/ Naranja</td>
+        <td>Juguetona</td>
+        <td>Pollo</td>
+
+</tr>
+</table>
+
+<!--listado numerado y punteado-->
+<div class="container">
+    <div class="columnsf">
+        <h2>Actividades</h2>
+<ol>
+    <li>Jugar con juguetes interactivos.</li>
+    <li>Entrenamiento con clicker.</li>
+    <li>Exploración segura (con correa).</li>
+    <li>Sesión de mimos y cepillado.</li>
+    <li>Crear un "parque de aventuras" casero</li>
+    
+ </ol>
+
+    </div>
+
+    
+    <div class="columnsf">
+        <h2>Alimentos</h2>
+<ul>
+   
+    <li>Pechuga de pollo cocida.</li>
+    <li>Atún (en agua, sin aceite ni sal).</li>
+    <li>Pavo o carne magra cocida.</li>
+    <li>Puré de calabaza.</li>
+    <li>Yogur natural (sin azúcar ni aditivos).</li>
+
+</ul>
+    </div>
+
+</body>
+</html>

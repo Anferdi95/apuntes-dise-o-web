@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <Style>
+*{
+    box-sizing: border-box;
+}
+.box {
+    width: 100px;
+            height: 100px;
+            padding: 5px;
+            margin: 10px;
+
+            background-color: #eb9d37;
+            border: 4px solid black;
+            box-shadow: inset 10px 10px 10px rgb(253,200,102); /* inset sombra interna */
+            border-radius: 255px 15px 225px 15px/1px 2px 3px 4px;
+/* propiedades de CSS standard */
+            color: rgb(43, 41, 41);
+            filter: drop-shadow(  2px 2px 2px rgba(0,0,0,0.5)  );
+            font-weight: bold;
+            font-size:large;
+            text-align:center;
+}
+.inline{
+    display: inline;
+}
+.block{
+    display: block;
+}
+.inline-block{
+    display: inline-block;
+}
+.hidden{
+    display: none;
+}
+h3{
+    color: red;
+}
+    </Style>
+
+    <h1>Display</h1>
+
+    <h2>Display: Inline</h1>
+
+ <span class="box Inline">Caja  1: elemento inline, no tengo height o widht</span>
+ <span class="box inline">Caja 2: Inline</span>
+
+    
+    <h2>Display: Block</h2>
+
+    <span class="box block">Caja 1</span>
+    <span class="box block">Caja 2</span>
+
+    <h2>Display: Inline-block</h2>
+    En inline-block nos permite combinar ambas opciones,pudiendo aplicar, width y height.
+    <span class="box inline-block">Caja 1</span>
+    <span class="box inline-block">Caja 2</span>
+    La unica diferencia es que hace un salto de linea
+
+    <h2>Display: none</h2>
+
+    caja  2 invisible
+    <span class="box">Caja 1</span>
+    <span class="box hidden">Caja 2</span>
+    <span class="box">Caja 3</span>
+
+    
+
+
+</body>
+</html>
