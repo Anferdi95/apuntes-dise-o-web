@@ -22,13 +22,70 @@
     }
  .boxDouble{
         width: 200px;
+        background-color: red;
+    
+    }
+.boxDouble1{
+        width: 200px;
+        background-color: red;
+        order: 1;
     }
 .purpleBox{
     background: purple;
     padding:  5px;
     height: 250 ;
+}
+.blueBox {
+    background: rgb(54, 46, 161);
+    padding:  5px;
+    height: 250px ;
+    flex-wrap: wrap;
+    align-items: center;
+    /* flex-start 
+    flex-end 
+    center
+    baseline */
+    
+}
+.ACT-ALIGN-CONT {
+    background: rgb(61, 161, 46);
+    padding:  5px;
+    height: 250px ;
+    flex-wrap: wrap;
+    align-content: center;
+    /*flex-start 
+    flex-end 
+    center 
+    space-between 
+    space-around 
+    space-evenly */
+}
 
 
+.ORDER {
+    background: rgb(161, 46, 46);
+    padding:  5px;
+    height: 250px ;
+    flex-wrap: wrap;
+    align-content: center;
+    /*flex-start 
+    flex-end 
+    center 
+    space-between 
+    space-around 
+    space-evenly */
+}
+
+
+.FLEXGROW {
+    background: rgb(161, 138, 46);
+    padding:  5px;
+    height: 250px ;
+    display: flex;
+    flex-wrap: wrap;
+      /*nowrap (default) 
+     wrap 
+     wrap-reverse*/
 }
 
 .flexx {
@@ -65,12 +122,15 @@
     justify-content: space-around;/* los laterales son 1/2 de los espacios centrales */
 
 }
-
+h2 {
+    background-color: rgb(70, 232, 235);
+    color:  red;
+    text-align: center; 
+}
 
 </style>
-
-
 </head>
+
 <body>
     
 <h3> Flex Direction</h3>
@@ -109,22 +169,40 @@
     <div class="box">2</div>
     <div class="box boxDouble ">3 d</div>
 </div>
+<!-- ACTIVIDAD CASA -->
+<h1>TRABAJO ACTIVIDAD</h1>
+<h2>↓ ALIGN ITEMS ↓</h2>
+    <!-- align items -->
+    <div class="flexx act blueBox">
+        <div class="box boxDouble">1 d</div>
+        <div class="box">2</div>
+        <div class="box boxDouble ">3 d</div>    
+</div>
+    
+<h2>↓ ALIGN CONTENT ↓</h2>
+    <div class="flexx ACT-ALIGN-CONT">
+        <div class="box boxDouble">1 d</div>
+        <div class="box">2</div>
+        <div class="box boxDouble ">3 d</div>    
+</div>
 
+<h2>↓ ORDER ↓</h2>
+    <div class="flexx ORDER">
+        <div class="box boxDouble1">1 d</div>
+        <div class="box">2</div>
+        <div class="box boxDouble 1">3 d</div>    
+</div>
 
-
-
-Tomás Sánchez
-21:55
-<h3>Align items</h3>
-
-
-    <h3>Align Content</h3>
-
-
-    <h3>Order</h3>
-
-
-    <h3>Flex Grow</h3>
-    */*
+<h2>↓ FLEX GROW ↓</h2>
+    <div class="flexx FLEXGROW">
+        <div class="box boxDouble">1 d</div>
+        <div class="box">2</div>
+        <div class="box boxDouble ">3 d</div> 
+        <div class="box boxDouble">1 d</div>
+        <div class="box">2</div>
+        <div class="box boxDouble ">3 d</div>        <div class="box boxDouble">1 d</div>
+        <div class="box">2</div>
+        <div class="box boxDouble ">3 d</div>
+        
 </body>
 </html>
