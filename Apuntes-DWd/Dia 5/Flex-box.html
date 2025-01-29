@@ -10,10 +10,10 @@
             height: 100px;
             background-color: #eb9d37;
             border: 4px solid black;
-            box-shadow: inset 10px 10px 10px rgb(253,200,102);
+            box-shadow: inset 6px 6px 18px rgb(27, 27, 27);
             border-radius: 255px 15px 225px 15px/1px 2px 3px 4px;
             color: rgb(255, 255, 255);
-            filter: drop-shadow(  2px 2px 2px rgba(0,0,0,0.5)  );
+            
 
 /* centrar contenido */
             display: flex;
@@ -39,7 +39,6 @@
     background: rgb(54, 46, 161);
     padding:  5px;
     height: 250px ;
-    flex-wrap: wrap;
     align-items: center;
     /* flex-start 
     flex-end 
@@ -195,14 +194,10 @@ h2 {
 
 <h2>↓ FLEX GROW ↓</h2>
     <div class="flexx FLEXGROW">
-        <div class="box boxDouble">1 d</div>
+        <div style="flex-grow: 1;" class="box boxDouble">1 d</div>
         <div class="box">2</div>
         <div class="box boxDouble ">3 d</div> 
-        <div class="box boxDouble">1 d</div>
-        <div class="box">2</div>
-        <div class="box boxDouble ">3 d</div>        <div class="box boxDouble">1 d</div>
-        <div class="box">2</div>
-        <div class="box boxDouble ">3 d</div>
+        
         
 </body>
 </html>

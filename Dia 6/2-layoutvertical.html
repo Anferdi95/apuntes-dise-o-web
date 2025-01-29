@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Vertical</title>
+</head>
+
+<style>
+
+ *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .container {
+    display: flex;
+    background-color: rgb(204, 207, 172);
+    height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+   
+        
+
+    }
+
+.header, .footer {
+text-align: center;
+background-color: rgb(113, 152, 194) ;
+height: 10vh;
+align-content: center;
+
+border-radius: 8px;
+
+
+
+
+}
+
+.content {
+
+    text-align: center;
+    background-color: beige;
+    height: 80vh;
+    align-content: center;
+   border-radius: 8px;
+}
+    
+
+</style>
+
+<body>
+   <div class="container">
+    <div class="header">Header </div>
+    <div class="content">Contenido
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate veniam tempora officiis doloremque enim doloribus atque voluptas, distinctio aliquid vero rem facere, iure excepturi libero velit aspernatur praesentium mollitia fugiat!</p>
+     </div> 
+    <div class="footer">Pie</div>  
+
+
+
+
+</body>
+</html>
