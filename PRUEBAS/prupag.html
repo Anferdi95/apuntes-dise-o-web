@@ -1,105 +1,126 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Combinado</title>
-    <style>
-        .container {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .menu  {
-            background-color: rgb(0, 0, 0);
-            height: 10vh;
-            padding: 15px;
-            display: flex;
-        }
-        .mi-lista-horizontal{          
-           display: flex;
-            list-style-type: none;
-
-        }
-        .mi-lista-horizontal li {          
-          color: white;
-
-        }
-
-
-        .col1 {
-            height: 100vh;
-            padding: 15px;
-        }
-
-       .sidbar ul {
-            display: flex;
-            list-style-type: none;
-        }
-
-        li {
-            margin-right: 20px;
-        }
-
-        .logog {
-            height: 50px;
-        }
-
-        .sidbar {
-            background-color: grey;
-        }
-
-        .sidbar ul li a {
-            text-decoration: none;
-            color: rgb(230, 148, 40);
-
-        }
-
-        .sidbar ul li a:hover {
-            color: rgb(81, 160, 21)
-        }
-    </style>
+    <title>Flexbox Froggy - Juego</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+<style>* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+#game-container {
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+}
+
+#flexbox-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    height: 100px;
+    background-color: #e0e0e0;
+    align-items: center;
+}
+
+.frog {
+    font-size: 3rem;
+    display: inline-block;
+    margin: 10px;
+}
+
+#code-container {
+    margin-top: 20px;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#result-message {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #ff5722;
+}
+</style>
 
 <body>
-    <div class="header">
-        <div class="menu">
-            <img src="https://img.icons8.com/m_sharp/200/FFFFFF/google-logo.png" alt="" class="logog">
-            <ul class="mi-lista-horizontal">
-                <li><a href="./index.html">Inicio</a></li>
-                <li><a href="./index.html">Acerca de</a></li>
-                <li><a href="./index.html">Servicios</a></li>
-                <li><a href="./index.html">Contacto</a></li>
-            </ul>
+
+    <div id="game-container">
+        <h1>Juego de Flexbox Froggy</h1>
+        <div id="level-info">
+            <p>Instrucciones: Usa Flexbox para mover las ranas a su posición correcta.</p>
         </div>
-        <div class="container">
-            <div class="content">
-                <div class="sidbar">
-                    <ul>
-                        <h2>Barra lateral</h2>
-                        <li><a href="./index.html">LINK 1</a></li>
-                        <li><a href="./index.html">LINK 2</a></li>
-                        <li><a href="./index.html">LINK 3</a></li>
-                    </ul>
-                </div>
 
-            </div>
-
-
-            <div class="col1">
-                <h2>Contenido Principal</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates cumque corporis sapiente
-                    voluptatibus fugiat magni temporibus, vel porro necessitatibus reiciendis praesentium eius, ad in
-                    vitae, illum distinctio beatae error asperiores!</p>
-            </div>
+        <div id="flexbox-container" class="flexbox-container">
+            <div class="frog" id="frog-1">🐸</div>
+            <div class="frog" id="frog-2">🐸</div>
+            <div class="frog" id="frog-3">🐸</div>
         </div>
-    </div>
-    <div class="footer">Derechos de autor © 2025 Andrés Fernández
 
+        <div id="code-container">
+            <label for="css-code">Código CSS:</label>
+            <textarea id="css-code" placeholder="Escribe aquí el código Flexbox..."></textarea>
+            <button id="check-btn">Verificar</button>
+        </div>
+
+        <div id="result-message"></div>
     </div>
 
-
+    <script> document.getElementById('check-btn').addEventListener('click', function() {
+        // Obtener el código CSS ingresado por el jugador
+        const userCode = document.getElementById('css-code').value.trim();
+    
+        // Nivel 1: Verificar la respuesta
+        const correctAnswer = 'justify-content: space-between;';
+    
+        if (userCode === correctAnswer) {
+            document.getElementById('result-message').textContent = '¡Correcto! La rana se movió correctamente.';
+            document.getElementById('result-message').style.color = 'green';
+            // Avanzar al siguiente nivel
+            setTimeout(nextLevel, 2000);
+        } else {
+            document.getElementById('result-message').textContent = '¡Incorrecto! Intenta nuevamente.';
+            document.getElementById('result-message').style.color = 'red';
+        }
+    });
+    
+    // Cambiar a un nuevo nivel
+    function nextLevel() {
+        // Cambiar las instrucciones para el siguiente nivel
+        document.getElementById('level-info').innerHTML = '<p>Instrucciones: Usa "justify-content: center;" para alinear las ranas.</p>';
+    
+        // Restablecer el código CSS
+        document.getElementById('css-code').value = '';
+    
+        // Mover las ranas a sus nuevas posiciones (por ejemplo, centro)
+        document.getElementById('flexbox-container').style.justifyContent = 'center';
+    }
+    </script>
 </body>
-
 </html>

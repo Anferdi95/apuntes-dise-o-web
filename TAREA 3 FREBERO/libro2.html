@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UN SEGUNDO PARA AMAR</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            flex: 1;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-be;
+            padding-top: 30px;
+
+        }
+
+        .imgn1 {
+            padding-left: 100px;
+        }
+
+        .sidbar {
+            height: auto;
+            padding-top: 26px;
+        }
+
+        .main-content {
+            padding: 10px;
+            flex-grow: 1;
+            padding-left: 100px;
+
+        }
+
+        .estrella-llena {
+            color: gold;
+
+        }
+
+        p {
+            width: 500px;
+            text-align: justify;
+
+        }
+
+        h6 {
+            background-color: rgb(103, 57, 17);
+            height: 15px;
+            width: 48px;
+            color: white;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding-left: 3px;
+        }
+
+        .botton {
+            display: flex;
+            justify-content: end;
+            background-color: #3C4A58;
+            color: white;
+            padding: 16px 40px;
+            font-weight: bold;
+            border: 2px solid;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 20px;
+            margin-left: 340px;
+
+        }
+
+        .botton:hover {
+            background-color: transparent;
+            border: 2px solid #3C4A58;
+            color: #3C4A58;
+        }
+
+        .botton2 {
+            width: 250px;
+            height: 5px;
+            background-color: #3C4A58;
+            color: white;
+            padding: 15px 1px;
+            font-weight: bold;
+            border: 2px solid;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+            display: flex;
+            justify-content: center;
+            justify-items: center;
+
+        }
+
+        .botton2:hover {
+            background-color: transparent;
+            border: 2px solid #3C4A58;
+            color: #3C4A58;
+        }
+
+        .autoreditorial {
+
+            color: gray;
+
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        .containerr {
+            flex: 1;
+            width: 1000px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #ffffff36;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h3 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        textarea {
+            width: 100%;
+            height: 150px;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #cccccc3f;
+            border-radius: 4px;
+            resize: vertical;
+            font-size: 14px;
+        }
+
+        .imgper {
+            height: 150PX;
+        }
+        .imgn1 {
+            height: 350PX;
+        }
+
+        .grid-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card2 {
+
+            width: 75%;
+            align-content: center;
+        }
+
+        .card1 {
+            text-align: center;
+            color: #333;
+            width: 15%;
+            align-content: center;
+
+        }
+
+        .card3 {
+            padding-left: 350px;
+            display: flex;
+        }
+
+        .nomb {
+            padding-left: 38px;
+            border: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="sidbar">
+            <img src="./un segundo.webp" alt="IMG1" class="imgn1">
+        </div>
+
+        <div class="main-content">
+
+
+            <h2>UN SEGUNDO PARA AMAR</h2>
+            <span class="estrella-llena">&#9733;</span>
+            <span class="estrella-llena">&#9733;</span>
+            <span class="estrella-llena">&#9733;</span>
+            <span class="estrella-llena">&#9733;</span>
+            <span class="estrella-vacia">&#9734;</span>
+
+            <h6>categoria</h6>
+            <div class="autoreditorial">
+                <p class="autor">Kristina Moninger</p>
+                <p class="autor">INLOV - 9788410399006</p>
+            </div>
+            <p> Avery, Isabella, Odina, Lee y Josie son jóvenes, salvajes e inseparables desde que se conocieron en un campamento de surf en una pequeña isla frente a la costa de Carolina del Sur. 
+                <br>Están viviendo el verano de sus vidas hasta que, de pronto, Josie desaparece sin dejar rastro.
+                <br>Diez años después aparece una pista…
+            </p>
+            <button class="botton"> Reservar libro</button>
+        </div>
+    </div>
+
+    <h3>Deja tu Reseña</h3>
+    <div class="containerr">
+        <div class="grid-container">
+            <div class="card1">
+                <p class="nomb"><b>Pepito Perez</b></p>
+
+                <img src="./depositphotos_662127928-stock-illustration-profile-image-woman-avatar-social-removebg-preview.png"
+                    alt="imgper" class="imgper">
+
+            </div>
+
+            <div class="card2">
+                <label for="review">Tu Reseña:</label>
+
+                <textarea id="review" placeholder="Escribe tu reseña aquí..."></textarea>
+            </div>
+        </div>
+        <div class="grid-container">
+            <div class="card3">
+                <button class="botton2"> Enviar reseña</button>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

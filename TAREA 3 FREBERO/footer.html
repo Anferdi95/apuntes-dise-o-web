@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer Básico</title>
+    <style>
+        /* Estilo general para el footer */
+        footer {
+            background-color: #d9d9d9;
+            color: white;
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left: 60px;
+        }
+
+        .logo img {
+            height: 40px; 
+            margin-right: 10px;
+        }
+
+        .social-media {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-media a {
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            font-size: 40px;
+        }
+
+        .social-media a:hover {
+            color: #4CAF50;
+        }
+
+        .links {
+            display: flex;
+            gap: 20px;
+            margin-right: 60px;
+        }
+
+        .links ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .links ul li {
+            margin-bottom: 8px;
+        }
+
+        .links ul li a {
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+        }
+
+        .links ul li a:hover {
+            color: #4CAF50;
+        }
+     
+        .footerr {
+            height: 5vh;
+            background-color: #000000;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            background-color: #b4b4b4;
+            color: white;
+        }
+        .facebook {
+            background-image: url('./icons8-facebook-50.png');
+        }
+        .instagram {
+            background-image: url('./icons8-instagram-96.png');
+        } .linkedin {
+            background-image: url('./icons8-linkedin-50.png');
+        } .youtube {
+            background-image: url('./icons8-youtube-50.png');
+        }
+        .social-media {
+            display: flex;
+            gap: 10px;
+        }
+
+        .social-media a {
+            width: 30px;
+            height: 30px;
+            background-size: cover;
+         
+        }
+
+    </style>
+</head>
+<body>
+
+   
+    <footer>
+            
+    <div class="logo">
+        <img src="./logo-01.png" alt="Logo">
+        <div class="social-media">
+            <a href="#" target="_blank" class="facebook"></a>
+            <a href="#" target="_blank" class="instagram"></a>
+            <a href="#" target="_blank" class="linkedin"></a>
+            <a href="#" target="_blank" class="youtube"></a>
+            
+        </div>
+    </div>
+        <div class="links">
+            
+            <ul>
+                <li><a href="#">Términos y Condiciones</a></li>
+                <li><a href="#">Política de privacidad</a></li>
+                <li><a href="#">Política de Cookies</a></li>
+            </ul>
+        </div>
+    </footer>
+    <div class="footerr">
+        Todos los derechos reservados 2025. Nombre de la marca 
+    </div>
+</body>
+</html>
