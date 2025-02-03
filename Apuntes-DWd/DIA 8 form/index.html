@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+
+<body>
+    <!-- GET==> Recibir datros
+    POST==> Enviar datros  -->
+
+
+    <form action="./" method="post">
+        <label for="txt-usuario">Usuario</label>
+        <input type="text" id="txt-usuario" name="txt-usuario" placeholder="Usuario">
+        <br>
+        <label for="txt-email">Email</label>
+        <input type="email" id="txt-email" name="txt-email" placeholder="Tu clave (8 caracteres)">
+        <br>
+        <label for="txt-clave">Clave</label>
+        <input type="password" id="txt-clave" name="txt-clave" placeholder="Tu clave (8 caracteres)">
+        <br>
+        Biografía <textarea name="descripcion" id="txt-info" rows="5 "></textarea>
+        <br>
+
+<!-- seleccionar elemeto (solo 1) -->
+        <input type="radio" id="rd-edad" name="rd-edad" value="mayor">
+        <label for="rd-edad">Mayor de 18</label>
+        <br>
+        <input type="radio" id="rd-edad-menor" name="rd-edad" value="maenor">
+        <label for="rd-edad">Menor de 18</label>
+        <br>
+        <input type="radio" id="rd-edad-no" name="rd-edad" value="maenor">
+        <label for="rd-edad">No contesta</label>
+        <br>
+
+        <!-- seleccionar elemtos (varios) -->
+        <h3>Hobbies</h3>
+        <input type="checkbox" id="chk-futbol" name="chk-futbol" value="futbol">
+        <label for="chk-futbol">futbol</label>
+        <br>
+        <input type="checkbox" id="chk-volley" name="chk-volley" value="volley">
+        <label for="chk-volley">volley</label>
+        <br>
+        <input type="checkbox" id="chk-leer" name="chk-leer" value="leer">
+        <label for="chk-leer ">leer</label>
+        <br />
+
+         <!-- seleccionar elemtos desde barra seleccion) -->
+        <label for="select_puesto">Trabajo</label>
+        <select name="select_puesto" id="select_puesto">
+            <option value="estudiante">Estudiante</option>
+            <option value="profesor">Profesor</option>
+            <option value="medico">Médico</option>
+        </select>
+        <br>
+
+        <input type="submit" value="Enviar">
+
+
+    </form>
+    </form>
+
+
+
+
+
+
+</body>
+
+</html>
