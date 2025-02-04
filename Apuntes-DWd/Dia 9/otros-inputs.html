@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Otros-inputs.html</title>
+</head>
+
+<body>
+
+    <h1>LOGIN FORM</h1>
+    <form action="./" method="Get">
+        <div class="input">
+            <label for=txt-usuario>Usuario</label>
+            <input type="text" id="txt-usuario" name="txt-usuario" placeholder="Minimo 4 caracteres" required />
+        </div>
+
+        <div class="input">
+            <label for=txt-contraseña>Contraseña</label>
+            <input type="password" id="txt-contraseña" name="txt-contraseña" placeholder="Mayusculas y minusculas"
+                required />
+        </div>
+
+        <input type="submit" value="INICIAR SESION" />
+
+    </form>
+
+
+    <h2>TYPES</h2>
+
+    <h3>(Number)</h3> 
+    <!-- define un campo de entrada numérico . -->
+    <form>
+        <label for="edad">Edad (Entre 1 año y 30 años ):</label>
+        <input type="number" id="edad" name="edad" min="1" max="30">
+    </form>
+
+
+<h3>(Color)</h3> 
+<!-- utiliza para campos de entrada que deben contener un color. -->
+<form>
+    <label for="favcolor">Seleccione su color favorito:</label>
+    <input type="color" id="favcolor" name="favcolor">
+  </form>
+
+
+  <h3>(date)</h3> 
+  <!-- utiliza para campos de entrada que deben contener una fecha. -->
+  <form>
+    <label for="cumple">Cumpleaños:</label>
+    <input type="date" id="cumple" name="cumple">
+  </form>
+
+
+  <h3>(file)</h3> 
+  <!-- un campo de selección de archivos y un botón "Explorar" para cargar archivos. -->
+  <form>
+    <label for="miarchivo">Seleccionar archivo:</label>
+    <input type="file" id="miarchivo" name="miarchivo">
+  </form>
+
+<h3>(Reset)</h3> resetar los campos
+    <form action="/action_page.php">
+        <label for="fname">Nombre:</label><br>
+        <input type="text" id="fname" name="fname" value=""><br>
+        <label for="lname">Apellido:</label><br>
+        <input type="text" id="lname" name="lname" value=""><br><br>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Borrar">
+    </form><br>
+
+    <h3>(hidden)</h3> 
+    <!-- un campo de entrada oculto (no visible para el usuario).
+
+Un campo oculto permite a los desarrolladores web incluir datos que los usuarios no pueden ver ni modificar cuando se envía un formulario.
+
+Un campo oculto a menudo almacena qué registro de base de datos debe actualizarse cuando se envía el formulario.-->
+<form>
+    <label for="fname">Primer nombre</label>
+    <input type="text" id="fname" name="fname"><br><br>
+    <input type="hidden" id="custId" name="custId" value="3487">
+    <input type="submit" value="Enviar">
+  </form>
+
+  <h3>(Range)</h3> 
+  <!-- un control para ingresar un número cuyo valor exacto no es importante (como un control deslizante). El rango predeterminado es de 0 a 100. Sin embargo, puede establecer restricciones sobre qué números se aceptan con los atributos min, maxy step: -->
+  <form action="/action_page.php" method="get">
+    <label for="vol">Volume (between 0 and 50):</label>
+    <input type="range" id="vol" name="vol" min="0" max="50">
+    <input type="submit" value="Enviar">
+  </form>
+  
+    <!-- number, color, date, file, reset, hidden, range" -->
+</body>
+</html>
