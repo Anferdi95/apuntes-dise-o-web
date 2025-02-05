@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=a, initial-scale=1.0">
+    <title>Actividad</title>
+</head>
+<Style>
+
+
+    .gatico {
+        height: 0.5;
+        width: 100%;
+        opacity: 60%;
+    }
+
+    .container {
+        width: 300px;
+        position: fixed;
+    }
+
+    .box {
+        border: 1px solid red;
+        position: absolute;
+
+    }
+
+    .box--topright {
+        top: 10px;
+        right: 10px;
+    }
+
+    .box--topleft {
+        top: 10px;
+        left: 10px;
+    }
+
+    .box--center {
+        top: 50%;
+        width: 100%;
+        text-align: center;
+    }
+
+    .box--bottomleft {
+        bottom: 10px;
+        left: 10px;
+    }
+
+    .box--bottomright {
+        bottom: 10px;
+        right: 10px;
+    }
+</Style>
+
+<body>
+    <h1>Position Absolute Gatito</h1>
+    <p> Recrear esta imagen en HTML, utilizando position</p>
+    <div class="container">
+        <img class="gatico " src="./gatito-m.jpg"></img>
+
+        <div class="box box--topright">arriba-der</div>
+        <div class="box box--topleft">Arriba-izq</div>
+        <div class="box box--center"> Center (w100)</div>
+        <div class="box box--bottomleft"> Abajo-izq</div>
+        <div class="box box--bottomright"> Abajo-derec</div>
+    </div>
+
+    </div>
+</body>
+
+</html>

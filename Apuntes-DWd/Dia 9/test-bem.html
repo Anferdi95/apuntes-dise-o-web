@@ -5,37 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>test bem</title>
 </head>
+
+<style>
+
+.header{}
+.header__tittle{}
+.header__nav{}
+.header_items{}
+.header_item{}
+
+.section{
+    border-radius: 20px;
+    color: red;
+    padding: 20px;
+    margin: 20px;
+}
+.section{}
+.header__nav{}
+.section__parafo{}
+.section__link{}
+
+
+
+</style>
 <body>
 
     <div class="header"> <!--bloque*/-->
-        <h1 class="h1">Logo</h1>
-        <div class="nav">
-            <ul class="ul">
-                <li class="li">...</li>
-                <li class="li">...</li>
+        <h1 class="header__tittle">Logo</h1>
+        <div class="header__nav">
+            <ul class="header_items">
+                <li class="header_item">...</li>
+                <li class="header_item">...</li>
             </ul>
         </div>
     </div>
 
+
+
 <div class="main">
-        <div class="section">
-            <h2 class="h2">...</h2>
-            <p class="p">...</p>
-            <a class="a">...</a>
+        <div class="section--hero">
+            <h2 class="section__tittle">...</h2>
+            <p class="section__parafo">...</p>
+            <a class="section__link">...</a>
         </div>
         <div class="section">
-            <h2 class="h2">...</h2>
-            <p class="p">...</p>
-            <a class="a">...</a>
-        </div>
+            <h2 class="section__tittle">...</h2>
+            <p class="section__parafo">...</p>
+            <a class="section__link">...</a>
     </div>
 
+
+
 <div class="footer">
-        <h3 class="h3">RSS</h3>
-        <ul class="ul">
-            <li class="li">...</li>
-            <li class="li especial">...</li> <!--modificador*/-->
-            <li class="li">...</li>
+        <h3 class="footer__tittle">RSS</h3>
+        <ul class="footer_items">
+            <li class="footer__item">...</li>
+            <li class="footer__item footer__item--especial">...</li> <!--modificador*/-->
+            <li class="footer__item">...</li>
         </ul>
     </div>
 </body>

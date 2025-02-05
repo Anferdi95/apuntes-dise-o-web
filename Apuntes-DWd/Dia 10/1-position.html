@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de posicones en CSS</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: 0;
+    }
+
+    .container {
+        display: flex;
+        margin-top: 50px;
+    }
+
+    .box {
+        width: 100px;
+        height: 100px;
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+        padding: 10px;
+    }
+
+    .yellow {
+        background-color: yellow;
+        top: 20px;
+        left: 20px;
+    }
+
+    /*Estilos adicionales de posiciones*/
+    .static {
+        position: static;
+    }
+
+    .relative {
+        position: relative;
+    }
+
+    .absolute {
+        position: absolute;
+    }
+    .fixed{
+        position: fixed;
+    }
+    .sticky{
+        position: sticky;
+    }
+
+</style>
+
+<body>
+    <!-- Static
+ Normal, no se aplica ninguna propiedad de posición. Se muetsra en el flujo normal del documento. -->
+    <div class="container">
+        <div class="box"></div>
+        <div class="box yellow static">Static</div>
+        <div class="box"></div>
+
+    </div>
+
+    <!-- relative
+  Afectan las position top, right, left, bottom
+  Ocupa espacio
+  -->
+    <div class="container">
+        <div class="box"></div>
+        <div class="box yellow relative">Relative</div>
+        <div class="box"></div>
+
+    </div>
+
+    <!-- Absolute
+    Afectan las position top, right, left, bottom
+ no cupa espacio
+ Se posiciona con respecto al padre mas cercano que tenga una propiedad de posición diferente a static (normalmente relative). Si no encuentra una, utiliza el body.
+  -->
+    <div class="container relative" >
+        <div class="box"></div>
+        <div class="box yellow absolute">Absolute</div>
+        <div class="box"></div>
+
+    </div>
+
+   <!-- FIXED
+    Afecta las position top, right, left, bottom
+ no cupa espacio
+ Se posiciona respecto a la ventana del navegador (no al body)
+ Se mantiene fijo en panalla, y no se mueve al hacer scroll
+  -->
+  <div class="container " >
+    <div class="box"></div>
+    <div class="box yellow fixed">Fixed</div>
+    <div class="box"></div>
+
+</div>
+
+   <!-- sticky
+    
+  -->
+  <div class="container" style="height: 300px; width: 400px; border: 1px solid gray; padding: 20px;
+  overflow: scroll;" >
+    <div class="box" style="margin-top:100px;"></div>
+    <div class="box yellow sticky"style="margin-top:100px;">Sticky</div>
+    <div class="box" style="height: 2000px ;margin-top:100px"></div>
+
+    </div>
+
+    <div class="box" style="height: 300px;">    </div>
+
+
+</body>
+
+</html>
