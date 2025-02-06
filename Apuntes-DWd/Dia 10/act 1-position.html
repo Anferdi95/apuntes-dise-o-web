@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1 position</title>
+
+    <style>
+        /* Contenedor Layout General */
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+
+        }
+
+        /* Estilos para el header y footer */
+        .header,
+        .footer {
+
+            background-color: #1EAAFC;
+            background-image: linear-gradient(130deg, #6C52D9 0%, #c11efc 85%, #973edf 100%);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+            color: #ffffff;
+            border-radius: 4px;
+            border: 6px solid #171717;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            font-weight: bold;
+            width: 99%;
+            height: 40px;
+
+        }
+
+        /* main: incluye sidebar + content */
+        .main {
+            display: flex;
+
+
+        }
+
+        .logofixed {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+        }
+
+        .contact {
+            width: 40px;
+
+
+        }
+
+        .section {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            padding: 10px;
+        }
+
+        /* Estilos para la navegación del sidebar */
+        .sidebar {
+
+            background-color: #1EAAFC;
+            background-image: linear-gradient(130deg, #6C52D9 0%, #1EAAFC 85%, #3EDFD7 100%);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+            color: #ffffff;
+            border-radius: 4px;
+            border: 6px solid #171717;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            font-weight: bold;
+            width: 20%;
+            margin-top: 10px;
+            margin-bottom: 10px;
+
+        }
+
+
+
+        .box-item {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 10px;
+            width: 100%;
+
+        }
+
+        .itemp {
+            background-color: #1EAAFC;
+            background-image: linear-gradient(130deg, #6C52D9 0%, #1EAAFC 85%, #3EDFD7 100%);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+            color: #ffffff;
+            border-radius: 4px;
+            border: 6px solid #171717;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            font-weight: bold;
+            width: 100%;
+            height: 40px;
+        }
+        .section2 {
+            display: flex;
+            gap: 10px;
+            width: 100%;
+        }
+        .item {
+            background-color: #1EAAFC;
+            background-image: linear-gradient(130deg, #6C52D9 0%, #1EAAFC 85%, #3EDFD7 100%);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+            color: #ffffff;
+            border-radius: 4px;
+            border: 6px solid #171717;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            font-weight: bold;
+            height: 200px;
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logofixed">
+            <img class="contact"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1022px-WhatsApp.svg.png"
+                alt="">
+        </div>
+
+        <div class="header">
+            <div>Logo</div>
+        </div>
+        <div class="main">
+            <div class="sidebar">
+                <h2>Sidebar</h2>
+            </div>
+            <div class="section">
+                <div class="box-item">
+                    <div class="itemp">Content-1</div>
+                    <div class="section2">
+                        <div class="item">Content-2</div>
+                        <div class="item">Content-3</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer">
+                <p>Footer</a></p>
+            </div>
+
+
+        </div>
+
+</body>
+
+</html>
