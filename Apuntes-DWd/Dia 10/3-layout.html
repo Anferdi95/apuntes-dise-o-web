@@ -4,125 +4,208 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3.layout</title>
+    <title>1 position</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            
+        }
+        .bodyy{
+            background-color: #5e5c5f;
+            padding: 20px;
+
+        }
+        
+        /* Contenedor Layout General */
+        .container {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        /* si se coloca el alto se queda el footer anclado al final*/
+        /* Estilos para el header y footer */
+        .header {
+            background-color: #c61be4;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+            color: #ffffff;
+            border-radius: 4px;
+            border: 6px solid #171717;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            font-weight: bold;
+            width: 99%;
+            height: 90px;
+            position: sticky;
+            top: 0;
+
+        }
+
+        .footer {
+            background-color: #c61be4;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+            color: #ffffff;
+            border-radius: 4px;
+            border: 6px solid #171717;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            font-weight: bold;
+            width: 99%;
+            height: 90px;
+        }
+
+        /* Main: incluye sidebar + content */
+        .main {
+            display: flex;
+            flex: 1;
+        }
+
+        .logofixed {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+        }
+
+        .contact {
+            width: 40px;
+        }
+
+        .section {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            padding: 10px;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            background-color: #1cb2b2;
+            
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+            color: #ffffff;
+            border-radius: 4px;
+            border: 6px solid #171717;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            font-weight: bold;
+            width: 20%;
+            height: 100vh;
+            margin: 10px 0;
+        }
+
+        /* Contenedor de items */
+        .box-item {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 100%;
+        }
+
+        /* Content-1 ocupa toda la fila */
+        .itemp {
+            background-color: #1EAAFC;
+            background-image: linear-gradient(130deg, #6C52D9 0%, #1EAAFC 85%, #3EDFD7 100%);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+            color: #ffffff;
+            border-radius: 4px;
+            border: 6px solid #171717;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            font-weight: bold;
+            width: 100%;
+            height: 40px;
+        }
+
+        /* Fila para Content-2 y Content-3 */
+        .section2 {
+            display: flex;
+            gap: 10px;
+            width: 100%;
+        }
+
+        /* Content-2 y Content-3 ocupan el mismo espacio */
+        .item {
+            background-color: #1EAAFC;
+            background-image: linear-gradient(130deg, #6C52D9 0%, #1EAAFC 85%, #3EDFD7 100%);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+            color: #ffffff;
+            border-radius: 4px;
+            border: 6px solid #171717;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            font-weight: bold;
+            height: 200px;
+            flex: 1;
+        }
+    </style>
 </head>
-<style>
-    .main {
-        display: flex;
-        flex-direction: column;
-    }
 
-    .item {
-        background-color: #1EAAFC;
-        background-image: linear-gradient(130deg, #6C52D9 0%, #1EAAFC 85%, #3EDFD7 100%);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-        color: #ffffff;
-        border-radius: 4px;
-        border: 6px solid #171717;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 18px;
-        font-weight: bold;
-        width: 100%;
-    }
+<body class="bodyy">
+    <div class="header">
+        <div>Logo</div>
+    </div>
 
-    .item2 {
-        display: flex;
-        flex-direction: column;
-        background-color: #1EAAFC;
-        background-image: linear-gradient(130deg, #6C52D9 0%, #1EAAFC 85%, #3EDFD7 100%);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-        color: #ffffff;
-        border-radius: 4px;
-        border: 6px solid #171717;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 18px;
-        font-weight: bold;
-        width: 200px;
-        height: 150px;
-    }
-
-    .item3 {
-        background-color: #1EAAFC;
-        background-image: linear-gradient(130deg, #6C52D9 0%, #1EAAFC 85%, #3EDFD7 100%);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-        color: #ffffff;
-        border-radius: 4px;
-        border: 6px solid #171717;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 18px;
-        font-weight: bold;
-        width: 200px;
-        height: 150px;
-    }
-
-    .header {
-        background-color: #1EAAFC;
-        background-image: linear-gradient(130deg, #6C52D9 0%, #c11efc 85%, #973edf 100%);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-        color: #ffffff;
-        border-radius: 4px;
-        border: 6px solid #171717;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 18px;
-        font-weight: bold;
-        width: 100%;
-        height: 100px;
-
-    }
-
-    .footer {
-        background-color: #1EAAFC;
-        background-image: linear-gradient(130deg, #6C52D9 0%, #c11efc 85%, #973edf 100%);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-        color: #ffffff;
-        border-radius: 4px;
-        border: 6px solid #171717;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 18px;
-        font-weight: bold;
-        width: 100%;
-        height: 100px;
-
-    }
-
-    .container {
-        display: flex;
-        flex: 1;
-    }
-</style>
-
-<body>
-
-    <div class="header">Header</div>
-    <!-- main  -->
     <div class="container">
-        <div class="section">
-            <div class="main"></div>
+        <div class="logofixed">
+            <img class="contact"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1022px-WhatsApp.svg.png"
+                alt="">
+        </div>
 
-            <div>sidebar</div>
 
+        <div class="main">
+            <div class="sidebar">
+                <h2>Sidebar</h2>
+            </div>
             <div class="section">
-
-                <div class="item"> Content-1</div>
-                <div>
-                    <div class="item2"> content-2</div>
-                    <div class="item3">content-3</div>
+                <div class="box-item">
+                    <div class="itemp">Content-1</div>
+                    <div class="section2">
+                        <div class="item">Content-2</div>
+                        <div class="item">Content-3</div>
+                    </div>
+                  
+<!-- Elementos con java scrip -->
                 </div>
             </div>
-
         </div>
     </div>
-    <div class="footer">Footer</div>
+    <div class="footer">
+        <p>Footer</p>
+
+    </div>
+
+<script>
+    // acá podemos escribir nuestro JavaScrip
+    // ATENCIÓN: Forma sencilla pero ineficiente de agregar contenido
+
+
+    // 1.Seleccionar la caja .main
+let contenedor = document.querySelector(".container")
+
+//Creo un HTML.
+const miHTML = `<div class="section2">
+                        <div class="item">Content-2</div>
+                        <div class="item">Content-3</div>
+                    </div> `;
+
+contenedor.innerHTML += miHTML;
+
+
+
+</script>
 
 </body>
 
