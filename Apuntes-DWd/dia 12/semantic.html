@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic</title>
+</head>
+<style>
+    .img1 {
+        width: 400px;
+    }
+.figure{
+    width: 300px;
+}
+</style>
+
+<body>
+
+    <h1>Web Semantica</h1>
+
+    <h3>Elementos con significado!</h3>
+
+    Ejemplos de etiquetas no semanticas: <br />
+    Ejemplos de etiquetas semanticas: Table, Form, Article <br />
+
+
+    <img class="img1" src="./Captura de pantalla 2025-02-10 a las 20.58.22.png" alt="ejem">
+    <img class="img1" src="./Captura de pantalla 2025-02-10 a las 21.00.16.png" alt="ejem">
+
+
+    <P>
+    <H3> <mark> HEADER </mark> </H3>
+    Es el encabezado de una página, sección o artículo. Incluye elementos como el logo, texto introductorio, menus de
+    navegacion. Puede haber multiples headers en una pagina, pero no opuede haber un header dentro de un footer, o de
+    otro header.
+    </P>
+    <p>
+    <h3> <mark> FOOTER </mark> </h3>
+    Es el pie de página de un sitio o sección. Puede haber múltiples por página. Puede incluir información como:
+    <ul>
+        <li>Información de contacto</li>
+        <li>Enlaces de RRSS</li>
+        <li>Mapa del Sitio</li>
+        <li>Creditos</li>
+        <li>Formulario de Contacto</li>
+    </ul>
+    </p>
+    <p>
+        <H3> <mark>NAVEGACIÓN </mark> </H3>
+        Define un conjunto de enlaces de navegación. No todos los links deben estar dentro de un "Nav".
+    </p>
+    <p>
+        <H3> <mark> MAIN </mark> </H3>
+        Crea un contenedor para el contenido principal de nuestra página. Este debe ser único y no debe incluir contendio repetido de otras secciones, como por ejemplo del sidebar, logos, etc. No puede ser hijo de etiquetas como: Article. aside, footer, header o nav.
+    </p>
+
+    <p>
+        <H3> <mark> ASIDE </mark> </H3>
+        Define el contenido relacionado indirectamente con el contendio principal, como por ejemplo un sidebar. Elementos que solemos poner en un aside:
+        <ul>
+            <li>Publicidad</li>
+            <li>Biografía de autor</li>
+            <li>Enlaces relacionados</li>
+            <li>Información de Perfil</li>
+
+        </ul>
+    </p>
+
+
+    <p>
+        <H3> <mark> SECTION </mark></H3>
+        Define una sección en una página donde se agrupa los contenidos relacionados, y normalmente incluyen un título. <br />
+        Una web se compone de varias secciones, cada una con su contenido y propósito. <br />
+        <ul>
+            <li>Cápitulos</li>
+            <li>Introducción</li>
+            <li>Noticias</li>
+            <li>Información de Contacto</li>
+
+        </ul>
+
+    </p>
+
+    <p>
+        <H3> <mark> ARTICLE </mark> </H3>
+        Define un contenido <b>INDEPENDIENTE</b>. El mismo puede ser compartido o reutilizarlo en otro sitio sin requerir contexto. <br>
+        <ul>
+            <li>Post de Blóg</li>
+            <li>Artículo de Revista</li>
+            <li>Comentario de un Usuario</li>
+            <li>Tarjeta de Producto</li>
+
+        </ul>
+    </p>
+
+<p>Puedo encontrar artículos dentro de secciones o secciones dentro de artículos. <br />
+    Un artículo puede tener múltiples secciones. Una seccion puede tener Múltiples artículos.
+</p>
+
+<p>
+    <h3> <mark> FIGURE </mark> </h3>
+    Define elementos autocontenidos, como puede ser una imágen, un diagrama, un gráfico, una tabla o una foto. <br>
+    Dentro de ella, se suele utilizar la etiqueta <b>"figcaption"</b> para describir el contenido, esto es ademas del ya incluido <b> "alt" </b> en caso de ímagenes.
+    <figure>
+        <img class="figure" src="./Captura de pantalla 2025-02-10 a las 20.58.22.png" alt="soy una imagen">
+        <figcaption> Fig1 - Imágen de prueba</figcaption>
+    </figure>
+</p>
+
+<p>
+    <h3> <mark> MARK </mark></h3> 
+    Define un texto resaltado, normalmentese muestra con un  <mark> Fondo Amarillo</mark>
+</p>
+
+
+
+</body>
+
+</html>

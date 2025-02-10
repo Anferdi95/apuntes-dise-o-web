@@ -1,79 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actividad Perritos</title>
-    <style>
-        body {
-            background-color: #f0f8ff;
-            transition: background-color 0.5s ease-in-out;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
-            margin: 0;
-        }
-        
-        
-        .main__image {
-            display: flex;
-            justify-content: center;
-        }
-        .main__image-img {
-            max-width: 100%;
-            height: 200px;
-        }
-        .cel-title {
-            display: none;
-        }
-
-        /* Tablet */
-        @media (min-width: 650px) {
-            body {
-                background-color: #d4d712;
-            }
-            .nombre__title, .nombre__title--2, .cel-title__D {
-                display: none;
-            }
-            .nombre__title--2 {
-                display: block;
-                
-               
-            }
-        }
-
-        /* Desktop */
-        @media (min-width: 1024px) {
-            body {
-                background-color: #4682b4;
-            }
-            .cel-title__D{
-                display: block;
-            }
-            .nombre__title--2 {
-                display: none;
-            }
-        }
-        /* cel */
-            @media (max-width: 649px) {
-                .nombre__title--2 {
-                    display: none;
-                }
-                .cel-title__D{
-                display: none;
-            }
-            }
-        
-         
-    </style>
+    <link rel="stylesheet" href="./CSS/estilos.css">
+    
 </head>
+
 <body>
     <div class="nombres">
-        <h2 class="nombre__title">Título Mobile</h2>
-        <h2 class="cel-title__D">Título Desktop</h2>
+        <h2 class="nombre__title">Mobile</h2>
+        <h2 class="cel-title__D">Desktop</h2>
     </div>
     <main class="main">
         <picture class="main__image">
@@ -81,9 +20,10 @@
             <source media="(min-width:650px)" srcset="./img/abl.jpg">
             <img src="./img/cel.jpeg" alt="Mi mascota" class="main__image-img">
         </picture>
-        <h2 class="nombre__title--2">Título Tablet</h2>
-        
-      
+        <h2 class="nombre__title--2">Tablet</h2>
+
+
     </main>
 </body>
+
 </html>
