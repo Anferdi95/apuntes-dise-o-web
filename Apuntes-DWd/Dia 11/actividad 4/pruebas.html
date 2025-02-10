@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actividad Perritos</title>
+    <title>pruebas</title>
     <style>
         body {
             background-color: #f0f8ff;
@@ -16,7 +16,9 @@
             text-align: center;
             margin: 0;
         }
-        
+        .nombre__title::after {
+            content: "Título Mobile";
+        }
         
         .main__image {
             display: flex;
@@ -26,7 +28,7 @@
             max-width: 100%;
             height: 200px;
         }
-        .cel-title {
+        .tablet-title {
             display: none;
         }
 
@@ -35,13 +37,12 @@
             body {
                 background-color: #d4d712;
             }
-            .nombre__title, .nombre__title--2, .cel-title__D {
-                display: none;
+            .nombre__title::after {
+                content: "";
             }
-            .nombre__title--2 {
+            .tablet-title {
                 display: block;
-                
-               
+                margin-top: 10px;
             }
         }
 
@@ -50,40 +51,26 @@
             body {
                 background-color: #4682b4;
             }
-            .cel-title__D{
-                display: block;
+            .nombre__title::after {
+                content: "Título Desktop";
             }
-            .nombre__title--2 {
+            .tablet-title {
                 display: none;
             }
         }
-        /* cel */
-            @media (max-width: 649px) {
-                .nombre__title--2 {
-                    display: none;
-                }
-                .cel-title__D{
-                display: none;
-            }
-            }
-        
-         
     </style>
 </head>
 <body>
-    <div class="nombres">
-        <h2 class="nombre__title">Título Mobile</h2>
-        <h2 class="cel-title__D">Título Desktop</h2>
-    </div>
+    <header class="nombres">
+        <h1 class="nombre__title"></h1>
+    </header>
     <main class="main">
         <picture class="main__image">
             <source media="(min-width:1024px)" srcset="./img/deskpot.jpg">
             <source media="(min-width:650px)" srcset="./img/abl.jpg">
             <img src="./img/cel.jpeg" alt="Mi mascota" class="main__image-img">
         </picture>
-        <h2 class="nombre__title--2">Título Tablet</h2>
-        
-      
+        <h2 class="tablet-title">Título Tablet</h2>
     </main>
 </body>
 </html>
