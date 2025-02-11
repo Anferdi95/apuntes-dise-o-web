@@ -1,0 +1,93 @@
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(12, 12, 12);
+    color: white;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.banpais {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.menu ul li {
+    margin-right: 20px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+}
+
+.menu ul li a:hover {
+    color: rgb(235, 127, 39);
+}
+
+
+.banpais {
+    height: 50px;
+}
+
+.imgprinci {
+    height: 600px;
+    
+    justify-content: space-between;
+    padding: 10px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.titulo {
+    width: 50%;
+    margin: 1 auto;
+    text-align: center;
+}
+.ingredientes{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50PX;
+}
+    .seccionprincipal{
+        display: flex;
+        
+    }
+    .descripcion{
+        background-color: #f0f0f0;
+        width: 50%;
+        padding: 40px;
+        margin: 20px;
+        
+    }
+    .imgingredientes{
+        height: 300px;
+       margin-left: 10px;
+       
+
+    }
+    .titulo_ingredientes, .tituloplato{
+        text-align: center;
+    
+    
+    }
+    .listado-ing{
+        margin-top: 30px;
+        font-size: 20px;
+    }
