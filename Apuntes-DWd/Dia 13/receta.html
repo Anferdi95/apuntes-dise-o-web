@@ -5,19 +5,226 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bandeja Paisa</title>
-    <link rel="stylesheet" href="./css/styles.css">
+    <!-- <link rel="stylesheet" href="./css/styles.css"> -->
 </head>
 
+<style>
+    body {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header {
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        text-align: center;
+        background-color: #222;
+        color: white;
+    }
+
+    .menu ul {
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .banpais {
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+        height: 50px;
+        /* Ajusta según sea necesario */
+        width: auto;
+
+    }
+
+    .menu ul li {
+        margin-right: 20px;
+    }
+
+    .menu ul li a {
+        text-decoration: none;
+        color: white;
+        padding: 15px;
+    }
+
+    .menu ul li a:hover {
+        color: rgb(235, 127, 39);
+    }
+
+    .imgprinci {
+        justify-content: space-between;
+        padding: 10px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .imgprinci,
+    .imgingredientes {
+        width: 50%;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .titulo {
+        width: 50%;
+        margin: 1 auto;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .ingredientes {
+        display: flex;
+        justify-content: space-around;
+
+    }
+
+    .seccionprincipal  {
+        display: flex;
+
+    }
+
+    .descripcion {
+        background-color: #f0f0f0;
+        width: 50%;
+        padding: 10px;
+        margin: 10px;
+
+    }
+
+    .imgingredientes {
+        height: 200px;
+
+    }
+
+    .titulo_ingredientes,
+    .tituloplato {
+        text-align: center;
+
+    }
+
+    .footer {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        background-color: #222;
+        color: white;
+    }
+
+
+    .contenedor  {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 20px;
+        
+    }
+.caja{
+    display: flex;
+        height:200px;
+        width: 400px;
+        justify-content: center;
+        background-color: rgba(249, 225, 204, 0.371);     
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);       
+    padding-top: 0px;
+ border-radius: 10px;
+
+}
+.caja:hover{
+    display: flex;
+        height:250px;
+        width: 450px;
+        justify-content: center;
+        background-color: rgba(249, 225, 204, 0.371);     
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);       
+    padding-top: 0px;
+ border-radius: 10px;
+}
+    .cajaone {
+        
+        display: flex;
+        height:250px;
+        width: 700px;
+        background-color: rgba(249, 225, 204, 0.371);     
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);       
+    padding-right: 10px;
+    padding-top: 30px;
+        border-radius: 10px;
+    
+    }
+    .contenedorfoto  {
+        display: flex;
+        justify-content: end;
+    }
+
+    .cajafoto {
+        width: 50px;
+        display: flex;
+        height:30px;
+        width: 150px;
+        justify-content: center;
+        background-color: rgba(249, 225, 204, 0.371);     
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);       
+    padding-top: 0px;
+ border-radius: 10px;
+    }
+    .cajafoto img {
+            width: 100%;  
+            height: 100px;
+            object-fit: cover; /* Recorta y ajusta la imagen sin deformarla */
+            border-radius: 10px;
+            justify-content: center;
+    }
+    .titulorec{
+        color: rgb(255, 98, 0);
+        margin-left: 20px;
+
+    }
+    .olflex {
+    column-count: 3; 
+    column-gap: 30px; 
+    list-style-position: inside; 
+}
+
+.olflex li {
+    break-inside: avoid; 
+    padding: 5px 0; 
+}
+.olflexone, .aside {
+    column-count: 3; 
+    column-gap: 30px; 
+    list-style-position: inside; /* Mantiene la numeración bien alineada */
+}
+ .aside {
+    column-count: 3; 
+    column-gap: 1px; 
+    
+}
+
+.olflexone li {
+    break-inside: avoid; /* Evita que los elementos se corten entre columnas */
+    padding: 5px 0; 
+}
+.instprep{
+    padding-right: 40px;
+    text-align: justify;
+}
+
+</style>
 
 <body>
 
     <header class="header">
-        <img class="banpais" src="./IMG/flag-3574340_1280.webp" alt="bander pais">
+        <img class="banpais" src="./img/flag-3574340_1280.webp" alt="bander pais">
         <h3 class="titulo">BANDEJA PAISA</h3>
         <nav class="menu">
             <ul>
-                <li><a href="./index.html">Ingredientes</a></li>
-                <li><a href="./index.html">Instrucciones</a></li>
+                <li><a href="#">Ingredientes</a></li>
+                <li><a href="#">Instrucciones</a></li>
             </ul>
         </nav>
     </header>
@@ -36,11 +243,11 @@
                         Está compuesto por diez alimentos o preparaciones diferentes: arroz, carne picada, alubias
                         cocidas,
                         plátano frito, aguacate, huevo frito, sofrito de cebolla y tomate, panceta y chorizo.</p>
-                
+
                     <hr>
                     <h2 class="titulo_ingredientes">INGREDIENTES</h2>
                     <section class="ingredientes">
-                        <uL class="listado-ing">
+                        <ul class="listado-ing">
                             <li>Arroz blanco</li>
                             <li>Frijoles cocidos</li>
                             <li>Carne molida</li>
@@ -51,39 +258,98 @@
                             <li>Platano maduro</li>
                             <li>Huevo frito</li>
                             <li>Rellena</li>
-                        </uL>
-                     
-                        <img class="imgingredientes" src="./img/ingredientes-de-la-bandeja-paisa.jpg" alt="bandeja">
-                     
-                    </section>
-                </div>
+                        </ul>
 
+                        <img class="imgingredientes" src="./img/ingredientes-de-la-bandeja-paisa.jpg" alt="bandeja">
+                    </section>
+                    <hr>
+                    <section class="contenedor">
+                        <div class="cajaone">
+                            <div> <h3 class="titulorec" >Preparacion de Frijoles</h3>
+                                <ul>
+                                    <li>2 tazas de frijoles</li>
+                                    <li>4 tazas de agua</li>
+                                    <li>1 taza de zanahoria rallada</li>
+                                    <li>1/2 plátano verde</li>
+                                    <li>1/2 cucharada de sal</li>
+                                </ul>
+                                <section class="contenedorfoto">
+                                    <div class="cajafoto">
+                                        <img src="https://i.ytimg.com/vi/OG4pJdxxmj4/maxresdefault.jpg" alt="Imagen 1"></div>
+                                        </section>
+                            </div>
+                            <hr>
+                            <div> <h3 class="titulorec" >Preparacion de Hogao</h3>
+                                <ul>
+                                    <li>1 cebolla larga</li>
+                                    <li>2 tomates frescos</li>
+                                    <li>1 diente de ajo</li>
+                                    <li>3 cucharadas de aceite</li>
+                                    <li>1 pisca de sal</li>
+                                    <li>1 pisca de pimienta molida</li>
+                                </ul>
+                                <section class="contenedorfoto">
+                                    <div class="cajafoto">
+                                        <img src="https://i0.wp.com/www.pasionthermomix.co/wp-content/uploads/2020/01/hogao.jpg?fit=1280%2C800&ssl=1" alt="Imagen 1"></div>
+                                        </section>
+                            </div>
+                            <hr>
+                           <div> <h3 class="titulorec" >Preparacion de Arepa</h3>
+                            <ul>
+                                <li>1/2 cucharada de sal</li>
+                                <li>>4 tazas de agua tibia</li>
+                                <li>140 gr de arina</li>
+                                <li>1 cucharada de aceite</li>
+                                
+                            </ul>
+                            <section class="contenedorfoto">
+                                <div class="cajafoto">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSabdfjA7qu9MjyZfLwK9SSGR8hc1NMvHrXJA&s" alt="Imagen 1"></div>
+                                    </section>
+                        </div>   
+                </section>
+            </div>
             </div>
             <hr>
-            <section>
-                <h2>INSTRUCCIONES DE PREPARACIÓN</h2>
-                <h3>Dificultad: Fácil</h3>
-                <ol>
-                    <li>Preparar los frijoles, hogao y carne en polvo el día danterior y guardar en la nevera.</li>
-                    <li>Cuando este listo para servir la bandeja paisa, caliente los frijoles ,hogao, la carne en polvo
-                        y
-                        prepare los chicharrones.</li>
-                    <li>Cocine el arroz blanco y los plátanos. Freír los huevos y chorizos.</li>
+            <section class="instprep">
+                <h2 class="titulo_ingredientes">INSTRUCCIONES DE PREPARACIÓN</h2>
+                <h3 class="titulo_ingredientes">Dificultad: Fácil</h3>
+                <ol class="olflex">
+                    <li>Comenzaremos la preparación poniendo a cocer los frijoles o alubias junto con su agua de remojo. Además, echaremos a la olla un trozo de cebolla (reservamos el resto para más adelante), 1 o 2 hojas de laurel, unas ramas de tomillo y un par de ajos enteros pero ligeramente machacados.</li><hr>
+                    <li>Ponemos los frijoles a fuego fuerte y, cuando el agua hierva, los dejamos cocinar 10 minutos. Luego, bajamos el fuego y los tenemos entre 1 hora y media, y 2 horas, dependiendo de la variedad, hasta que estén tiernos. Si lo deseas, el tiempo de cocción puede reducirse a la mitad si usas la olla exprés.</li><hr>
+                    <li>El siguiente paso es preparar los chicharrones. Para ello, vamos a cortar 200 g de panceta fresca en dos trozos y, luego, a cada trozo le haremos un corte longitudinal y dos o tres transversales pero sin llegar a la piel, de forma que la carne se quede unida como ves en la foto. Por último, salpimentamos y espolvoreamos generosamente la piel con bicarbonato sódico para que lo ablande y tenga una textura más agradable al comerla. Dejamos reposar una media hora para que haga efecto.</li><hr>
+                </ol>
+                <ol class="olflexone" start="4">
+                    <li>En una sartén, ponemos a calentar aceite para freír. Debe quedar bien caliente, pero como siempre, debemos evitar que humee. Cuando esté a temperatura, doramos los dos trozos de panceta y volvemos a ponerlos sobre papel absorbente para eliminar el excedente de aceite.</li><hr>
+                    <li>Seguimos con una guarnición bastante rica. Para ello, pelamos medio plátano macho que deberá estar maduro (el verde no nos sirve, ese es para tostones). Lo cortamos en 4 rodajas a lo largo, lo freímos hasta que se dore al gusto y dejamos reposar sobre papel absorbente. Salpimentamos ligeramente. </li> 
+                    <li>Pues ya está casi. Nos queda un componente más: el aguacate. Basta con pelar y cortar ½ aguacate en cuartos o rodajas.
+
+                        Para servir, ponemos todo junto en una bandeja con el hogao en un cuenquito aparte, para añadirlo al gusto.</li><hr>
                 </ol>
             </section>
-            <aside>
+            <aside class="aside">
                 <p><mark>Tiempo ------------ 1 Hora</mark></p>
                 <p><mark>Elaboración ------- 30 min</mark></p>
                 <p><mark>Cocción ------------30 min</mark></p>
             </aside>
+            
+                <h2 class="titulo_ingredientes">OTRAS RECETAS</h2>
+         <section class="contenedor">
+                <div class="caja">
+                    <img src="https://cdn.colombia.com/gastronomia/2011/07/28/sancocho-de-gallina-1594-1.gif" alt="Imagen 1"></div>
+            <div class="caja">
+                <img src="https://cloudfront-us-east-1.images.arcpublishing.com/elespectador/J7VL3TQJXVA7JJCO2B7XIDRPFQ.jpg" alt="Imagen 2"></div>
+            <div class="caja">
+                <img src="https://cloudfront-us-east-1.images.arcpublishing.com/elespectador/KH7HAZHTFVH4FKF2NGBCMX7W2U.jpg" alt="Imagen 3"></div>
+        </section>
         </article>
     </main>
-    <Footer>
-        Pie de pagina (Derechos Autor politicas de privacidad etc)
-    </Footer>
+    <footer class="footer">
+        <p>&copy; 2025 Tu Empresa. Todos los derechos reservados.</p>
+    </footer>
 
 
-    
+
 
 </body>
 
