@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=style, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.gridContainer{
+    display: grid;
+    grid-template-columns: 100px 100px 100px  ;
+    grid-template-rows: 100px 100px 100px  ;
+    grid-gap: 1em 3em; /* row start / end */
+
+}
+.item-1{
+    grid-column-start: 1;
+    grid-column-end: span 3;
+    grid-row-start:1 ;
+    grid-row-end:   2;
+    background-color: darkgreen;
+}
+.item-2{
+    grid-column: 4/1;
+    grid-row: 3/4;
+    background-color: bisque;
+    
+}
+
+
+</style>
+<body>
+    <div class="gridContainer"></divclass>
+<div class="item-1" ></div>
+<div class="item-2" ></div>
+
+</body>
+</html>
