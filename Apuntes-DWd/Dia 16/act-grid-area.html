@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Area</title>
+</head>
+<style>
+    .layout {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 10px;
+        grid-template-areas:
+            " header header "
+            "sidebar main"
+            "footer footer"
+            
+    }
+
+    .header {
+        grid-area: header;
+        background-color: #1EAAFC;
+        background-image: linear-gradient(130deg, #6C52D9 0%, #1EAAFC 85%, #3EDFD7 100%);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+        color: #ffffff;
+        border-radius: 4px;
+        border: 6px solid #171717;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .sidebar {
+        grid-area: sidebar;
+        background-color: #1EAAFC;
+        background-image: linear-gradient(130deg, #6C52D9 0%, #1EAAFC 85%, #3EDFD7 100%);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+        color: #ffffff;
+        border-radius: 4px;
+        border: 6px solid #171717;
+        font-size: 18px;
+        font-weight: bold;
+
+    }
+
+    .content-1 {
+        grid-area: content-1;
+        background-color: #1EAAFC;
+        background-image: linear-gradient(130deg, #6C52D9 0%, #1EAAFC 85%, #3EDFD7 100%);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+        color: #ffffff;
+        border-radius: 4px;
+        border: 6px solid #171717;
+        font-size: 18px;
+        font-weight: bold;
+     
+
+    }
+
+    .content-2 {
+        grid-area: content-2;
+        background-color: #1EAAFC;
+        background-image: linear-gradient(130deg, #6C52D9 0%, #1EAAFC 85%, #3EDFD7 100%);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+        color: #ffffff;
+        border-radius: 4px;
+        border: 6px solid #171717;
+        font-size: 18px;
+        font-weight: bold;
+
+    }
+
+    .content-3 {
+        grid-area: content-3;
+        background-color: #1EAAFC;
+        background-image: linear-gradient(130deg, #6C52D9 0%, #1EAAFC 85%, #3EDFD7 100%);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+        color: #ffffff;
+        border-radius: 4px;
+        border: 6px solid #171717;
+        font-size: 18px;
+        font-weight: bold;
+
+    }
+
+    .footer {
+        grid-area: footer;
+        background-color: #1EAAFC;
+        background-image: linear-gradient(130deg, #6C52D9 0%, #1EAAFC 85%, #3EDFD7 100%);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+        color: #ffffff;
+        border-radius: 4px;
+        border: 6px solid #171717;
+        font-size: 18px;
+        font-weight: bold;
+    }
+</style>
+
+
+<body class="layout">
+
+
+
+    <header class="header">Header</header>
+    <div class="sidebar">sidebar</div>
+    <div class="main">
+        <div class="content-1">content-1</div>
+       
+
+    </div>
+    <div class="main2">
+   
+        <div class="content-2">content-2</div>
+        <div class="content-3">content-3</div>
+
+    </div>
+
+
+
+
+
+    <footer class="footer">footer</footer>
+
+
+
+
+
+
+</body>
+
+</html>
