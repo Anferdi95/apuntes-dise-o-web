@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rick and Morty</title>
+</head>
+<style>
+
+*{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 10px;
+        width: 100%;
+    }
+
+    .card {
+        background-color: rgb(201, 199, 199);
+        width: 310px;
+        padding: 10px;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+    @media (max-width:790px){
+        .container{
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+    }
+
+    @media (max-width:500px){
+        .container{
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+    }
+
+    .imagenpersonaje {
+        border: 5px solid green;
+        object-fit: cover;
+
+    }
+
+    .nombre {
+        justify-content: center;
+        text-align: center;
+    }
+</style>
+
+<body>
+
+    <h1 class="tittle">Lista de personajes</h1>
+
+    <div class="container">
+        <div class="card">
+            <h2 class="nombre">Rick Sanchez</h2>
+            <img class="imagenpersonaje" src="https://rickandmortyapi.com/api/character/avatar/1.jpeg"
+                alt="Rick Sanchez">
+                <p class="estado">Especie:Humano</p>
+                <div class="especie">Estado:Vivo</div>
+        </div>
+
+        <div class="card">
+            <h2 class="nombre">Morty Smith</h2>
+            <img class="imagenpersonaje" src="https://rickandmortyapi.com/api/character/avatar/2.jpeg"
+                alt="Rick Sanchez">
+                <p class="estado">Especie:Humano</p>
+                <div class="especie">Estado:Vivo</div>
+        </div>
+        <div class="card">
+            <h2 class="nombre">Summer Smith</h2>
+            <img class="imagenpersonaje" src="https://rickandmortyapi.com/api/character/avatar/3.jpeg"
+                alt="Rick Sanchez">
+            <p class="estado">Especie:Humano</p>
+            <div class="especie">Estado:Vivo</div>
+        </div>
+
+        <div class="card">
+            <h2 class="nombre">Summer Smith</h2>
+            <img class="imagenpersonaje" src="https://rickandmortyapi.com/api/character/avatar/4.jpeg"
+                alt="Rick Sanchez">
+            <p class="estado">Especie:Humano</p>
+            <div class="especie">Estado:Vivo</div>
+        </div>
+
+        <div class="card">
+            <h2 class="nombre">Summer Smith</h2>
+            <img class="imagenpersonaje" src="https://rickandmortyapi.com/api/character/avatar/6.jpeg"
+                alt="Rick Sanchez">
+            <p class="estado">Especie:Humano</p>
+            <div class="especie">Estado:Vivo</div>
+        </div>
+
+
+</body>
+
+</html>

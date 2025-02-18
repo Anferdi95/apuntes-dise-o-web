@@ -13,12 +13,23 @@
         grid-template-rows: repeat(3, 1fr);
         grid-gap: 10px;
         grid-template-areas:
-            " header header "
-            "sidebar main"
-            "footer footer"
-            
-    }
+            " header header header"
+            "sidebar main main"
+            "footer footer footer ";
 
+    }
+    .main {
+        grid-area: main;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+            "content-1 content-1"
+            "content-2 content-3";
+        grid-gap: 20px;
+
+
+    }
     .header {
         grid-area: header;
         background-color: #1EAAFC;
@@ -54,7 +65,9 @@
         border: 6px solid #171717;
         font-size: 18px;
         font-weight: bold;
-     
+
+
+
 
     }
 
@@ -69,6 +82,7 @@
         font-size: 18px;
         font-weight: bold;
 
+
     }
 
     .content-3 {
@@ -81,6 +95,7 @@
         border: 6px solid #171717;
         font-size: 18px;
         font-weight: bold;
+
 
     }
 
@@ -95,37 +110,22 @@
         font-size: 18px;
         font-weight: bold;
     }
+
+  
 </style>
 
 
 <body class="layout">
-
-
-
     <header class="header">Header</header>
     <div class="sidebar">sidebar</div>
     <div class="main">
         <div class="content-1">content-1</div>
-       
-
-    </div>
-    <div class="main2">
-   
         <div class="content-2">content-2</div>
         <div class="content-3">content-3</div>
 
     </div>
 
-
-
-
-
     <footer class="footer">footer</footer>
-
-
-
-
-
 
 </body>
 
