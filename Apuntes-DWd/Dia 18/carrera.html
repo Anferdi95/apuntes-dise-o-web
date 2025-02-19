@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box</title>
+</head>
+<style>
+    body{
+        background-color: bisque;
+    }
+
+    .container {
+       
+        background-color: grey;
+        width: 1000px;
+    
+    }
+.box:hover{
+    background-color: black;
+}
+    .box {
+        width: 100px;
+        height: 100px;
+        background: rgb(44, 133, 197);
+        color: bisque;
+        transition: backgroun-color 4s;
+    }
+    .container:hover .box{
+        margin-left: 900px;
+        background-color: black;
+    }
+    
+    .box1{
+        transition:  margin 4s ease, background-color 4s;
+    }
+    .box1:hover{
+        background-color: black;
+    }
+    .box2{
+        transition:  margin 4s linear, background-color 4s;
+    }
+    .box2:hover{
+        background-color: black;
+    }
+    .box3{
+        transition:  margin 4s ease-in, background-color 4s;
+    }
+    .box4{
+        transition:  margin 4s ease-out, background-color 4s;
+    }
+    .box5{
+        transition:  margin 4s ease-in-out, background-color 4s;
+    }
+   
+
+    
+</style>
+
+<body> 
+    <div class="container">
+
+    <div class="box box1">Easy</div>
+
+    <div class="box box2">Linear</div>
+
+    <div class="box box3">Ease-in</div>
+
+    <div class="box box4">Ease-out</div>
+
+    <div class="box box5">Ease-in-out</div>
+
+
+</div> 
+
+
+
+</body>
+
+</html>

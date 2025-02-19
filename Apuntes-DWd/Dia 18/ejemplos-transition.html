@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos transition</title>
+</head>
+<style>
+    /* Inputs focus  */
+    input {
+        all: unset;
+        /* Reset de estilos de inputs  */
+    }
+
+    input {
+        border: 1px solid green;
+        border-radius: 5px;
+        padding: 10px;
+        font-size: 16px;
+        transition: border-color 0.5s ease,
+            background-color 0.5s ease;
+    }
+
+    input:focus {
+        border-color: brown;
+        background-color: lightgray;
+    }
+     /* Menu - Hover */
+    .menu{
+        background-color: aquamarine;
+        
+    }
+    .menu ul{
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+    }
+.menu:hover ul {
+    transform: translateX(0);
+}
+   
+
+    /* Tarjeta - Active */
+.card  {
+    border: 1px solid lightcoral;
+    padding: 20px;
+    transition: transform 0.3s box-shadow 0.3s;
+}
+.card:active{
+    transform: scale(0.9);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.413);
+}
+
+
+
+
+</style>
+
+<body>
+
+    <h3> Inputs - Focus</h3>
+    <input type="text">
+    <input type="text">
+
+    <div class="menu">
+        <h3>Menu - Hover</h3>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Acerca</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </div>
+
+    <h3>Tarjeta - Active</h3>
+    <div class="card"></div>
+    <h2>titulo  </h2>
+    <p>click si¡obre mi</p>
+
+
+
+</body>
+
+</html>

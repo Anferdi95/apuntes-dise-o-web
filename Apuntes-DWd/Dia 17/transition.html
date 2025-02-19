@@ -7,12 +7,18 @@
     <title>Transition</title>
 </head>
 <style>
+    .container{
+        display: flex;
+        justify-content: space-around;
+        
+    }
     .primero {
         width: 100px;
         height: 100px;
         background-color: brown;
         transition: all 2s;
         padding: 10px;
+    
 
     }
 
@@ -37,31 +43,24 @@
 
     }
 
-    .tercero {
+  .tercero {
         width: 100px;
         height: 100px;
         background: rgb(71, 204, 77);
-        transition: width 2s;
+        transition: all 2s;
         padding: 10px;
         
 
     }
 
     .tercero:hover {
-        width: 300px;
-    }
+      background-color: blueviolet;
+        height: 50px;
+    } 
 
-    /* div {
-  width: 100px;
-  height: 100px;
-  background: red;
-  transition: width 3s;
-  transition-delay: 1s;
-}
+ 
 
-div:hover {
-  width: 300px;
-} */
+
 
 .cuarto {
   width: 100px;
@@ -70,25 +69,25 @@ div:hover {
   transition: width 2s, height 2s, transform 2s; 
    transition-delay: 1s;
    padding: 10px;
-   padding-bottom: 10px;
+  
 }
 
 .cuarto:hover {
-  width: 150px;
-  height: 150px;
+  width: 50px;
+  height: 50px;
   transform: rotate(90deg);
 }
 
 
 </style>
 
-<body>
+<body class="container">
   
     <div class="primero">caja1</div>
    
     <div class="segundo">caja2</div>
-    
-    <div class="tercero">caja3</div>
+     
+    <div class="tercero">caja3</div> 
 
     <div class="cuarto">caja4</div>
 
