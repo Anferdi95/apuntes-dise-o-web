@@ -12,6 +12,7 @@
         height: 100px;
         background-color: brown;
         transition: all 2s;
+        padding: 10px;
 
     }
 
@@ -27,6 +28,7 @@
         height: 100px;
         background: rgb(179, 169, 63);
         transition: width 2s;
+        padding: 10px;
 
     }
 
@@ -40,21 +42,58 @@
         height: 100px;
         background: rgb(71, 204, 77);
         transition: width 2s;
+        padding: 10px;
+        
 
     }
 
     .tercero:hover {
         width: 300px;
     }
+
+    /* div {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition: width 3s;
+  transition-delay: 1s;
+}
+
+div:hover {
+  width: 300px;
+} */
+
+.cuarto {
+  width: 100px;
+  height: 100px;
+  background: rgb(102, 14, 143);
+  transition: width 2s, height 2s, transform 2s; 
+   transition-delay: 1s;
+   padding: 10px;
+   padding-bottom: 10px;
+}
+
+.cuarto:hover {
+  width: 150px;
+  height: 150px;
+  transform: rotate(90deg);
+}
+
+
 </style>
 
 <body>
-    <h2>caja1</h2>
+  
     <div class="primero">caja1</div>
-    <h2>caja2</h2>
+   
     <div class="segundo">caja2</div>
-    <h2>caja3</h2>
+    
     <div class="tercero">caja3</div>
+
+    <div class="cuarto">caja4</div>
+
+
+
 </body>
 
 </html>
