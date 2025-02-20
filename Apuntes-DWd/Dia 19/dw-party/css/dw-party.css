@@ -70,5 +70,16 @@
 
 }
 .imghero{
-    width: 100%;
+    width: 80%;
+}
+.contenido__item--container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-template-areas:
+        " header header header"
+        "sidebar main main"
+        "footer footer footer ";
+
 }
