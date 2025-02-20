@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica Diseño web - web party</title>
+    <link rel="stylesheet" href="./css/dw-party.css">
+</head>
+
+<body>
+
+    <body class="layout">
+        <header class="header">
+            <h1 class="header__tittle">HEADER</h1>
+            <div class="header__nav">
+                <button class="header__nav--button">Menu</button>
+        </header>
+        <aside class="sidebar">SIDEBAR</aside>
+        <div class="main">
+            <section class="content">
+                <div class="contenido__items">
+                    <div class=" contenido__items contenido__item--hero">
+                        <h2>Web Party DW</h2>
+                        <img class="imghero" src="./img/pagina-html-1.jpg" alt=></div>
+                    <div class=" contenido__items contenido__item--container">container</div>
+                    <div class=" contenido__items contenido__item--galeria">GALERIA</div>
+                </div>
+
+            </section>
+
+        </div>
+
+        <footer class="footer">
+            <button id="btn-theme"> Modo Oscuro</button>
+
+        </footer>
+
+        <script>
+            //Paso 1:   Obtener eleentos de nuestro DOM (documento html)
+            const miBoton = document.querySelector("#btn-theme");
+            const body = document.querySelector("body");
+            // const sidebar =document.querySelector(".sidebar");
+
+            //Paso 2: Crear funciones 
+            function cambiarAModoOscuro() {
+                // body.classList.add("darkMode");
+                body.classList.toggle("darkMode");
+            }
+            miBoton.addEventListener("click", cambiarAModoOscuro);
+
+            //Paso 3:  Ejecutar codigo
+            cambiarAModoOscuro();
+
+
+
+            //con este codigo podemos agregar html desntro de nuestro contenedor
+            sidebar.innerHTML="<h1>Soy Titulo</h1>";
+
+        </script>
+
+    </body>
+
+</html>
