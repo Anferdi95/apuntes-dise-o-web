@@ -34,8 +34,14 @@ div{
 /* 
  Prop desition timing-functio delay */
  Transition: font-size 4s ease-in-out 2s;
+``` 
+## timing funtion
 
-
+- `ease`: velocidad lenta - rapida -lenta (por defecto)
+- `linear`: velocidad constante
+- `ease-in` :
+- `ease-out`:
+- `ease-in-out`:
  
 
  https://cubic-bezier.com/#.92,.04,.14,.89....
