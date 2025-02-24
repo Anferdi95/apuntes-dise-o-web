@@ -1,0 +1,100 @@
+/*----------------------------*/
+/*      VARIABLES DE CSS */
+/*----------------------------*/
+
+:root{
+    --bg-primary:#fff;
+    --bg-secondary: #f0f0f0;
+    --txt-primary:#000;
+    --txt-secondary:#222;
+
+    --box-shadow:1px 1px 5px rgba(0,0,0,0.5);
+}
+
+/*------------------*/
+/*   Modo oscuro */
+/*------------------*/
+.u-Dark{
+    --bg-primary:#020202;
+--bg-secondary: #494646;
+--txt-primary:#fafafa;
+--txt-secondary:#c0c0c0;
+
+--box-shadow:1px 1px 5px rgba(0,0,0,0,5);
+}
+
+/*--------------------------------------*/
+/*  Clases reutilizables (utilities) */
+/*--------------------------------------*/
+
+.u-bgPrimary{
+    background: var(--bg-primary);
+transition: background-color 0.3s ease;
+}
+
+.u-bgSecondary{
+    background: var(--bg-secondary);
+   transition: background-color 0.3s ease; 
+}
+.u-txtPrimary{
+    color: var(--txt-primary);
+transition: color 0.3s ease;
+}
+.u-txtSecondary{
+    color: var(--txt-secondary);
+    transition: color 0.3s ease;
+}
+ .u-boxShadow{
+    color:var(--box-shadow);
+ }
+
+
+ /* Modo Row / Col */
+ .u-flexCol{
+    display: flex;
+    flex-direction: column;
+ }
+ .u-flexRow{
+    display: flex;
+    flex-direction: row;
+ }
+
+ /*--------------------*/
+/*    Controllers */
+/*---------------------*/
+
+.Controllers{
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+
+}
+
+
+.Btn{
+color: var(--txt-primary);
+background-color: var(--bg-primary);
+border: none;
+box-shadow: var(--box-shadow);
+
+cursor: pointer;
+padding: 10px;
+min-width: 100px;
+border-radius: 10px;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+
+.Btn--icon{
+    min-width: unset;
+    border-radius: 100%;
+
+
+}
