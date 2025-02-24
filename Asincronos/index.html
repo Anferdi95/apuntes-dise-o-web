@@ -18,29 +18,53 @@
             width: 100%;
             height: 100%;
         }
+
         .grid-item--2f2c {
-           grid-column: span 2;
-           grid-row: span 2;
-        }
-        .grid-item--2f1c {
-           grid-row: span 2;
-        }
-        .grid-item--1f2c {
-           grid-column: span 2;
-        }
-        .footer{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-items: center;
-            justify-content: center;
-            width:100% ;
+            grid-column: span 2;
+            grid-row: span 2;
         }
 
-        /*   .img1 {    grid-column: 1/2;
-        grid-row: 2/1;
-        background-color: bisque;
-        border: 1px solid black; }*/
+        .grid-item--2f1c {
+            grid-row: span 2;
+        }
+
+        .grid-item--1f2c {
+            grid-column: span 2;
+        }
+
+        .footer {
+            display: flex;
+            flex-direction: column;
+            background-color: rgb(227, 227, 227);
+            border-radius: 4px;
+            align-items: center;
+            text-align: center;
+            padding: 30px 20px;
+
+        }
+
+        .imgfooter {
+            justify-content: center;
+       
+        }
+
+        .textfooter {
+        
+            text-align:center;
+            width: 320px;
+            font-size: small;
+            padding-bottom: 50px;
+          
+        }
+        .reserved{
+            font-size: small;
+        }
+        .button1 {
+            background-color: transparent;
+            border: 1px solid black;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
     </style>
 </head>
 
@@ -67,11 +91,16 @@
         <img class="grid-item" src="./1-bem/grid/Masonry-list-img-19-500x500.jpg" alt="img19">
         <img class="grid-item" src="./1-bem/grid/Masonry-list-img-20-500x500.jpg" alt="img20">
         <img class="grid-item" src="./1-bem/grid/Masonry-list-img-21-500x500.jpg" alt="img21">
+    </div>
+    <footer class="footer">
+        <img class="logofooter" src="./1-bem/grid/Footer-logo.png" alt="logo">
+        <p class="textfooter">Aliquam lorem ante, dapibus in, viverra quis, elit feugiat Etiam sit tellus. Phasellus
+            rutru nulla euter ametermetus varius laoreet amet orci.</p>
+            <div>
+                <p class="reserved">© 2021 <button class="button1"> Qode Interactive,</button> Q All Rights Reserved</p>
+            </div>
+    </footer>
 
-        <footer class="footer">
-            <img class="logofooter" src="./" alt="logo">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, amet facere porro consequuntur hic alias praesentium ab! Libero fuga deserunt asperiores, laborum officia doloremque eveniet nobis provident voluptates? Tempore, voluptate?</p>
-        </footer>
 
-
+</body>
 </html>
