@@ -1,0 +1,162 @@
+/*------------------------*/
+/*      Variables CSS
+/*------------------------*/
+:root{
+    --fb-color: #4267b2;
+    --x-color: #000;
+    --insta-color: #E1306c;
+    --lkdin-color: #2867b2;
+    --yt-color: #f00;
+    --lion-color:#db9601;
+}
+/*  Fix para icono de twitter */
+u.dark {  
+    --x-color:white;
+}
+
+/*------------------------*/
+/*          Icons
+/*------------------------*/
+
+.Icons{
+    display: flex;
+        flex-wrap: wrap;
+        gap: 2px;
+}
+
+.IconBox-link{
+    margin: 0 25px;
+    text-decoration: none;
+    display: block;
+
+    position: relative;
+
+}
+
+.IconBox-layers{
+    width: 55px ;
+    height: 55px;
+    transition: transform 0,3s;
+
+}
+
+.IconBox:hover .IconBox-layers {
+    transform: rotate(-35deg) skew(20deg);
+
+}
+.IconBox-span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid rgb(245, 106, 106);
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+
+    font-size: 30px;
+    line-height: 55px;
+    text-align: center;
+
+}
+
+
+/*------------------------------------*/
+/*          layers de Icons
+/*------------------------------------*/
+.IconBox:hover .IconBox-span:nth-child(1){
+    opacity: 0,2;
+}
+
+.IconBox:hover .IconBox-span:nth-child(2){
+    opacity: 0,4;
+    transform: translate(5px, -5px) ;
+}
+
+.IconBox:hover .IconBox-span:nth-child(3){
+    opacity: 0,6;
+    transform: translate(10px, -10px) ;
+}
+
+.IconBox:hover .IconBox-span:nth-child(4){
+    opacity: 0,8;
+    transform: translate(15px, -15px) ;
+}
+
+.IconBox:hover .IconBox-span:nth-child(5){
+    opacity: 1;
+    transform: translate(20px, -20px) ;
+}
+/*------------------------------------*/
+/*         Colores de Icons
+/*------------------------------------*/
+.IconBox--fb .IconBox-span,
+.IconBox--fb .IconBox--text { 
+    color: var(--fb-color);
+    border-color: var(--fb-color);
+}
+
+.IconBox--x .IconBox-span,
+.IconBox--x .IconBox--text { 
+    color: var(--x-color);
+    border-color: var(--fb-color);
+}
+
+.IconBox--insta .IconBox-span,
+.IconBox--insta .IconBox--text { 
+    color: var(--fb-color);
+    border-color: var(--insta-color);
+}
+
+.IconBox--lkdin .IconBox-span,
+.IconBox--lkdin .IconBox--text { 
+    color: var(--fb-color);
+    border-color: var(--lkdin-color);
+}
+
+.IconBox--yt .IconBox-span,
+.IconBox--yt .IconBox--text { 
+    color: var(--yt-color);
+    border-color: var(--yt-color);
+}
+
+.IconBox--lion .IconBox-span,
+.IconBox--lion .IconBox--text { 
+    color: var(--lion-color);
+    border-color: var(--lion-color);
+}
+
+/* Sombras de layers/capas  */
+.IconBox--fb:hover .IconBox-span{
+    box-shadow: -1px 1px 3px var(--fb-color);
+
+}
+.IconBox--x:hover .IconBox-span{
+    box-shadow: -1px 1px 3px var(--x-color);
+
+}
+.IconBox--insta:hover .IconBox-span{
+    box-shadow: -1px 1px 3px var(--insta-color);
+
+}
+.IconBox--lkdin:hover .IconBox-span{
+    box-shadow: -1px 1px 3px var(--lkdin-color);
+
+}
+.IconBox--yt:hover .IconBox-span{
+    box-shadow: -1px 1px 3px var(--yt-color);
+
+}
+.IconBox--lion:hover .IconBox-span{
+    box-shadow: -1px 1px 3px var(--lion-color);
+
+}
+
+
+/*------------------------------------*/
+/*          layers de Icons
+/*------------------------------------*/
+.IconBox--lion .IconBox--text,
+.IconBox--lion .IconBox-span{
+    font-family: "Bungee Spice";
+    white-space: nowrap;
+}

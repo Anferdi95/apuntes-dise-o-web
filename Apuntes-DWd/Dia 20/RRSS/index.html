@@ -13,6 +13,12 @@
     <link rel="stylesheet" href="../css/layout.css">
     <link rel="stylesheet" href="../css/controllers.css">
     <link rel="stylesheet" href="../css/rrss.css">
+
+<!--Fuentes de google -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet">
+
 </head>
 
 <body class="u-bgPrimary">
@@ -27,7 +33,7 @@
 
             <div class="IconBox u-bgPrimary IconBox--fb">
 
-                <a class="IconBox--link" href="">
+                <a class="IconBox-link" href="">
 
                     <div class="IconBox-layers">
 
@@ -48,7 +54,7 @@
 
             <div class="IconBox u-bgPrimary IconBox--x">
 
-                <a class="IconBox--link" href="">
+                <a class="IconBox-link" href="">
 
                     <div class="IconBox-layers">
 
@@ -69,7 +75,7 @@
 
             <div class="IconBox u-bgPrimary IconBox--insta">
 
-                <a class="IconBox--link" href="">
+                <a class="IconBox-link" href="">
 
                     <div class="IconBox-layers">
 
@@ -90,7 +96,7 @@
 
             <div class="IconBox u-bgPrimary IconBox--lkdin">
 
-                <a class="IconBox--link" href="">
+                <a class="IconBox-link" href="">
 
                     <div class="IconBox-layers">
 
@@ -111,7 +117,7 @@
 
             <div class="IconBox u-bgPrimary IconBox--yt">
 
-                <a class="IconBox--link" href="">
+                <a class="IconBox-link" href="">
 
                     <div class="IconBox-layers">
 
@@ -132,7 +138,7 @@
 
             <div class="IconBox u-bgPrimary IconBox--lion">
 
-                <a class="IconBox--link" href="">
+                <a class="IconBox-link" href="">
 
                     <div class="IconBox-layers">
 
@@ -172,7 +178,7 @@
         // 1. Declarar variables de nuestro DOM
         const btnDarkLight = document.querySelector("#btnDarkLight");
         const btnDireccion = document.querySelector("#btnDireccion");
-        const mainElement = document.querySelector(".Main");
+        const IconContainer= document.querySelector(".Icons");
 
 
         console.log("Boton darkLight es: ", btnDarkLight);
@@ -200,13 +206,13 @@
           btnDireccion.addEventListener("click", () => {
             //agregar o quitar la clase de FlexCol
             //..su codigo
-            document.body.classList.toggle("u-flexCol");
+            IconContainer.classList.toggle("u-flexCol");
             
 
         //Preguntar si tiene la clase FlexCol para cambiar el texto del boton
         //..su codigo
-        if (document.body.classList.contains("u-flexCol")) {
-                                               //   document.querySelector(".Icons").classList.toggle("u-flexCol");//
+        if (IconContainer.classList.contains("u-flexCol")) {
+                                             
             //codigo si se cumple la condicionn(texto = fila)
             //..su codigo
             btnDireccion.querySelector("button").innerText = "Fila";
@@ -218,7 +224,7 @@
             
     }
 });
-        // 3. Inicializar nuestro proyecto
+    
         
   
 
