@@ -64,21 +64,21 @@
 /*          layers de Icons
 /*------------------------------------*/
 .IconBox:hover .IconBox-span:nth-child(1){
-    opacity: 0,2;
+    opacity: 0.2;
 }
 
 .IconBox:hover .IconBox-span:nth-child(2){
-    opacity: 0,4;
+    opacity: 0.4;
     transform: translate(5px, -5px) ;
 }
 
 .IconBox:hover .IconBox-span:nth-child(3){
-    opacity: 0,6;
+    opacity: 0.6;
     transform: translate(10px, -10px) ;
 }
 
 .IconBox:hover .IconBox-span:nth-child(4){
-    opacity: 0,8;
+    opacity: 0.8;
     transform: translate(15px, -15px) ;
 }
 
@@ -90,37 +90,37 @@
 /*         Colores de Icons
 /*------------------------------------*/
 .IconBox--fb .IconBox-span,
-.IconBox--fb .IconBox--text { 
+.IconBox--fb .IconBox-text { 
     color: var(--fb-color);
     border-color: var(--fb-color);
 }
 
 .IconBox--x .IconBox-span,
-.IconBox--x .IconBox--text { 
+.IconBox--x .IconBox-text { 
     color: var(--x-color);
     border-color: var(--x-color);
 }
 
 .IconBox--insta .IconBox-span,
-.IconBox--insta .IconBox--text { 
+.IconBox--insta .IconBox-text { 
     color: var(--insta-color);
     border-color: var(--insta-color);
 }
 
 .IconBox--lkdin .IconBox-span,
-.IconBox--lkdin .IconBox--text { 
+.IconBox--lkdin .IconBox-text { 
     color: var(--lkdin-color);
     border-color: var(--lkdin-color);
 }
 
 .IconBox--yt .IconBox-span,
-.IconBox--yt .IconBox--text { 
+.IconBox--yt .IconBox-text { 
     color: var(--yt-color);
     border-color: var(--yt-color);
 }
 
 .IconBox--lion .IconBox-span,
-.IconBox--lion .IconBox--text { 
+.IconBox--lion .IconBox-text { 
     color: var(--lion-color);
     border-color: var(--lion-color);
 }
@@ -150,12 +150,30 @@
     box-shadow: -1px 1px 3px var(--lion-color);
 
 }
+.IconBox-text {
+    position: absolute;
+    left: 50%;
+    font-weight: 500;
+    bottom: -5px;
+    opacity: 0;
+    transition: bottom 0.3s ease, opacity 0.3s ease;
+    transform: translate(-50%);
+}
+
+.IconBox:hover .IconBox-text {
+    bottom: -35px;
+    opacity: 1;
+}
+
+.IconBox {
+    padding-bottom: 35px;
+}
 
 
 /*------------------------------------*/
 /*          layers de Icons
 /*------------------------------------*/
-.IconBox--lion .IconBox--text,
+.IconBox--lion .IconBox-text,
 .IconBox--lion .IconBox-span{
     font-family: "Bungee Spice";
     white-space: nowrap;

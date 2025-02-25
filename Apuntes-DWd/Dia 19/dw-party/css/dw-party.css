@@ -70,7 +70,7 @@
 
 }
 .imghero{
-    width: 80%;
+    width: 100%;
 }
 .contenido__item--container{
     display: grid;
@@ -82,4 +82,15 @@
         "sidebar main main"
         "footer footer footer ";
 
+}
+
+.contenido__items{
+    display: grid;
+    width: 100%;
+  
+}
+
+
+.imgcont{
+    width: 100%;
 }
