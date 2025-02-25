@@ -3,15 +3,15 @@
 /*------------------------*/
 :root{
     --fb-color: #4267b2;
-    --x-color: #000;
+    --x-color: #000000;
     --insta-color: #E1306c;
     --lkdin-color: #2867b2;
     --yt-color: #f00;
     --lion-color:#db9601;
 }
 /*  Fix para icono de twitter */
-u.dark {  
-    --x-color:white;
+.u-Dark {  
+    --x-color: white;
 }
 
 /*------------------------*/
@@ -98,18 +98,18 @@ u.dark {
 .IconBox--x .IconBox-span,
 .IconBox--x .IconBox--text { 
     color: var(--x-color);
-    border-color: var(--fb-color);
+    border-color: var(--x-color);
 }
 
 .IconBox--insta .IconBox-span,
 .IconBox--insta .IconBox--text { 
-    color: var(--fb-color);
+    color: var(--insta-color);
     border-color: var(--insta-color);
 }
 
 .IconBox--lkdin .IconBox-span,
 .IconBox--lkdin .IconBox--text { 
-    color: var(--fb-color);
+    color: var(--lkdin-color);
     border-color: var(--lkdin-color);
 }
 
