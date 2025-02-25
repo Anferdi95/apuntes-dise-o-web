@@ -21,7 +21,7 @@
         <h1 class="u-txtCrotah u-txtPrimary">RRSS</h1>
     </header>
 
-    <main class="Main u-bgSecondary">
+    <main class="Main u-bgSecondary u-flexRow">
 
         <div class="Icons">
 
@@ -156,7 +156,7 @@
 
     <div id="btnDireccion" class="Controllers">
         <button class="Btn">
-            Columna
+        Fila
         </button>
 
         <button id="btnDarkLight" class="Btn Btn--icon">
@@ -172,8 +172,12 @@
         // 1. Declarar variables de nuestro DOM
         const btnDarkLight = document.querySelector("#btnDarkLight");
         const btnDireccion = document.querySelector("#btnDireccion");
+        const mainElement = document.querySelector(".Main");
+
 
         console.log("Boton darkLight es: ", btnDarkLight);
+
+        console.log("Botón Dirección es:", btnDireccion);
 
 
         // 2. Agregar funciones y enetListeners
@@ -189,23 +193,35 @@
                 btnDarkLight.querySelector("span").innerText = "dark_mode"
             }
         });
-
+       
 
         // agregar click al boton fila /columna
         // ..su codigo
+          btnDireccion.addEventListener("click", () => {
             //agregar o quitar la clase de FlexCol
             //..su codigo
+            document.body.classList.toggle("u-flexCol");
+            
 
         //Preguntar si tiene la clase FlexCol para cambiar el texto del boton
         //..su codigo
-
+        if (document.body.classList.contains("u-flexCol")) {
             //codigo si se cumple la condicionn(texto = fila)
             //..su codigo
-            
+            btnDireccion.querySelector("button").innerText = "Fila";
+            mainElement.style.transform = "rotate(90deg)";
+
+    } else {
             //codigo si se cumple la condicionn(texto = columnaa)
             //..su codigo
-
+            btnDireccion.querySelector("button").innerText = "Columna";
+            mainElement.style.transform = "rotate(0deg)";
+    }
+});
         // 3. Inicializar nuestro proyecto
+        
+        
+       
 
     </script>
 </body>
