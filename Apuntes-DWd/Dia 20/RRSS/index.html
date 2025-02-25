@@ -23,7 +23,7 @@
 
     <main class="Main u-bgSecondary u-flexRow">
 
-        <div class="Icons">
+        <div class="Icons u-flexCol">
 
             <div class="IconBox u-bgPrimary IconBox--fb">
 
@@ -206,22 +206,22 @@
         //Preguntar si tiene la clase FlexCol para cambiar el texto del boton
         //..su codigo
         if (document.body.classList.contains("u-flexCol")) {
+                                               //   document.querySelector(".Icons").classList.toggle("u-flexCol");//
             //codigo si se cumple la condicionn(texto = fila)
             //..su codigo
             btnDireccion.querySelector("button").innerText = "Fila";
-            mainElement.style.transform = "rotate(90deg)";
-
+       
     } else {
             //codigo si se cumple la condicionn(texto = columnaa)
             //..su codigo
             btnDireccion.querySelector("button").innerText = "Columna";
-            mainElement.style.transform = "rotate(0deg)";
+            
     }
 });
         // 3. Inicializar nuestro proyecto
         
-        
-       
+  
+
 
     </script>
 </body>
