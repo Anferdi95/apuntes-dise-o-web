@@ -24,7 +24,7 @@ Perro
 //Propiedades
 - color:blanco y negro
 - nombre: lasie
-//metodos
+// metodos
 -lasdren()
 moveeLaCola()
 
@@ -34,10 +34,9 @@ moveeLaCola()
 const alumno = {
     nombre:"Lucia perez",
     edad: 35,
-    //hobbies: ["futbol", "progrmar", "leer"]
-
+    hobbies: ["futbol", "progrmar", "leer"],
     saludar: function(){
-        Console.log("hola, mi nombre es lucia")
+        Console.log("hola, mi nombre es lucia");
     }
 }
 //Para imprimir el nombre del alumno usamos algo como:
@@ -92,6 +91,7 @@ let numeros = 123
 let numeros2 = "123"; // "123"
 numero2= Number(numero2); // 123
 
+
 let entero = 25;      // Numero entero
 let decimal = 22.30;  // Numero decimal
 let negativo = -5;
@@ -109,7 +109,7 @@ let onActive = false;
 // Objeto
 const alumno = {
     nombre: "Andres",
-    edad 29,
+    edad 29,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
     isRecibido: false, 
     presentarProyecto: function() {
         // this es para referisse a ESTE objeto
@@ -191,13 +191,46 @@ console.log(persona);
 
 
 `Ejercicio 3: Arrays de objetos`
-- Crea un array llamado estudiantes que contenga tres objetos, cada uno representando a un estudiante con - las propiedades nombre y nota.
+- Crea un array llamado estudiantes que contenga tres objetos, cada uno representando a un estudiante con las propiedades nombre y nota.
 - Imprime en la consola el nombre del segundo estudiante.
 - Cambia la nota del primer estudiante a 95.
 - Utiliza un bucle for para imprimir el nombre y la nota de cada estudiante en la consola.
+
+```js
+const estudiantes=[ 
+    { nombre:"andres", nota:50 },
+    { nombre:"cesar", nota:40 },
+    { nombre:"kevin", nota:30, }
+    ];
+
+console.log(estudiantes[1]);
+console.log(estudiantes[1].nombre);
+
+
+estudiantes[0].nota=95;
+```
+
+
 
 `Ejercicio 4: Métodos en objetos`
 - Crea un objeto llamado calculadora con las propiedades a y b (números) y un método sumar que retorne la suma de a y b.
 - Asigna valores a a y b y llama al método sumar, imprimiendo el resultado en la consola.
 
+
+```js
+const calculadora={
+    a : 5.
+    b : 3,
+    sumar: function(){
+        console.log(this.a + this.b)
+    }
+}
+
+console.log(calculadora.a);
+console.log(calculadora.b);
+calculadora.sumar();
+
+
+calculadora.a=15;
+calculadora.b=30;
 
