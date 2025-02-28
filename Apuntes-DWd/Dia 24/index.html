@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn"> Click Me</button>
+    <div id="content">
+
+    </div>
+
+<script>
+//hacer progrma que al hacer click en el boton
+//escriba algo en #conten
+const boton = document.querySelector("#btn");
+const container = document.querySelector("#content");
+boton.addEventListener("click",saludar );
+
+function saludar() {
+    alert("hola");
+    container.textContent="soy el texto nuevo agregado con js"
+    
+}
+</script>
+
+</body>
+</html>

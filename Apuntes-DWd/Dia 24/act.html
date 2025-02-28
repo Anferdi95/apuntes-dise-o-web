@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Actividad bienvenidos JavaScript</h1>
+    <button id="btn1">Suma 1</button>
+    <button id="btn2">Resta 1</button>
+    <button id="btn3">Multiplicar 5</button>
+
+    <h3>Cantidad de clicks</h3>
+    <div id="content">0</div>
+
+    input para recibir numeros que el usuario ingrese la edad y al hacer click en un bton de entrar  y me diga si es mayor o menor de edad
+    elemento.value
+    <input type="text">
+
+
+    <script>
+
+const boton1 = document.querySelector("#btn1");
+const boton2 =document.querySelector("#btn2");
+const boton3 =document.querySelector("#btn3");
+boton3.addEventListener("click", multiplicar);
+boton1.addEventListener("click", sumar);
+boton2.addEventListener("click", restar);
+
+        let inicio = 0;  
+        const container = document.querySelector("#content");
+
+        function iniciarContador() {
+            container.textContent = inicio;
+        }
+  
+       
+        function sumar() {
+            inicio++;
+            iniciarContador();
+        }
+
+        function restar() {
+            inicio--;
+            iniciarContador();
+        }
+
+        function multiplicar() {
+            inicio *= 5;
+            iniciarContador();
+        }
+        
+        
+    </script>
+</body>
+</html>
