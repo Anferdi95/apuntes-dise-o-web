@@ -8,37 +8,33 @@
 <body>
     <h1>Verifica si eres mayor o menor de edad</h1>
 
-    <input type="number" id="edad" placeholder="Edad">
+    <input type="number" id="edad" placeholder="Ingresa tu edad">
     
     <button id="btnVerificar">Entrar</button>
 
     <h3 id="resultado"></h3>
 
     <script>
-        // Obtener los elementos de la página
-        const btnVerificar = document.querySelector("#btnVerificar");
+
         const resultado = document.querySelector("#resultado");
         const inputEdad = document.querySelector("#edad");
 
-        // Función para verificar si es mayor o menor de edad
+       
         btnVerificar.addEventListener("click", function() {
-            // Usamos .value para obtener el valor ingresado por el usuario
-            const edad = inputEdad.value;  // Obtiene el valor como string
+           
+            const edad = inputEdad.value;  
 
-            // Convertir el valor a número
             const edadNumero = Number(edad);
 
-            // Validar si el valor es un número positivo mayor que 0
-            if (edad === "") {
-                resultado.textContent = "Por favor, ingresa una edad.";
-            } else if (edadNumero <= 0 || edadNumero !== edadNumero) {  // edadNumero !== edadNumero verifica si es NaN
-                resultado.textContent = "Por favor, ingresa una edad válida.";
-            } else if (edadNumero >= 18) {
+            if (edadNumero >= 18) {
                 resultado.textContent = "Eres mayor de edad.";
+                resultado.style.color = "green";
             } else {
                 resultado.textContent = "Eres menor de edad.";
+                resultado.style.color = "red";
             }
         });
+
     </script>
 </body>
 </html>

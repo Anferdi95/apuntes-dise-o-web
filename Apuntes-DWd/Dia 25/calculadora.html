@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULADORA</title>
+<style>
+    body{
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        height: 100vh;
+    }
+    .calculadora{
+            border: 2px solid #537ad4;
+            padding: 50px;
+            border-radius: 10px;
+            background-color: #a0a8af;
+                   
+        
+
+        }
+        .botones{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-gap: 10px;
+        grid-template-areas:
+            " 1 2 3 +"
+            "4 5 6 -"
+            "7 8 9 *"
+            "c 0 = /";
+        }
+
+        .type{
+         margin-bottom: 20px;
+}
+</style>
+
+
+</head>
+<body>
+   
+
+    <div class="calculadora">
+        <input class="type" type="number" id="pantalla" placeholder="numero" />
+        <br>
+      <div class="botones">
+        <button onclick="mostrar('1')">1</button>
+        <button onclick="mostrar('2')">2</button>
+        <button onclick="mostrar('3')">3</button>
+        <button onclick="mostrar('+')">+</button>
+        
+      
+        <button onclick="mostrar('4')">4</button>
+        <button onclick="mostrar('5')">5</button>
+        <button onclick="mostrar('6')">6</button>
+        <button onclick="mostrar('-')">-</button>
+      
+        <button onclick="mostrar('7')">7</button>
+        <button onclick="mostrar('8')">8</button>
+        <button onclick="mostrar('9')">9</button>
+        <button onclick="mostrar('*')">*</button>
+
+        <button onclick="borrar()">C</button>
+        <button onclick="mostrar('0')">0</button>
+        <button onclick="resultado()">=</button>
+        <button onclick="mostrar('/')">/</button>
+    </div>
+
+
+    <script>
+
+function mostrar(valor){
+const miElemento = document.querySelector("pantalla").value += value; 
+
+ function borrar(){
+    const miElemento = document.querySelector("pantalla").value = " "; 
+
+function resultado(){
+    
+    if 
+    let resultado = eval(document.querySelector('pantalla').value);
+                document.querySelector('pantalla').value = result;
+        
+     }
+     }
+}
+
+
+
+
+
+    </script>
+
+</body>
+</html>
