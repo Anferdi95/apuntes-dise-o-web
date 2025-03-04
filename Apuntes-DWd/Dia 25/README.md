@@ -4,7 +4,7 @@ mirar video dia 25 a las 19:45 pm
 
 const edad = 25
 
-//Para que cumpla ambas opciones
+//Para que cumpla ambas opciones usar &&
 if (edad<= 120 && edad >=18){
     conosle.log("eres mayor de edad");
 }
@@ -54,7 +54,7 @@ const sumar = (num1, num2)  => {
 }
 
 //--------------------------------
-//   Funcion flecha reducida   / solo sirve si mi funcion tiene una sola linea. 
+//   Funcion flecha reducida   / solo sirve si mi funcion tiene una sola linea. y esa linea es la de return
 //--------------------------------
 const sumar = (num1, num2)  =>  num1+num2;
 
