@@ -29,7 +29,7 @@ txtarea.addEventListener("keyup",() =>{
    //procesamos
    for(i=0; i < palabrasCensuradas.length; i++){
        const palabra = palabrasCensuradas[i];
-       const palabraCensurada = "***";
+       const palabraCensurada = "*" .repeat(palabra.length);
        texto = texto.replaceAll(palabra,palabraCensurada);
    }
 
