@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .hL{
+            color: red;
+            font-weight: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejercicio 3</h1>
+
+    <input type="text" id="inputEj3" value="" placeholder="Ingrese un texto">
+    <button id="btn3">Revisar texto</button>
+
+<div id="resultado">
+  
+
+<script>
+// 1. Declaro variales
+    const inputEj3 = document.querySelector("#inputEj3")
+    const divEj3= document.querySelector("#resultado")
+    const btn3= document.querySelector("#btn3")
+    const marca="CEI"
+    const nuevaMarca = "<span class='hL'> CEI </span>"
+ // 2. Funciones
+btn3.addEventListener("click",() =>{
+   
+    const inputText = inputEj3.value;
+
+    divEj3.innerHTML = inputText.replaceAll(marca,nuevaMarca);
+
+    
+//CAMBIAR palabra del texto por otra
+//v1: repalceAll para cambiaar nuestro texto
+//divEj3.innerHTML = inputText.replaceAll(marca,nuevaMarca);
+
+//v2: replace + regex para cambiar nuestro texto
+const marcaRegex = new RegExp(marca,"gi");
+divEj3.innerHTML = inputText.replace(marcaRegex,nuevaMarca);
+
+});
+
+
+</script>
+
+</body>
+</html>

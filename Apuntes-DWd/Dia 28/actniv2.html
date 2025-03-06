@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+<body>
+    <h1>Censuras</h1>
+
+    <textarea name="texto" id="txtArea"></textarea>
+   
+
+   <div id="resultado">
+
+
+
+    <script>
+
+const txtarea = document.querySelector("#txtArea");
+const divEj3= document.querySelector("#resultado");
+const palabrasCensuradas = ["sol","luna","estrella"];
+
+txtarea.addEventListener("keyup",() =>{
+    // leer datos
+   let texto = txtarea.value;
+   //procesamos
+   for(i=0; i < palabrasCensuradas.length; i++){
+       const palabra = palabrasCensuradas[i];
+       const palabraCensurada = "***";
+       texto = texto.replaceAll(palabra,palabraCensurada);
+   }
+
+//imprimirlos
+   divEj3.innerText = texto;
+    
+});
+
+
+
+
+
+
+// console.log("ofensiva" + frase.includes("sol")); 
+</script>
+</body>
+</html>
