@@ -1,24 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adivina el numero</title>
+    <title>Document</title>
 </head>
+
 <body>
+
+    <input type="number" id="inputNumero" placeholder="Ingresa tu numero">
+    <button id="btnAdivina">Adivina</button>
+   
+
     <script>
-  
-        const numeroAleatorio = Math.floor(Math.random() * 100) + 1;
-        let intento;
 
-        alert("estoy pensando en un número entre 1 y 100. adivina");
 
-        while () {
-            
-            intento = prompt("introduce un número (entre 1 y 100):");
+        const Adivina = document.querySelector("#btnAdivina")
 
-            
+        Adivina.addEventListener("click", adivina)
+
+        const input = document.querySelector("#inputNumero")
+
+        let numero = input.value
+        //numeros al azar hasta max
+        //ej:
+        const numeroAleatorio = Math.floor(Math.random() * 100)+1;
+        console.log(numeroAleatorio);
+
+        function adivina() {
+
+            do {
+                numero = parseInt(prompt("Adivina el número entre 1 y 100:"));
+
+                if (isNaN(numero) || numero < 1 || numero > 100) {
+                   
+                    ("Por favor, ingresa un número válido entre 1 y 100.");
+                } else if (numero < numeroAleatorio) {
+                    alert("El número es mayor. Intenta de nuevo.");
+                } else if (numero > numeroAleatorio) {
+                    alert("El número es menor. Intenta de nuevo.");
+                } else {
+                    alert("¡Felicidades! Adivinaste el número.");
+                }
+            } while (numero !== numeroAleatorio);
         }
     </script>
+
+
 </body>
+
 </html>

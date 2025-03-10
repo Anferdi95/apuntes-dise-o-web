@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pptp</title>
+    <style>
+        body{
+            display: flex;
+          flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f1f1f1;
+        
+        }
+        
+            </style>
+</head>
+<body>
+    <button id="btnPiedra">Piedra</button>
+    <button id="btnPapel">Papel</button>
+    <button id="btnTijeras">Tijeras</button>
+    <p>
+       GANE: <span id="txtGane">0</span>  <br>
+        PERDI: <span id="txtPerdi" >0</span> <br>
+        EMPATE:<span id="txtEmpate">0</span> <br>
+        Resultado: <span id="txtResultado">0</span>
+    </p>
+
+
+    <script>
+
+        const btnPiedra = document.getElementById("btnPiedra");
+        const btnPapel = document.getElementById("btnPapel");
+        const btnTijeras = document.getElementById("btnTijeras");
+      
+
+        const cantGanaste = 0
+        const cantPerdiste = 0
+        const cantEmpataste = 0
+
+        btnPiedra.addEventListener("click", ()=> { jugar("piedra"); });
+        btnPapel.addEventListener("click", ()=> { jugar("papel"); });
+        btnTijeras.addEventListener("click", ()=> { jugar("tijera"); });
+        
+
+
+//funcion principal
+function jugar(){  
+      const jugadorIA = seleccionDeIA();
+   console.log(`yo tire ${jugador} - la IA tiro ${jugadorIA}`);
+
+ const resultado = queJugadorGana(jugador, jugadorIA);
+
+
+        imprimirResultado();
+}
+
+// actualizar valores
+
+if resultado =="gasnaste"){}
+
+
+
+//que obtuvo elordenador
+function seleccionDeIA(){
+   const opciones = ["piedra", "papel", "tijeras"];
+   const numeroAleatorio = Math.floor(Math.random()*opciones.length);
+    return opciones[numeroAleatorio];
+
+
+
+
+}
+
+//quien agno entre J1 y J2
+function queJugadorGana(J1, J2){
+    if(J1 === J2){ return "Empate";}
+
+    if (J1 === "piedra" && J2 === "tijeras") || 
+        (J1 === "papel" && J2 === "piedra" )||
+        (J1 === "tijeras" && J2 === "papel") {
+       
+    }
+}
+
+
+//imprimir resultado en pantalla
+function imprimirResultado(){
+   
+}
+
+
+
+//ejecutar programa 
+seleccionDeIA();
+seleccionDeIA();
+seleccionDeIA();
+
+        
+
+    </script>
+</body>
+</html>

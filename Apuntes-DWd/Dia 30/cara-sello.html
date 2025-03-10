@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moneda</title>
+    <style>
+body{
+    display: flex;
+   flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f1f1f1;
+
+}
+
+    </style>
+</head>
+<body>
+   
+   <h2>Tirar Moneda</h2>
+    <button id="btnTirarMoneda">Lanza</button>
+
+<p>
+    Cant de caras: <span id="txtCara">0</span>  <br>
+    Cant de sellos: <span id="txtSello" >0</span> <br>
+    Porcentaje: <span id="txtPorcentaje">0</span> <br>
+ Resultado: <span id="txtResultado">0</span>
+</p>
+
+
+
+
+    <script>
+        const btn =document.getElementById("btnTirarMoneda");
+
+        const txtCara = document.getElementById("txtCara");
+        const txtSello = document.getElementById("txtSello");
+        const txtResultado = document.getElementById("txtResultado");
+        const txtPorcentaje = document.getElementById("txtPorcentaje");
+
+let cantCaras=0;
+let cantSellos=0;
+let porcentajeCaras=100;
+
+
+        btn.addEventListener("click", ()=> {
+       
+        const numeroAleatorio = Math.random();
+
+        //operacion ternaria
+    
+    const moneda= numeroAleatorio>0.5 ? "cara" : "sello";
+    const resultado = moneda=="cara" ? cantCaras++ : cantSellos++;
+
+    //calcular porcentaje
+    const porcentaje=cantCaras/(cantCaras+cantSellos)*100;
+
+    //imprimir resultado
+    txtResultado.innerText=`Tiraste ${moneda}`;
+    txtCara.innerText=cantCaras;
+    txtSello.innerText=cantSellos;
+    txtPorcentaje.innerText=Math.round(porcentaje)+'%';
+
+
+    console.log(moneda);
+
+    })
+
+    </script>
+</body>
+</html>
