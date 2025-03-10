@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+
+    </style>
+</head>
+<body>
+    <nav id="menu"></nav>
+
+
+
+    <script>
+// crear menu dinamicamente dado el array ["home", "Nosotros", "Contacto"]. Usar for each para crear un elance <a> y agregarla a nuestro >nav id="menu"></nav>.
+    //ej;
+    //home  -> a href="#home">home</a>
+    const listaMenu = ["home", "Nosotros", "Contacto"];
+    const navegacion =document.getElementById("menu");
+    listaMenu.forEach(item=> {
+        const enlace=`<a href="#${item}">${item}</a>`;
+        navegacion.innerHTML += enlace; //+= para mostrar los 3 elementos
+    });
+
+    </script>
+</body>
+</html>
