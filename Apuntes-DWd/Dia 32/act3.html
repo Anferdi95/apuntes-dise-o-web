@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evento "e"</title>
+
+
+    <style>
+      #errorNombre {
+        color: brown;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form id="formulario" action="#" >
+      <label for="">Nombre</label>
+      <input type="text" name="txtNombre" id="txtNombre"> <br />
+      <span id="errorNombre">El nombre es obligatorio</span> <br />
+
+      <button type="submit">Enviar</button>
+    </form>
+
+    <script>
+
+const form = document.querySelector("#formulario");
+const msgError = document.querySelector("#errorNombre");
+const txtNombre = document.querySelector("#txtNombre");
+
+form.addEventListener("submit",(e)=> {
+    e.preventDefault(); // decirle a mi elemento que no haga lo que tenia pensado hacer , que era enviar(submit)
+    console.log("submit de formulario");
+
+    if(txtNombre.value.trim() ===""){
+     msgError.style.display ="block"
+        // alert("error");
+    } else {
+        msgError.style.display ="none"
+        // alert("ok");
+    }
+})
+
+    </script>
+  </body>
+</html>

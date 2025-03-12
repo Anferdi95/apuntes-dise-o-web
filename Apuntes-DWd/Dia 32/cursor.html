@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cursor</title>
+
+    <style>
+body{
+margin: 0;
+overflow: hidden;
+background-color: white;
+
+}
+
+.rastro{
+position: absolute;
+width: 20px;
+height: 20px;
+background-color: brown;
+border-radius: 50%;
+ 
+pointer-events: none;
+transform: translate(-50%,-50%);
+
+opacity: 0,7;
+transition: opacity 0,5s;
+}
+
+
+    </style>
+</head>
+<body>
+    <h1>HOLI</h1>
+   
+
+    <script>
+document.addEventListener("mousemove",(e)=>{
+const rastro = document.createElement('div');
+rastro.className="rastro";
+rastro.style.left = e.clientX + "px";
+rastro.style.top = e.clientY + "px";
+document.body.appendChild(rastro);
+
+setTimeout(()=>{
+// hacer algo
+rastro.style.opacity = "0";
+
+setTimeout( ()=> rastro.remove(),500);
+
+}, 100); // a los 5 seg
+});
+
+    </script>
+</body>
+</html>

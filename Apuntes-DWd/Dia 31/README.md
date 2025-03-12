@@ -129,6 +129,8 @@ El metodo`find()` devuelve el PRIMER elemnto del ARRAY que cumpla la funcion de 
 ```js
 const numeros=[5,12,8,130,44,12];
 const item =numeros.find (num =>>10);
+
+
 console.log(item);//12
 ```
 
@@ -194,11 +196,22 @@ cont Personajes =[
 3. Encuenta un libro con el titulo especifico(buscar "La Odisea")
 
 ```js
-const elLibroBuscado= librops.find(libro =>   libro.titulo=='la Odisea');
+const libros =[
+    {titulo: 'El Quijote', autor :'Miguel de Cervantes'},
+    {titulo: 'Cien años de soledad', autor :'Gabriel Garcia Marquez'},
+    {titulo: 'La Odisea', autor :'Homer'}
+]
+
+const inputValue="La Odisea",
+const elLibroBuscado= librops.find(libro =>   libro.titulo==inputValue);
 
 ```
 3b. Usar los metosdo de string para busquedas parciales "cien años"
+```js
+const libroDeseado=libros.find(libro => libro.titulo-tolowerCase()-includes("cien años")  )
 
+
+```
 
 
 const libros =[
@@ -210,3 +223,12 @@ const libros =[
 
 
 4. Dado una lista de numeros desordenados, ordenar de menor a mayor (investigar)
+
+```js
+const numeros=[5,20,3,-10,25,100005];
+const ordenados = numeros.sort((a,b) => a-b );
+
+// const ordenados = numeros.sort(function(a,;){
+//     return a-b;
+
+// });
