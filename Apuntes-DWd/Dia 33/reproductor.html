@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproductor</title>
+<style>
+
+
+</style>
+
+
+</head>
+<body>
+    <h3>Reproductor</h3>
+ <div id="playlist">
+ <div id="card">
+    <span class="artista">artista</span>
+    <span class="cancion">cancion</span>
+ </div>
+
+</div> 
+
+
+
+
+    <script>
+       const playlist = document.getElementById("playlist");
+    
+    
+       btnArtCan.addEventListener("click", MostarArtCan);
+
+ const listaCanciones =[
+    "https://archive.org/details/rosalia-aunque-es-de-noche/BAD+BUNNY+x+ROSAL%C3%8DA+-+LA+NOCHE+DE+ANOCHE.mp3", 
+    "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
+    "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3",
+    "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3",
+    "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3"];
+    
+    const listaArtistas = ["feid", 
+    "Ryan Castro",
+    "Melendi", 
+    "Karol G", 
+    "Maluma"
+    ]
+const cantItems =listaArtistas.length;
+
+
+
+
+listaCanciones.forEach( (cancion, idx) => {
+    const artista =listaArtistas[idx];
+    console.log(cancion);
+    console.log(artista);
+    
+
+
+});
+
+
+// for(let i=0; i< cantItems; i++){
+// const cancion = listaCanciones[i];
+// const artista = listaArtistas[i];
+// }
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

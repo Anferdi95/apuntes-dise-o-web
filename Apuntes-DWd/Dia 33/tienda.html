@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrito</title>
+    <style>
+      .body1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+        background-color: #bed5d7;
+      }
+      #cafe {
+        width: 210px;
+        height: 210px;
+        border-style: groove;
+
+        justify-content: center;
+        align-items: center;
+      }
+      img {
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="body1">
+    <section id="cafe">
+      <img src="./descafeinado_web.jpg" alt="" />
+
+      <h2>CAFÉ</h2>
+      <button class="btn" id="agregar1Cafe">+1</button>
+      <button id="agregar2Cafe">+2</button>
+      <button id="agregar3Cafe">+3</button>
+    </section>
+
+    <section id="cafe">
+      <img
+        src="./HF_Y24_R21_W19_ES_ESSAB21128-2_edit_meat_Main_high-da717520.avif  "alt=""  />
+      <h2>BOCADILLO</h2>
+      
+      <button id="agregar1Boc">+1</button>
+      <button id="agregar2Boc">+2</button>
+      <button id="agregar3Boc">+3</button>
+    </section>
+
+    <section id="cafe">
+      <img src="./450_1000.jpg" alt="" />
+      <h2>BEBIDA</h2>
+
+      <button id="agregar1Beb">+1</button>
+      <button id="agregar2Beb">+2</button>
+      <button id="agregar3Beb">+3</button>
+    </section>
+</div>
+    <div>
+    
+ <h2>PEDIDO</h2>
+      <div class="btnTotal" id="total"></div>
+      <button class="btnVaciar" id="vaciar">Vaciar</button>
+      
+    </div>
+    <div id="resultado">
+<ul>
+    <li>Cafe: </li>
+    <li>Bocadillo: </li>
+    <li>Bebida: </li>
+</ul>
+
+
+    </div>
+    <script>
+
+const btnCafe1 = document.querySelector("#agregar1Cafe");
+const btnCafe2 = document.querySelector("#agregar2Cafe");
+const btnCafe3 = document.querySelector("#agregar3Cafe");
+
+const btnBoca1 = document.querySelector("#agregar1Boc");
+const btnBoca2 = document.querySelector("#agregar2Boc");
+const btnBoca3 = document.querySelector("#agregar3Boc");
+
+const btnBeb1 = document.querySelector("#agregar1Beb");
+const btnBeb2 = document.querySelector("#agregar2Beb");
+const btnBeb3 = document.querySelector("#agregar3Beb");
+
+const btnTotal = document.querySelector("#total");
+const btnVaciar = document.querySelector("#vaciar");
+const resultado = document.getElementById("resultado");
+
+btnCafe1.addEventListener("click",()=>AgregarCarrito(1,"cafe"));
+btnCafe2.addEventListener("click",()=>AgregarCarrito(2,"cafe"));
+btnCafe3.addEventListener("click",()=>AgregarCarrito(3,"cafe"));
+
+btnBoca1.addEventListener("click",()=>AgregarCarrito(1,"bocadillo"));
+btnBoca2.addEventListener("click",()=>AgregarCarrito(2,"bocadillo"));
+btnBoca3.addEventListener("click",()=>AgregarCarrito(3,"bocadillo"));
+
+btnBeb1.addEventListener("click",()=>AgregarCarrito(1,"bebida"));
+btnBeb2.addEventListener("click",()=>AgregarCarrito(2,"bebida"));
+btnBeb3.addEventListener("click",()=>AgregarCarrito(3,"bebida"));
+
+btnTotal.addEventListener("click", MostarTotal);
+btnVaciar.addEventListener("click", BorrarCarrito);
+
+let totalItems = 0;
+let conCafe=0;
+let conBocadillo=0;
+let conBebida=0;
+
+
+//funcion de agregar a carrito
+function AgregarCarrito(cant,tipo){
+    console.log("Agregar cantidad:", cant);
+   switch(tipo){
+    case"cafe":conCafe+=cant;break;
+    case"bocadillo":conBocadillo+=cant;break;
+    case"bebida":conBebida+=cant;break;
+   }
+   totalItems += cant;
+MostarTotal();
+}
+
+
+//funcion de mostrar totales
+function MostarTotal(){
+    resultado.innerHTML= `
+    <ul>
+    <li>Cafe: ${conCafe}</li>
+    <li>Bocadillo: ${conBocadillo}</li>
+    <li>Bebida: ${conBebida}</li>
+</ul>
+Total:  ${totalItems}
+`;
+
+        
+}
+
+
+//funciones de borrador carrito
+function BorrarCarrito(){
+totalItems = 0;
+conCafe=0;
+conBocadillo=0;
+conBebida=0;
+MostrarTotal();
+}
+
+    </script>
+  </body>
+</html>
