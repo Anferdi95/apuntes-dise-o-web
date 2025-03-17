@@ -1,78 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reproductor</title>
-<style>
+    <style>
+      .card {
+        border-radius: 8px;
+        background-color: rgb(212, 219, 227);
+        padding: 10px;
+        width: 400px;
+        margin: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 
+        display: flex;
+        overflow: hidden;
+      }
+      .card img {
+        width: 100px;
+        height: 100px;
+        margin-right: 5px;
+      }
 
-</style>
-
-
-</head>
-<body>
+      .controllers {
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
     <h3>Reproductor</h3>
- <div id="playlist">
- <div id="card">
-    <span class="artista">artista</span>
-    <span class="cancion">cancion</span>
- </div>
 
-</div> 
+    <div id="playlist">
+      <!-- <div class="card">
+    <span>artista</span>
+    <span>cancion</span>
+ </div> -->
+    </div>
 
+    <div id="cancionActual">Aca va cancion actual</div>
 
-
+    <div class="controllers">
+      <button id="btn3">Tem 3</button><br />
+      <br />
+      <button id="btnAnterior">Anterior</button>
+      <button id="btnPlay">Play</button>
+      <button id="btnPausa">Pausa</button>
+      <button id="btnSiguiente">Siguiente</button>
+    </div>
 
     <script>
-       const playlist = document.getElementById("playlist");
+      const playlist = document.getElementById("playlist");
+      const btn3 = document.getElementById("btn3");
+
+      const btnAnterior = document.getElementById("btnAnterior");
+      const btnPlay = document.getElementById("btnPlayr");
+      const btnPausa = document.getElementById("btnPausa");
+      const btnSiguiente = document.getElementById("btnSiguiente");
+
+      const cancionActual = document.querySelector("#cancionActual");
+
+      let indCancion = 0;
+
+      const listaCover = [
+        "https://picsum.photos/id/100/200/300",
+        "https://picsum.photos/id/200/200/300",
+        "https://picsum.photos/id/300/200/300",
+        "https://picsum.photos/id/400/200/300",
+        "https://picsum.photos/id/500/200/300",
+      ];
+
+      const listaCanciones = [
+        "https://archive.org/details/rosalia-aunque-es-de-noche/BAD+BUNNY+x+ROSAL%C3%8DA+-+LA+NOCHE+DE+ANOCHE.mp3",
+        "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
+        "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3",
+        "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3",
+        "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3",
+      ];
+
+      const listaArtistas = [
+        "Feid",
+        "Ryan Castro",
+        "Melendi",
+        "Karol G",
+        "Maluma",
+      ];
+      const cantItems = listaArtistas.length;
+
+      const listaColores = ["Rojo", "Verde", "Azul", "Naranja", "negro"];
+      function mostrarTema() {}
+
+      listaCanciones.forEach((cancion, idx) => {
+        const artista = listaArtistas[idx];
+        const color = listaColores[idx];
+        const imagen = listaCover[idx];
+
+        console.log(cancion);
+        console.log(artista);
+
+        playlist.innerHTML += `
+     <div id= "${idx}" class="card">
+     <img src= "${imagen}" /img> 
+     <h3> ${artista}</h3>
+     <span>${cancion}</span>
+ </div>`;
+      });
+
+      // for(let i=0; i< cantItems; i++){
+      // const cancion = listaCanciones[i];
+      // const artista = listaArtistas[i];
+      // }
+
     
-    
-       btnArtCan.addEventListener("click", MostarArtCan);
+      const handleCargarCancion = () => {
+        console.log("me hcieron click", i);
+        const artista = listaArtistas[i];
+        const cancion = listaCanciones[i];
+        console.log("El artistaes:", artista, "y la cancion es:", cancion);
 
- const listaCanciones =[
-    "https://archive.org/details/rosalia-aunque-es-de-noche/BAD+BUNNY+x+ROSAL%C3%8DA+-+LA+NOCHE+DE+ANOCHE.mp3", 
-    "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
-    "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3",
-    "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3",
-    "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3"];
-    
-    const listaArtistas = ["feid", 
-    "Ryan Castro",
-    "Melendi", 
-    "Karol G", 
-    "Maluma"
-    ]
-const cantItems =listaArtistas.length;
+        cancionActual.innerHTML = ` 
+     
+    <h3> ${artista}</h3>
+    <span>${cancion}</span>
+ </div>`;
+      };
 
+      btn3.addEventListener("click", () => 
+      indCancion = 3;
+      handleCargarCancion());
 
+      document.addEventListener("click", (e) => {
+        console.log(event.target.id);
+        handleCargarCancion();
+      });
 
-
-listaCanciones.forEach( (cancion, idx) => {
-    const artista =listaArtistas[idx];
-    console.log(cancion);
-    console.log(artista);
-    
-
-
-});
-
-
-// for(let i=0; i< cantItems; i++){
-// const cancion = listaCanciones[i];
-// const artista = listaArtistas[i];
-// }
-
-
-
-
-
-
-
-
-
-
-
+      handleCargarCancion(1);
+      handleCargarCancion(4);
+      handleCargarCancion(3);
     </script>
-</body>
+  </body>
 </html>
