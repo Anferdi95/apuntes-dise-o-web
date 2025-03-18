@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App de Música</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="container">
+        <div id="tab1" class="tab-content " style="background-color: #ffcccb;">
+            <h1>Página Principal</h1>
+            <p>Bienvenido a nuestra app de música!</p>
+        </div>
+        <div id="tab2" class="tab-content active" style="background-color: #add8e6;">
+            <h1>Lista de Reproducción</h1>
+            <ul id="containerCanciones">
+                <!-- <li class="cardCancion">
+                <img src="https://picsum.photos/id/700/200/300" alt="Michael Jackson">
+                    <div>
+                     <h2>titulo</h2>
+                    <small>michael Jackson</small>
+                    </div>
+                </li>            -->
+               
+            </ul>
+            <div>
+                Canción Actual
+            </div>
+        </div>
+        <div id="tab3" class="tab-content" style="background-color: #90ee90;">
+
+                <h1>Canción Actual</h1>
+                <div class="player">
+                    <i class="fas fa-play"></i>
+                    <i class="fas fa-pause"></i>
+                    <i class="fas fa-step-forward"></i>
+                    <i class="fas fa-step-backward"></i>
+                </div>
+                <audio src="" controls></audio>
+            
+        </div>
+    </div>
+
+    <nav class="bottom-nav">
+        <button class="nav-button " data-tab="tab1"><i class="fas fa-home"></i><span>Inicio</span></button>
+        <button class="nav-button active" data-tab="tab2"><i class="fas fa-music"></i><span>Lista</span></button>
+        <button class="nav-button" data-tab="tab3"><i class="fas fa-volume-up"></i><span>Canción</span></button>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pestañas / Tabs</title>
+<style>
+    .bloque{
+        display: none;
+    }
+    .bloque.active{
+        display: block;
+    }
+.tablist{
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+}
+.tab.active{
+   border-bottom: 2px solid red;
+}
+.tab:hover{
+  color:blue
+}
+</style>
+
+</head>
+<body>
+    <h1>Pestañas / Tabs</h1>
+<ul class="tablist">
+    <li class="tab active">Boton 1</li>
+    <li class="tab">Boton 2</li>
+    <li class="tab">Boton 3</li>
+</ul>
+
+<main class="contentlist">
+    <div class="bloque active">Contenido 1</div>
+    <div class="bloque">Contenido 2</div>
+    <div class="bloque">Contenido 3</div>
+
+</main>
+
+
+<script>
+const containerBloques = document.querySelector(".contentlist")   
+const listaBloques = containerBloques.querySelectorAll(".bloque");
+const listaTabs =document.querySelectorAll(".tab");
+
+listaBloques.forEach((bloque)=>{
+    // console.log(bloque);
+});
+
+listaTabs.forEach((tab, idx)=>{
+    //posicion de la losta de tabs
+console.log("indice:", idx);
+
+// console.log(tab);
+console.log(listaTabs[idx]);
+console.log(listaBloques[idx]);
+
+listaTabs[idx].addEventListener("click", () =>{
+    // a todos los bloques sacarle la clase .active
+listaBloques.forEach((bloque, id)=>{
+listaBloques[id].classList.remove("active");
+listaTabs[id].classList.remove("active");
+})
+
+//agregar la clase .active al bloque que me interesa
+listaBloques[idx].classList.add("active");
+listaTabs[idx].classList.add("active");
+
+    });
+});
+
+
+</script>
+
+
+</body>
+</html>

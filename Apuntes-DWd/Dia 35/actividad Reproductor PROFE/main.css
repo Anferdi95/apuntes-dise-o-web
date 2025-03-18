@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    position: relative;
+    overflow: hidden;
+    flex-grow: 1;
+
+}
+
+.tab-content {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 20px;
+    z-index: 1;
+
+    left: 100%; /* por defecto fuera de pantalla */
+    transition: left 0.3s ease-in-out;
+
+    display:flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+    align-items: center;
+    height: 100%;
+}
+
+.tab-content.active {
+    left: 0;
+    z-index: 2;
+}
+
+
+.bottom-nav {
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+    color: white;
+    padding: 10px 0
+}
+
+.nav-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    align-items: center;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.nav-button.active {
+    background-color: #555;
+}
+
+.player {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.player i {
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.nav-button:hover {
+    color: #000;
+}
+
+#containerCanciones{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.imgCancion{
+    margin-right: 1em;
+    height: 100px;
+}
+.cardCancion{
+    padding: 0 1em 0 0;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border-radius: 10px;
+    background: white;
+   
+}
