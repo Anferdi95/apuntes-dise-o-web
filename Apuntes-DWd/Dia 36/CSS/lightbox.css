@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: azure;
+}
+.ul{
+width: 80%;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+gap: 20px;
+padding: 20px;
+}
+
+
+.li{
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 1);
+}
+
+
+.img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+.li:hover img{
+    transform: scale(1.1);
+    
+}
+ .imgBig{
+    max-width: 90%;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 5px;
+
+}
+
+
+.lightbox{
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0,0,0,0.8);
+
+pointer-events: none;
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+opacity: 0;
+
+transition: opacity 0.3s;
+
+}
+.lightbox.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.btnClose{
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+font-size: 16px ;
+}
+.btnClose:hover{
+    background-color: lavender;
+}
