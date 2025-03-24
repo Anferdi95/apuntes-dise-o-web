@@ -1,0 +1,30 @@
+/* Estilos adicionales para nuestra aplicación */
+
+/* Animación para las tarjetas cuando aparecen */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.profile-card {
+    animation: fadeIn 1s ease-out forwards;
+    opacity: 0;
+}
+
+/* Hacemos que las tarjetas aparezcan secuencialmente */
+.profile-card:nth-child(1) { animation-delay: 0.1s; }
+.profile-card:nth-child(2) { animation-delay: 0.3s; }
+.profile-card:nth-child(3) { animation-delay: 0.5s; }
+.profile-card:nth-child(4) { animation-delay: 0.7s; }
+.profile-card:nth-child(5) { animation-delay: 0.9s; }
+.profile-card:nth-child(6) { animation-delay: 1.1s; }
+
+/* Efecto hover para las tarjetas */
+.profile-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
