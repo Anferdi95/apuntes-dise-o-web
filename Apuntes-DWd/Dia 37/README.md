@@ -27,7 +27,7 @@ function traerDatos(){
 
  La obtencion de datos aasincronos  se utilizan para:
  - Traer incormacion de DB (data bases)
- - Traer informacion de un API (Aplicacion Programa Interface)
+ - Traer informacion de un API (Aplicacion Program Interface)
  - Manipulacion de nuestros propios archivos
 
 
