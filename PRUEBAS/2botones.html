@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Información de Animales</title>
+  <style>
+    body {
+      display: flex;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Columna izquierda */
+    .menu {
+      width: 200px;
+      background-color: #f0f0f0;
+      padding: 20px;
+      height: 100vh;
+    }
+
+    .menu h2 {
+      cursor: pointer;
+      color: #007bff;
+    }
+
+    /* Columna derecha */
+    .content {
+      flex-grow: 1;
+      padding: 20px;
+    }
+
+    .info {
+      display: none;
+    }
+
+    .info.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+    <header>
+
+
+    </header>
+  <div class="menu">
+    <h2 onclick="mostrarInfo('perros')">Perros</h2>
+    <h2 onclick="mostrarInfo('gatos')">Gatos</h2>
+  </div>
+
+  <div class="content">
+    <div id="perros" class="info">
+      <h3>Información sobre Perros</h3>
+      <p>Los perros son animales leales y amigables. Son conocidos como los mejores amigos del hombre.</p>
+    </div>
+
+    <div id="gatos" class="info">
+      <h3>Información sobre Gatos</h3>
+      <p>Los gatos son independientes y curiosos. Les encanta dormir y son excelentes cazadores.</p>
+    </div>
+  </div>
+<footer>
+
+
+    
+</footer>
+  <script>
+    function mostrarInfo(animal) {
+      // Ocultar todas las secciones
+      document.querySelectorAll('.info').forEach(section => {
+        section.classList.remove('active');
+      });
+
+      // Mostrar la sección correspondiente
+      document.getElementById(animal).classList.add('active');
+    }
+  </script>
+</body>
+</html>

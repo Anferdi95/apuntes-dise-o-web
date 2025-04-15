@@ -1,0 +1,167 @@
+[
+    {
+      "id": 1,
+      "nombre": "6 Personas",
+      "habilidades": ["Bandejas"],
+      "Precio": 199000,
+      "avatar": "../img/img_opti/bandejas/tabla_6personas.jpg",
+      "avatar2": "./img/img_opti/bandejas/tabla_6personas.jpg"
+      
+    },
+    {
+      "id": 2,
+      "nombre": "8 Personas",
+      "habilidades": ["Bandejas"],
+      "Precio": 235000,
+      "avatar": "../img/img_opti/bandejas/tabla_8personas.jpg",
+      "avatar2": "./img/img_opti/bandejas/tabla_8personas.jpg"
+    },
+    {
+      "id": 3,
+      "nombre": "12 Personas",
+      "habilidades": ["Bandejas"],
+      "Precio": 399000,
+      "avatar": "../img/img_opti/bandejas/tabla12personas.jpg",
+      "avatar2": "./img/img_opti/bandejas/tabla12personas.jpg"
+    },
+    {
+      "id": 4,
+      "nombre": "25 Personas",
+      "habilidades": ["Bandejas"],
+      "Precio": 709000,
+      "avatar": "../img/img_opti/bandejas/tablas_25personas.jpg",
+       "avatar2": "./img/img_opti/bandejas/tablas_25personas.jpg"
+    },
+    {
+      "id": 5,
+      "nombre": "Mesa Eventos",
+      "habilidades": ["Charcuteria"],
+      "Precio": 909000,
+      "avatar": "../img/img_opti/charcuterio/mesa_Eventos.jpg",
+      "avatar2": "./img/img_opti/charcuterio/mesa_Eventos.jpg"
+    },
+    
+
+    {
+      "id": 6,
+      "nombre": "Amarillo",
+      "habilidades": ["Tablas"],
+      "Precio": 249000,
+      "avatar": "../img/img_opti/tablas/amarillo.jpeg",
+      "avatar2": "./img/img_opti/tablas/amarillo.jpeg"
+    },
+    {
+      "id": 7,
+      "nombre": "Premium Baileys",
+      "habilidades": ["Tablas"],
+      "Precio": 251000,
+      "avatar": "../img/img_opti/tablas/baileys.jpeg",
+      "avatar2": "./img/img_opti/tablas/baileys.jpeg"
+    },
+    {
+      "id": 8,
+      "nombre": "Premium Bombay",
+      "habilidades": ["Tablas"],
+      "Precio": 342000,
+      "avatar": "../img/img_opti/tablas/bombay.jpeg",
+      "avatar2": "./img/img_opti/tablas/bombay.jpeg"
+    },
+    {
+      "id": 9,
+      "nombre": "Cerveza Alemana",
+      "habilidades": ["Tablas"],
+      "Precio": 108000,
+      "avatar": "../img/img_opti/tablas/cerveza_alemana.jpeg",
+      "avatar2": "./img/img_opti/tablas/cerveza_alemana.jpeg"
+    },
+    {
+      "id": 10,
+      "nombre": "Duo Jack",
+      "habilidades": ["Tablas"],
+      "Precio": 179000,
+      "avatar": "../img/img_opti/tablas/jack_duo.jpeg",
+      "avatar2": "./img/img_opti/tablas/jack_duo.jpeg"
+    },
+    
+      {
+        "id": 11,
+        "nombre": "Jack 2 Personas",
+        "habilidades": ["Tablas"],
+        "Precio": 178000,
+        "avatar": "../img/img_opti/tablas/jack.jpeg",
+        "avatar2": "./img/img_opti/tablas/jack.jpeg"
+      },
+      {
+        "id": 12,
+        "nombre": "Jager 2 Personas",
+        "habilidades": ["Tablas"],
+        "Precio": 179000,
+        "avatar": "../img/img_opti/tablas/jager.jpeg",
+        "avatar2": "./img/img_opti/tablas/jager.jpeg"
+      },
+      {
+        "id": 13,
+        "nombre": "Leyenda",
+        "habilidades": ["Tablas"],
+        "Precio": 78000,
+        "avatar": "../img/img_opti/tablas/leyenda.jpeg",
+        "avatar2": "./img/img_opti/tablas/leyenda.jpeg"
+      },
+      {
+        "id": 14,
+        "nombre": "Lujo Bottega",
+        "habilidades": ["Tablas"],
+        "Precio": 353000,
+        "avatar": "../img/img_opti/tablas/lujo_bottega.jpeg",
+        "avatar2": "./img/img_opti/tablas/lujo_bottega.jpeg"
+      },
+      {
+        "id": 15,
+        "nombre": "Lujo Dubonet",
+        "habilidades": ["Tablas"],
+        "Precio": 233000,
+        "avatar": "../img/img_opti/tablas/lujo_dubonet.jpeg",
+        "avatar2": "./img/img_opti/tablas/lujo_dubonet.jpeg"
+      },
+      {
+        "id": 16,
+        "nombre": "Lujo Ron",
+        "habilidades": ["Tablas"],
+        "Precio": 251000,
+        "avatar": "../img/img_opti/tablas/lujo_ron.jpeg",
+        "avatar2": "./img/img_opti/tablas/lujo_ron.jpeg"
+      },
+      {
+        "id": 17,
+        "nombre": "Lujo Undurraga",
+        "habilidades": ["Tablas"],
+        "Precio": 219000,
+        "avatar": "../img/img_opti/tablas/lujo_vino.jpeg",
+        "avatar2": "./img/img_opti/tablas/lujo_vino.jpeg"
+      },
+      {
+        "id": 18,
+        "nombre": "Vino",
+        "habilidades": ["Tablas"],
+        "Precio": 219000,
+        "avatar": "../img/img_opti/tablas/lujo_vino2.jpeg",
+        "avatar2": "./img/img_opti/tablas/lujo_vino2.jpeg"
+      },
+      {
+        "id": 19,
+        "nombre": "Premium Antioqueño",
+        "habilidades": ["Tablas"],
+        "Precio": 204000,
+        "avatar": "../img/img_opti/tablas/premium_antioqueño.jpg",
+        "avatar2": "./img/img_opti/tablas/premium_antioqueño.jpg"
+      },
+      {
+        "id": 20,
+        "nombre": "1 Persona Beer",
+        "habilidades": ["Tablas"],
+        "Precio": 74000,
+        "avatar": "../img/img_opti/tablas/Tabla_1Beer.jpeg",
+        "avatar2": "./img/img_opti/tablas/Tabla_1Beer.jpeg"
+      }
+    ]
+    

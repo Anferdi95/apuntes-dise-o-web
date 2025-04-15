@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Final - Quesos en Tabla</title>
+    <link rel="stylesheet" href="./css/estilos-hea-foot.css">
+    <link rel="stylesheet" href="./css/estilos-cont.css">
+    <link rel="stylesheet" href="./css/contacto.css">
+    
+
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <!-- Botones en la parte superior izquierda -->
+            <div class="buttons-left">
+                <a class="btn-square" href="https://www.facebook.com/Quesosentablabogota/" target="_blank"> <img
+                        class="face" src="./img/facebook.svg" alt="Icono de Facebook"></a>
+
+                <a class="btn-square" href="https://www.instagram.com/quesosentablabogota1?igshid=YmMyMTA2M2Y%3D"
+                    target="_blank"> <img class="insta" src="./img/1362857.png" alt="Icono de Facebook"></a>
+
+                <a class="btn-square" href="https://api.whatsapp.com/send?phone=573209996208" target="_blank"><img
+                        class="whatsapp" src="./img/viber.svg" alt="whats"></a>
+
+            </div>
+
+            <!-- Contenedor para el logo y el menú -->
+            <div class="center-content">
+                <!-- Logo -->
+                <img class="logo_header" src="./img/QET_Mesa de trabajo 1 copia.png" alt="logo">
+
+                <!-- Lista de navegación -->
+                <nav class="nav">
+                    <ul>
+                        <li><a href="./index.html">Inicio</a></li>
+                        <hr>
+                        <li><a href="./html/SobreNosotros.html">Sobre Nosotros</a></li>
+                        <hr>
+                        <li><a href="./html/Servicios.html">Servicios</a></li>
+                        <hr>
+                        <li><a href="./html/contacto.html">Contactanos</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- Botón en la parte superior derecha -->
+            <div class="button-right">
+                <img src="./img/img_opti/carritoquesos-06.png" alt="carrito" class="carrito">
+            </div>
+        </div>
+    </header>
+
+
+
+    <section class="hero">
+        <div class="recuadro">
+            <h2>Momentos que saben mejor: <br>¡Descubre nuestras tablas de quesos!"</h2><br>
+            <p>Nuestras tablas de quesos no solo se disfrutan, se viven. Sorprendé a tus amigos, familia o invitados con una experiencia de sabor única, ideal para celebraciones, eventos o encuentros especiales. Cada bocado despierta emociones, cada tabla crea recuerdos. ¡Hacé que cada momento cuente!
+
+            </p>
+            <!-- <img src="./img/logo_footer-05.png" alt="hero"> -->
+        </div>
+    </section>
+
+    <section class="charcuteria">
+        <div class="seccion_muestras">
+            <div class="border-behind"></div>
+            <img class="charIndex" src="./img/img_opti/charcuterio/Mesa_Eventos.jpg" alt="char_index">
+        </div>
+        <div class="contenido-texto">
+            <h1> CHARCUTERIA</h1>
+            <p class="etiq">Contamos con una elegante mesa de charcutería, perfecta para tus eventos, donde los
+                invitados podrán acercarse libremente, disfrutar de una amplia variedad de quesos, carnes frías y
+                acompañamientos, y armar su propia mini tabla personalizada. Una experiencia interactiva y deliciosa que
+                encantará a todos los asistentes.</p>
+            <button class="boton"> Llevame</button>
+        </div>
+    </section>
+    <section class="bandejas">
+        <div class="seccion_muestras">
+            <div class="border-behind"></div> <!-- Borde detrás de la imagen -->
+            <img class="charIndex" src="./img/img_opti/bandejas/IMG-20230918-WA0041.jpg" alt="char_index">
+        </div>
+        <div class="contenido-texto">
+            <h1>BANDEJA</h1>
+            <p class="etiq">Disfruta de nuestras exquisitas tablas de quesos, cuidadosamente preparadas con una variedad
+                selecta de quesos nacionales e importados. Cada tabla está acompañada de una cuidada selección de carnes
+                frías como salami, chorizo, jamón serrano, pepperoni, prosciutto, lomo ahumado y pastrami, entre otras
+                delicias. Además, puedes personalizar tu experiencia eligiendo el trago de tu preferencia para acompañar
+                tu tabla, creando así el maridaje perfecto para cualquier ocasión especial o reunión.</p>
+            <button class="boton">Llévame</button>
+        </div>
+    </section>
+    <section class="tablas">
+        <div class="seccion_muestras">
+            <div class="border-behind"></div>
+            <img class="charIndex" src="./img/img_opti/tablas/premium_antioqueño.jpg" alt="tablas_index">
+        </div>
+        <div class="contenido-texto">
+            <h1>TABLAS</h1>
+            <p class="etiq">También ofrecemos tablas de quesos y carnes diseñadas especialmente para grupos, ideales
+                para fomentar la unión e integración en reuniones familiares, eventos empresariales o celebraciones
+                especiales. Estas tablas están compuestas por una generosa variedad de quesos, jamones, salamis,
+                pepperoni, chorizos, pastrami, lomo canadiense y más, pensadas para compartir, conversar y disfrutar
+                juntos alrededor de sabores únicos y bien equilibrados.</p>
+            <button class="boton"> Llevame</button>
+        </div>
+    </section>
+
+
+    
+    <div id="muestras"></div>
+
+    <div id="contenedor-productos"></div>
+    <!-- Sección de contenedor de tarjetas -->
+    <section class="container_muestras">
+        <!-- Flecha izquierda -->
+        <div id="flecha-izquierda" class="arrow left-arrow">&#10094;</div>
+
+        <div class="cards-container">
+            <!-- Las tarjetas se insertarán aquí dinámicamente con JS -->
+        </div>
+
+        <!-- Flecha derecha -->
+        <div id="flecha-derecha" class="arrow right-arrow" ">&#10095;</div>
+    </section>
+
+
+    <section class="contacto-section">
+        <h2 class="titulo-contacto">¡Contáctanos!</h2>
+        <p class="subtitulo-contacto">¿Interesado en nuestros productos? ¡Contáctanos!</p>
+      
+        <form class="formulario-contacto">
+          <div class="form-row">
+            <input type="text" placeholder="Nombre*" required class="input-text" />
+            <input type="text" placeholder="Apellido*" required class="input-text" />
+          </div>
+
+          
+          
+
+
+          <input type="email" placeholder="Correo Electrónico*" required class="input-text largo" />
+      
+          <div class="textarea-container">
+            <textarea placeholder="Mensaje*" required class="textarea-mensaje"></textarea>
+          </div>
+          <div class="botones">
+            <button type="submit" class="btn-form">Enviar</button>
+            <button type="reset" class="btn-form">Borrar</button>
+          </div>
+        </form>
+      </section>
+
+
+
+
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- izquierda Footer -->
+            <div class="footer-left">
+                <a href="https://www.facebook.com/Quesosentablabogota/" target="_blank"> <img class="face"
+                        src="./img/facebook.svg" alt="Icono de Facebook"></a>
+
+                <a href="https://www.instagram.com/quesosentablabogota1?igshid=YmMyMTA2M2Y%3D" target="_blank"><img
+                        class="insta" src="./img/1362857.png" alt="insta"></a>
+
+                <a href="https://api.whatsapp.com/send?phone=573209996208" target="_blank"><img class="whatsapp"
+                        src="./img/viber.svg" alt="whats"></a>
+            </div>
+
+            <!--  Logo -->
+            <img class="logo_footer" src="./img/logo_footer-05.png" alt="Logo Footer">
+
+            <!-- derecha Footer -->
+            <div class="footer-right">
+                <p class="gg">Tu Empresa &copy; 2025 - Todos los derechos reservados. <br><a href="#">Términos y
+                        Condiciones</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Agregar el archivo JS -->
+    <script src="./JS/java.js"></script>
+    
+
+</body>
+
+</html>

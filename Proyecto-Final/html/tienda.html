@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrito de Compras - Queso y Vino</title>
+
+    <style>
+      /* Estilos previos no cambiados */
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Producto 1: Queso -->
+      <section class="product" id="productoQueso">
+        <img src="https://www.gastronosfera.com/sites/default/files/styles/wide/public/trending/2023/quesos-italianos-variedad-sabores-texturas.jpg.webp" alt="Queso" />
+        <div class="product-info">
+          <h2>Queso Manchego</h2>
+          <p>Precio: 1200€ por unidad</p>
+          <button class="btn" id="agregarQueso">+1</button>
+          <button class="btn" id="restarQueso">-1</button>
+        </div>
+      </section>
+
+      <!-- Producto 2: Vino -->
+      <section class="product" id="productoVino">
+        <img src="https://www.vinosensueno.com/wp-content/uploads/2020/10/vino-tinto.jpg" alt="Vino" />
+        <div class="product-info">
+          <h2>Vino Tinto</h2>
+          <p>Precio: 1500€ por botella</p>
+          <button class="btn" id="agregarVino">+1</button>
+          <button class="btn" id="restarVino">-1</button>
+        </div>
+      </section>
+    </div>
+
+    <!-- Resumen de pedido -->
+    <div class="total">
+      <h2>Pedido</h2>
+      <div id="resultado"></div>
+      <button class="btn-vaciar" id="vaciar">Vaciar Carrito</button>
+    </div>
+
+    <!-- Carrito de Compras -->
+    <div class="carrito">
+      <h2>Carrito de Compras</h2>
+      <ul id="carritoItems"></ul>
+      <p id="carritoTotal">Total: 0€</p>
+      <button class="btn-pagar" id="pagarCarrito">Resumen del Pedido</button>
+    </div>
+
+    <script>
+      // Elementos del carrito
+      const btnAgregarQueso = document.querySelector("#agregarQueso");
+      const btnRestarQueso = document.querySelector("#restarQueso");
+
+      const btnAgregarVino = document.querySelector("#agregarVino");
+      const btnRestarVino = document.querySelector("#restarVino");
+
+      const btnVaciar = document.querySelector("#vaciar");
+      const btnTotal = document.querySelector("#resultado");
+
+      const precioQueso = 1200;
+      const precioVino = 1500;
+
+      // Variables para llevar el control de las cantidades
+      let conQueso = 0;
+      let conVino = 0;
+
+      // Función para actualizar el carrito de compras
+      function ActualizarCarrito() {
+        const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+        // Limpiar carrito antes de agregar nuevos productos
+        localStorage.removeItem("carrito");
+
+        // Agregar productos al carrito
+        carrito.push({ producto: "Queso Manchego", cantidad: conQueso, precio: precioQueso });
+        carrito.push({ producto: "Vino Tinto", cantidad: conVino, precio: precioVino });
+
+        // Guardar el carrito actualizado en localStorage
+        localStorage.setItem("carrito", JSON.stringify(carrito));
+
+        // Mostrar carrito
+        MostrarCarrito(carrito);
+      }
+
+      // Función para mostrar el carrito en la página
+      function MostrarCarrito(carrito) {
+        const carritoItems = document.getElementById("carritoItems");
+        carritoItems.innerHTML = ""; // Limpiar carrito antes de mostrar
+
+        let totalCarrito = 0;
+        carrito.forEach(item => {
+          const li = document.createElement("li");
+          li.textContent = `${item.producto} - ${item.cantidad} x ${item.precio}€ = ${item.cantidad * item.precio}€`;
+          carritoItems.appendChild(li);
+          totalCarrito += item.cantidad * item.precio;
+        });
+
+        document.getElementById("carritoTotal").textContent = `Total: ${totalCarrito}€`;
+      }
+
+      // Función de agregar queso al carrito
+      function AgregarQueso(cant) {
+        conQueso += cant;
+        ActualizarCarrito();
+        MostarTotal();
+      }
+
+      // Función de restar queso del carrito
+      function RestarQueso(cant) {
+        if (conQueso > 0) {
+          conQueso -= cant;
+          ActualizarCarrito();
+          MostarTotal();
+        }
+      }
+
+      // Función de agregar vino al carrito
+      function AgregarVino(cant) {
+        conVino += cant;
+        ActualizarCarrito();
+        MostarTotal();
+      }
+
+      // Función de restar vino del carrito
+      function RestarVino(cant) {
+        if (conVino > 0) {
+          conVino -= cant;
+          ActualizarCarrito();
+          MostarTotal();
+        }
+      }
+
+      // Función de mostrar totales con el precio
+      function MostarTotal() {
+        const totalPrecioQueso = conQueso * precioQueso;
+        const totalPrecioVino = conVino * precioVino;
+        const total = totalPrecioQueso + totalPrecioVino;
+
+        btnTotal.innerHTML = `
+          <ul>
+            <li>Queso Manchego: ${conQueso} unidad(es) x ${precioQueso}€</li>
+            <li>Vino Tinto: ${conVino} botella(s) x ${precioVino}€</li>
+          </ul>
+          Total: ${total}€
+        `;
+      }
+
+      // Función de vaciar carrito
+      function BorrarCarrito() {
+        conQueso = 0;
+        conVino = 0;
+        localStorage.removeItem("carrito");
+        MostrarCarrito([]);
+        MostarTotal();
+      }
+
+      // Función de proceder al resumen de pedido (redirección a tienda_pago.html)
+      function ProcederAlPago() {
+        window.location.href = "./carrito.html"; // Redirige a la página de pago
+      }
+
+      // Event listeners
+      btnAgregarQueso.addEventListener("click", () => AgregarQueso(1));
+      btnRestarQueso.addEventListener("click", () => RestarQueso(1));
+
+      btnAgregarVino.addEventListener("click", () => AgregarVino(1));
+      btnRestarVino.addEventListener("click", () => RestarVino(1));
+
+      btnVaciar.addEventListener("click", BorrarCarrito);
+
+      document.getElementById("pagarCarrito").addEventListener("click", ProcederAlPago); // Cambiar nombre del botón
+
+      // Al cargar la página, mostrar el carrito guardado en el localStorage
+      window.onload = () => {
+        const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+        MostrarCarrito(carrito);
+      };
+    </script>
+  </body>
+</html>

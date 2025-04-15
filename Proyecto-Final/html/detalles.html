@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Detalles Tablas</title>
+
+  <style>
+    body {
+      background: #f1f5f9;
+      
+      margin: 0;
+      padding: 20px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 1000px;
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: row;
+      margin: 40px auto;
+      position: relative;
+      animation: fadeInUp 0.6s ease-out;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .imagen-container {
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #f9fafb;
+    }
+
+    .titulo {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 10px 20px;
+      margin-top: 15px;
+      margin-bottom: 10px;
+      border-radius: 12px;
+      font-size: 18px;
+      font-weight: 700;
+      color: #1f2937;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      white-space: nowrap;
+    }
+
+    .imagenproducto {
+      width: 90%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .info-inferior {
+      margin-top: 10px;
+      background: #ffffff;
+      text-align: center;
+      padding: 12px 8px;
+      font-size: 14px;
+      font-weight: 500;
+      color: #374151;
+      border-top: 1px solid #e5e7eb;
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .contenido {
+      padding: 30px;
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background-color: #ffffff;
+    }
+
+    .clase {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background-color: #e0e7ff;
+      color: #CF8D6D;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 6px 12px;
+      border-radius: 9999px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .subtitulo {
+      font-size: 20px;
+      font-weight: 700;
+      color: #1f2937;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #CF8D6D;
+      padding-bottom: 5px;
+    }
+
+    .boton {
+      margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #CF8D6D;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .boton:hover {
+      background-color: #CF8D6D;
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(67, 56, 202, 0.5);
+    }
+
+    ul {
+      padding-left: 18px;
+      margin: 5px 0 10px;
+    }
+
+    h3, p {
+      margin: 8px 0;
+      color: #374151;
+    }
+
+    .fila {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 10px;
+    }
+
+    .columna {
+      flex: 1;
+    }
+
+    strong {
+      color: #CF8D6D;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="productos-container"></div>
+
+  <script>
+    fetch('../db/products.json')  // Asegúrate de que la ruta sea correcta
+      .then(response => response.json())
+      .then(data => {
+        const container = document.getElementById('productos-container');
+
+        data.forEach(productoData => {
+          const producto = productoData.producto;
+          const card = document.createElement('div');
+          card.classList.add('card');
+
+          // Asignar la clase correcta según el tipo de producto
+          let productoClase = '';
+          if (producto.habilidades.includes("Bandejas")) {
+            productoClase = 'Bandeja';
+          } else if (producto.habilidades.includes("Charcutería")) {
+            productoClase = 'Charcutería';
+          } else if (producto.habilidades.includes("Tabla")) {
+            productoClase = 'Tabla';
+          }
+
+          card.innerHTML = `
+            <div class="clase">${productoClase}</div>
+            <div class="imagen-container">
+              <div class="titulo">${producto.nombre}</div>
+              <img class="imagenproducto" src="${producto.avatar}" alt="${producto.nombre}">
+              <div class="info-inferior">
+                <div><strong>Ideal para:</strong> ${producto.descripcion}</div>
+                <div><strong>Precio:</strong> $${producto.Precio}</div>
+                <button class="boton">Añadir al carrito</button>
+              </div>
+            </div>
+            <div class="contenido">
+              <h3 class="subtitulo">Detalles</h3>
+              <div class="fila">
+                <div class="columna">
+                  <h4>Carnes</h4>
+                  <ul>
+                    ${producto.carnes.map(carne => `<li>${carne}</li>`).join('')}
+                  </ul>
+                </div>
+                <div class="columna">
+                  <h4>Quesos</h4>
+                  <ul>
+                    ${producto.quesos.map(queso => `<li>${queso}</li>`).join('')}
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Aquí añadimos las frutas y complementos -->
+              <div class="fila">
+                <div class="columna">
+                  <h4>Frutas</h4>
+                  <ul>
+                    ${producto.frutas.map(fruta => `<li>${fruta}</li>`).join('')}
+                  </ul>
+                </div>
+                <div class="columna">
+                  <h4>Complementos</h4>
+                  <ul>
+                    ${producto.complementos.map(complemento => `<li>${complemento}</li>`).join('')}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          `;
+
+          container.appendChild(card);
+        });
+      })
+      .catch(error => {
+        console.error('Error cargando el JSON:', error);
+      });
+  </script>
+
+</body>
+</html>

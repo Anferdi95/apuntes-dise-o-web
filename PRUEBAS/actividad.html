@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Completo</title>
+
+    <style>
+        /* Reset de HTML */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Contenedor Layout General */
+        .container {
+            display:flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        /* Estilos para el header y footer */
+        .header, 
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+        .footer {
+            text-align: center;
+        }
+
+
+        /* Estilos para la navegación del header */
+        .nav {
+            display:flex;
+            justify-content: space-between ;
+        }
+
+        .nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .header a, 
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .header a:hover, 
+        .footer a:hover {
+            color: #cc49ea;
+        }
+
+        /* main: incluye sidebar + content */
+        .main {
+            display: flex;
+            flex:1;
+        }
+
+        /* Estilos para la navegación del sidebar */
+        .sidebar {
+            background-color: #f0f0f0;
+            width: 200px;
+            padding: 10px;
+        }
+
+        .sidebar ul {
+            margin: 10px;
+            list-style-type: none;
+        }
+        .sidebar a {
+            text-decoration: none;
+            color: gray;
+        }
+        .sidebar a:hover {
+            color: #ba3398;
+        }
+
+
+        /* EStilos para el contenido */
+        .content {
+            display:flex;
+            flex-direction: column;
+            flex: 1;
+           
+
+        }
+
+        .grid-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-top: 12px;
+    }
+
+    .Card {
+        background-color: gray;
+        color: white;
+        padding: 20px;
+
+        flex-grow: 1;       /*  permite al box crecer */
+        flex-shrink: 0;     /*  permite ser mas pequeña */
+        flex-basis: 200px;  /*  valor inicial */
+        flex: 1 0 200px;
+    }
+
+    .section{
+        padding: 20px;
+    }
+    .section:nth-child(even) {
+        background-color:rgb(227, 225, 225);
+    }
+.card{
+    box-shadow: 2PX 2PX 5PX rgb(141, 143, 141);
+    margin: 5px;
+    border-radius: 5px;
+}
+
+
+    </style>
+</head>
+<body>
+    
+    <!-- 
+    container: Es el contenedor principal que engloba todo el layout.
+    header: Se coloca en la parte superior de la página.
+    main: Contiene el contenido principal de la página, que incluye el sidebar y el content.
+    sidebar: Se coloca a la izquierda dentro del main.
+    content: Se coloca a la derecha dentro del main y contiene múltiples sections.
+    section: Representa las secciones de contenido dentro del content.
+    footer: Se coloca en la parte inferior de la página, fuera del main. 
+    -->
+
+    <!-- container: Contenedor que engloba todo el layout -->
+    <div class="container">
+
+
+        <div class="header">
+            <div class=":/nav">
+                <div>Logo</div>
+                
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Acerca de</a></li>
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    
+        <!-- main: Contenido Principal (incluye sidebar que también es parte del contenido) -->
+        <div class="main">
+            <div class="sidebar">
+                <h2>Barra lateral</h2>
+                <ul>
+                    <li><a href="#">Enlace 1</a></li>
+                    <li><a href="#">Enlace 2</a></li>
+                    <li><a href="#">Enlace 3</a></li>
+                </ul>
+            </div>
+    
+            <div class="content">
+
+              
+
+                <div class="section">
+
+                    <div class="section card">
+                        <h2> Sección 1 </h2>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus repudiandae eos dicta deserunt quas. Sapiente eaque dignissimos saepe hic? Voluptatibus in aspernatur vitae est, ex hic quo ducimus architecto perferendis!
+                    </div>
+
+                    <h2> Grid de items</h2>
+                    <div class="grid-container card">
+                        <div class="Card">Tarjeta 1</div>
+                        <div class="Card">Tarjeta 2</div>
+                        <div class="Card">Tarjeta 3</div>
+                        <div class="Card">Tarjeta 4</div>
+                        <div class="Card">Tarjeta 5</div>
+                        <div class="Card">Tarjeta 6</div>
+                
+                    </div>
+                
+
+                <div class="section card">
+                    <h2> Sección 3</h2>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus repudiandae eos dicta deserunt quas. Sapiente eaque dignissimos saepe hic? Voluptatibus in aspernatur vitae est, ex hic quo ducimus architecto perferendis!
+                </div>
+
+                <div class="section card">
+                    <h2> Sección 4</h2>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus repudiandae eos dicta deserunt quas. Sapiente eaque dignissimos saepe hic? Voluptatibus in aspernatur vitae est, ex hic quo ducimus architecto perferendis!
+                </div>
+            </div> 
+            </div>
+        </div>
+    
+        <div class="footer">
+            <p>Tu Empresa &copy; 2025 - Todos Los derechos reservados. <a href="#">Terminos y Condiciones</a></p>
+        </div>
+
+
+    </div>
+    
+</body>
+</html>

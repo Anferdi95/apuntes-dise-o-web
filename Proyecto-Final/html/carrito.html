@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pagar - Queso y Vino</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        width: 60%;
+        margin: 50px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+      .carrito-lista {
+        margin-bottom: 20px;
+      }
+
+      .carrito-item {
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 0;
+      }
+
+      .carrito-item p {
+        margin: 0;
+      }
+
+      .total {
+        text-align: right;
+        font-size: 1.2em;
+        margin-top: 20px;
+      }
+
+      .btn-pagar {
+        background-color: #28a745;
+        padding: 10px 20px;
+        border: none;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 4px;
+      }
+
+      .btn-pagar:hover {
+        background-color: #218838;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Resumen de Pedido</h2>
+
+      <!-- Lista de productos en el carrito -->
+      <div class="carrito-lista" id="carritoItems">
+        <!-- Los productos se agregarán dinámicamente aquí -->
+      </div>
+
+      <div class="total" id="totalCarrito">
+        <!-- Total se agregará aquí -->
+      </div>
+
+      <!-- Botón de realizar pago -->
+      <button class="btn-pagar">Realizar Pago</button>
+    </div>
+
+    <script>
+      // Función para mostrar los productos en el carrito y el total
+      function MostrarCarrito() {
+        const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+        const carritoItems = document.getElementById("carritoItems");
+        carritoItems.innerHTML = ''; // Limpiar la lista antes de mostrar
+
+        let totalCarrito = 0;
+
+        carrito.forEach(item => {
+          const li = document.createElement("div");
+          li.className = "carrito-item";
+          li.innerHTML = `
+            <p>${item.producto} - ${item.cantidad} x ${item.precio}€ = ${item.cantidad * item.precio}€</p>
+          `;
+          carritoItems.appendChild(li);
+          totalCarrito += item.cantidad * item.precio;
+        });
+
+        document.getElementById("totalCarrito").textContent = `Total: ${totalCarrito}€`;
+      }
+
+      // Al cargar la página, mostrar el carrito guardado
+      window.onload = MostrarCarrito;
+    </script>
+  </body>
+</html>

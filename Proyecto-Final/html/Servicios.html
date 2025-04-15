@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicios</title>
+  <link rel="stylesheet" href="../css/estilos-hea-foot.css" />
+  <link rel="stylesheet" href="../css/servicios.css" />
+  
+</head>
+
+<body>
+  <header>
+    <div class="header">
+      <div class="buttons-left">
+        <a class="btn-square" href="https://www.facebook.com/Quesosentablabogota/" target="_blank">
+          <img class="face" src="../img/facebook.svg" alt="Icono de Facebook" />
+        </a>
+        <a class="btn-square" href="https://www.instagram.com/quesosentablabogota1" target="_blank">
+          <img class="insta" src="../img/1362857.png" alt="Icono de Instagram" />
+        </a>
+        <a class="btn-square" href="https://api.whatsapp.com/send?phone=573209996208" target="_blank">
+          <img class="whatsapp" src="../img/viber.svg" alt="WhatsApp" />
+        </a>
+      </div>
+
+      <div class="center-content">
+        <img class="logo_header" src="../img/QET_Mesa de trabajo 1 copia.png" alt="logo" />
+        <nav class="nav">
+          <ul>
+            <li>
+              <a href="../index.html">Inicio</a>
+            </li>
+            <hr>
+            <li><a href="./SobreNosotros.html">Sobre Nosotros</a></li>
+            <hr>
+            <li><a href="./Servicios.html">Servicios</a></li>
+            <hr>
+            <li><a href="./contacto.html">Contactanos</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="button-right">
+        <img src="../img/img_opti/carritoquesos-06.png" alt="carrito" class="carrito" />
+      </div>
+    </div>
+  </header>
+
+
+  <!-- Contenedor de servicios -->
+  <div class="contenedorPrincipal">
+    <div class="servicios-container">
+      <div class="menu">
+        <h2 onclick="mostrarInfo('bandejas')">Bandejas</h2>
+        <h2 onclick="mostrarInfo('charcuteria')">Charcutería</h2>
+        <h2 onclick="mostrarInfo('tablas')">Tablas</h2>
+      </div>
+
+      <div class="content">
+        <!-- Sección Bandejas -->
+        <div id="bandejas" class="info active">
+          <h2>Bandejas</h2>
+          <p class="desc">Disfruta de nuestras exquisitas tablas de quesos, cuidadosamente preparadas con una variedad selecta de quesos nacionales e importados. Cada tabla está acompañada de una cuidada selección de carnes frías como salami, chorizo, jamón serrano, pepperoni, prosciutto, lomo ahumado y pastrami, entre otras delicias. Además, puedes personalizar tu experiencia eligiendo el trago de tu preferencia para acompañar tu tabla, creando así el maridaje perfecto para cualquier ocasión especial o reunión.</p>
+          <div class="galeria" id="galeria"></div>
+        </div>
+
+        <!-- Sección Charcutería -->
+        <div id="charcuteria" class="info">
+          <h2>Charcutería</h2>
+          <p class="desc">Contamos con una elegante mesa de charcutería, perfecta para tus eventos, donde los invitados podrán acercarse libremente, disfrutar de una amplia variedad de quesos, carnes frías y acompañamientos, y armar su propia mini tabla personalizada. Una experiencia interactiva y deliciosa que encantará a todos los asistentes.
+
+          </p>
+          <div class="galeriachar" id="galeriachar"></div>
+
+          <div class="habilidades-container" id="charcuteria-habilidades"></div>
+        </div>
+
+        <!-- Sección Tablas -->
+        <div id="tablas" class="info">
+          <h2>Tablas</h2>
+          <p class="desc">También ofrecemos tablas de quesos y carnes diseñadas especialmente para grupos, ideales para fomentar la unión e integración en reuniones familiares, eventos empresariales o celebraciones especiales. Estas tablas están compuestas por una generosa variedad de quesos, jamones, salamis, pepperoni, chorizos, pastrami, lomo canadiense y más, pensadas para compartir, conversar y disfrutar juntos alrededor de sabores únicos y bien equilibrados.</p>
+          <div class="galeriatab" id="galeriatab"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-left">
+        <a href="https://www.facebook.com/Quesosentablabogota/" target="_blank"><img class="face"
+            src="../img/facebook.svg" alt="Facebook" /></a>
+        <a href="https://www.instagram.com/quesosentablabogota1" target="_blank"><img class="insta"
+            src="../img/1362857.png" alt="Instagram" /></a>
+        <a href="https://api.whatsapp.com/send?phone=573209996208" target="_blank"><img class="whatsapp"
+            src="../img/viber.svg" alt="WhatsApp" /></a>
+      </div>
+      <img class="logo_footer" src="../img/logo_footer-05.png" alt="Logo Footer" />
+      <div class="footer-right">
+        <p class="gg">Tu Empresa &copy; 2025 - Todos los derechos reservados. <br /><a href="#">Términos y
+            Condiciones</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../JS/servicios.js"></script>
+</body>
+
+</html>

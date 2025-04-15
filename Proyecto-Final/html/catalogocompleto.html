@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Catálogo de Productos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background: #f8f8f8;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .producto {
+      background: white;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+
+    .producto:hover {
+      transform: scale(1.02);
+    }
+
+    .producto img {
+      width: 100%;
+      max-height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .producto h3 {
+      margin: 10px 0 5px;
+    }
+
+    .producto p {
+      margin: 4px 0;
+      font-size: 0.95em;
+      color: #555;
+    }
+
+    .precio {
+      color: #e91e63;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    /* Estilo general del card */
+.card {
+    position: relative;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto de hover sobre el card */
+.card:hover {
+    transform: translateY(-5px); /* Sube un poco cuando el mouse pasa */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Título del producto */
+.nombre {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
+}
+
+/* Imagen del producto */
+.imagenproducto {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Precio */
+.Precio {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #585E7F; /* Color rosado */
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Clase del producto (como categorías o etiquetas) */
+.clase {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background-color: #e0e7ff;
+    color: #CF8D6D;
+    font-size: 12px;
+    font-weight: 900;
+    padding: 6px 12px;
+    border-radius: 500px;
+    transition: background-color 0.3s;
+}
+
+.clase:hover {
+    background-color: #a5b4fc;
+}
+
+/* Botón para añadir al carrito */
+.boton_carrito {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #CF8D6D;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    
+    /* Centrado */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.boton_carrito:hover {
+    background-color: #CF8D6D;
+    transform: scale(1.05);
+}
+
+
+/* Para pantallas pequeñas, se ajustan los cards */
+@media (max-width: 768px) {
+    .card {
+        padding: 15px;
+    }
+
+    .nombre {
+        font-size: 1em;
+    }
+
+    .Precio {
+        font-size: 1em;
+    }
+
+    .imagenproducto {
+        height: 150px;
+    }
+}
+
+
+  </style>
+</head>
+<body>
+  <h1>Catálogo de Productos</h1>
+  <div class="galeria" id="galeria"></div>
+
+  <script>
+    fetch('../db/datos.json') // Ajusta la ruta si es necesario
+      .then(res => res.json())
+      .then(data => {
+        const galeria = document.getElementById('galeria');
+        data.forEach(item => {
+          galeria.innerHTML += `
+            <div class="card">
+              <h2 class="nombre">${item.nombre}</h2>
+              <img class="imagenproducto" src="./${item.avatar.trim()}" alt="${item.nombre}">
+              <p class="Precio">$${item.Precio.toLocaleString('es-CO')}</p>
+              <div class="clase">${item.habilidades.join(', ')}</div>
+              <button class="boton_carrito">Añadir al carrito</button>
+            </div>
+          `;
+        });
+      })
+      .catch(error => {
+        console.error('Error al cargar el catálogo:', error);
+        document.getElementById('galeria').innerHTML = "<p>No se pudo cargar el catálogo.</p>";
+      });
+  </script>
+  
+</body>
+</html>

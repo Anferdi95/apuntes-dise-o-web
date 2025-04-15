@@ -1,0 +1,252 @@
+/* Reset de HTML */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Establecer la altura total del body y html */
+html,
+body {
+    height: 100%;
+}
+    .body{
+    background-color: #eceae3;
+       
+}
+
+/* Estilos para el logo en el header */
+.logo_header {
+    height: auto;
+    max-height: 150px;
+    width: auto;
+    margin-bottom: 20px;
+}
+
+/* Estilos para el logo en el footer */
+.logo_footer {
+    height: auto;
+    max-height: 100px;
+    width: auto;
+    margin-bottom: 20px;
+}
+
+/* Estilos para el header y footer */
+.header,
+.footer {
+    background-color: #FBE7E4;
+    color: #2d2d2d;
+    padding: 10px;  
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Sombra en el header */
+.header {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenedor de navegación */
+.nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Estilos para la lista de navegación */
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+/* Estilos para los enlaces */
+.header a,
+.footer a {
+    color: #2d2d2d;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Efectos hover y focus para enlaces */
+.header a:hover,
+.footer a:hover,
+.header a:focus,
+.footer a:focus {
+    color: #eb1313;
+    outline: none;
+}
+
+/* Estilos para el footer */
+.footer {
+    text-align: center;
+    font-size: 14px;
+    padding-top: 10px;
+    margin-top: auto;
+    /* Esto hace que el footer se empuje hacia abajo */
+}
+
+/* Footer content with flexbox for alignment */
+.footer-content {
+    display: flex;
+    justify-content: space-around; /* Distribuye los elementos de manera uniforme */
+    align-items: center; /* Centra los elementos verticalmente */
+    gap: 20px; /* Espacio entre los elementos */
+    width: 100%;
+    padding: 10px 20px; /* Espaciado alrededor del footer */
+    flex-wrap: wrap; /* Asegura que los elementos no se desborden en pantallas pequeñas */
+}
+
+/* Estilo para los elementos del pie izquierdo y derecho */
+.footer-left,
+.footer-right {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra el contenido dentro de cada sección */
+}
+
+/* Alinear las imágenes de redes sociales y el logo */
+.footer-left img, .footer-right img, .logo_footer {
+    margin: 0 10px; /* Espaciado entre los iconos y el logo */
+}
+
+/* Estilo del texto de derechos reservados */
+.footer-right p {
+    margin: 0;
+    font-size: 14px; /* Tamaño de fuente */
+}
+
+/* Tamaño de los iconos sociales */
+.footer-left img {
+    width: 30px;
+    height: auto;
+}
+
+/* Estilo para el logo del footer */
+.logo_footer {
+    width: 150px;
+    height: auto;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Cambia la dirección a columna en pantallas pequeñas */
+        align-items: center; /* Centra los elementos */
+    }
+
+    .footer-left,
+    .footer-right {
+        flex-basis: 100%; /* Ocupa el 100% del ancho */
+        text-align: center; /* Alinea todo al centro */
+    }
+
+    .footer-left img {
+        width: 25px; /* Ajusta el tamaño de los iconos para pantallas pequeñas */
+    }
+
+    .footer-right p {
+        font-size: 12px; /* Reduce el tamaño de la fuente */
+    }
+}
+
+/* Media query para pantallas grandes */
+@media (min-width: 769px) {
+    .footer-content {
+        flex-wrap: nowrap; /* Previene que los elementos del footer se acomoden en una nueva línea */
+    }
+}
+
+/* Estilos para el header */
+.header {
+    display: flex;
+    justify-content: center; /* Centra todo el contenido */
+    align-items: center;
+    position: relative;
+}
+
+/* Contenedor para el logo y el menú centrado */
+.center-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Botones en la parte superior izquierda */
+.buttons-left {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    display: flex;
+    gap: 10px;
+}
+
+/* Estilo para los botones cuadrados */
+.btn-square {
+    width: 40px;
+    height: 40px;
+    
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+/* Estilos para el logo */
+.logo_header {
+    height: auto;
+    max-height: 150px;
+    width: auto;
+    margin-bottom: 20px;
+}
+
+/* Estilos para el menú de navegación */
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+/* Estilo para los enlaces del menú */
+.header a {
+    color: #2d2d2d;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Efectos hover para enlaces */
+.header a:hover {
+    color: #eb1313;
+}
+.insta{
+    height: 100%;
+}
+/* Contenedor para el botón en la parte superior derecha */
+.button-right {
+    position: absolute;
+    top: 40px;
+    right: 50px;
+}
+
+/* Estilo para el botón en la parte superior derecha */
+.btn-right {
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 65px;
+    opacity: 80%;
+}
+.carrito{
+    height: 65px;
+    opacity: 80%;
+}

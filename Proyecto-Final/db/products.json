@@ -1,0 +1,503 @@
+[
+    {
+      "producto": {
+        "id": 1,
+        "nombre": "6 Personas",
+        "habilidades": ["Bandejas"],
+        "Precio": 199000,
+        "avatar": "../img/img_opti/bandejas/tabla_6personas.jpg",
+        "descripcion": "Ideal para 6 personas",
+        "total_productos": 12,
+        "carnes": [
+          "Cábano", "Jamón", "Jamón serrano", "Salami", "Pernil de cerdo", "Rosas italianas"
+        ],
+        "quesos": [
+          "Queso de la casa", "Queso holandés", "Queso mozzarella", "Queso pera", 
+          "Queso gouda ahumado", "Queso cheddar", "Queso Pepper Jack", "Queso búfala"
+        ],
+        "frutas": [
+          "Fresas", "Uchuvas", "Uvas", "Kiwi", "Duraznos", "Mango"
+        ],
+        "complementos": [
+          "Ramonas", "Leños", "Tostadas", "Aceitunas", "Croissant", "Salsas", "Mix de frutos secos"
+        ],
+        "logo": "../img/QET_Mesa de trabajo 1 copia.png"
+      }
+    },
+    {
+      "producto": {
+        "id": 2,
+        "nombre": "8 Personas",
+        "habilidades": ["Bandejas"],
+        "Precio": 235000,
+        "avatar": "../img/img_opti/bandejas/tabla_8personas.jpg",
+        "descripcion": "Ideal para 8 personas",
+        "total_productos": 12,
+        "carnes": [
+          "Cábano", "Jamón", "Jamón serrano", "Salami", "Pernil de cerdo", "Rosas italianas"
+        ],
+        "quesos": [
+          "Queso de la casa", "Queso holandés", "Queso mozzarella", "Queso pera", 
+          "Queso gouda ahumado", "Queso cheddar", "Queso Pepper Jack", "Queso búfala"
+        ],
+        "frutas": [
+          "Fresas", "Uchuvas", "Uvas", "Kiwi", "Duraznos", "Mango"
+        ],
+        "complementos": [
+          "Ramonas", "Leños", "Tostadas", "Aceitunas", "Croissant", "Salsas", "Mix de frutos secos"
+        ],
+        "logo": "../img/QET_Mesa de trabajo 1 copia.png"
+      }
+    },
+    {
+      "producto": {
+        "id": 3,
+        "nombre": "12 Personas",
+        "habilidades": ["Bandejas"],
+        "Precio": 399000,
+        "avatar": "../img/img_opti/bandejas/tabla12personas.jpg",
+        "descripcion": "Ideal para 25-30 personas",
+        "total_productos": 15,
+        "carnes": [
+          "Cábano", "Jamón", "Jamón serrano", "Salami", "Pernil de cerdo", "Rosas italianas"
+        ],
+        "quesos": [
+          "Queso de la casa", "Queso holandés", "Queso mozzarella", "Queso pera", 
+          "Queso gouda ahumado", "Queso cheddar", "Queso Pepper Jack", "Queso búfala"
+        ],
+        "frutas": [
+          "Fresas", "Uchuvas", "Uvas", "Kiwi", "Duraznos", "Mango"
+        ],
+        "complementos": [
+          "Ramonas", "Leños", "Tostadas", "Aceitunas", "Croissant", "Salsas", "Mix de frutos secos"
+        ],
+        "logo": "../img/QET_Mesa de trabajo 1 copia.png"
+      }
+    },
+    {
+      "producto": {
+        "id": 4,
+        "nombre": "25 Personas",
+        "habilidades": ["Bandejas"],
+        "Precio": 709000,
+        "avatar": "../img/img_opti/bandejas/tablas_25personas.jpg",
+        "descripcion": "Ideal para 25-30 personas",
+        "total_productos": 25,
+        "carnes": [
+          "Cábano", "Jamón", "Jamón serrano", "Salami", "Pernil de cerdo", "Rosas italianas"
+        ],
+        "quesos": [
+          "Queso de la casa", "Queso holandés", "Queso mozzarella", "Queso pera", 
+          "Queso gouda ahumado", "Queso cheddar", "Queso Pepper Jack", "Queso búfala"
+        ],
+        "frutas": [
+          "Fresas", "Uchuvas", "Uvas", "Kiwi", "Duraznos", "Mango"
+        ],
+        "complementos": [
+          "Ramonas", "Leños", "Tostadas", "Aceitunas", "Croissant", "Salsas", "Mix de frutos secos"
+        ],
+        "logo": "../img/QET_Mesa de trabajo 1 copia.png"
+      }
+    },
+    {
+      "producto": {
+        "id": 5,
+        "nombre": "Mesa Eventos",
+        "habilidades": ["Charcutería"],
+        "Precio": 909000,
+        "avatar": "../img/img_opti/charcuterio/mesa_Eventos.jpg",
+        "descripcion": "Ideal para grupos",
+        "total_productos": 30,
+        "carnes": [
+          "Cábano", "Jamón", "Jamón serrano", "Salami", "Pernil de cerdo", "Rosas italianas"
+        ],
+        "quesos": [
+          "Queso de la casa", "Queso holandés", "Queso mozzarella", "Queso pera", 
+          "Queso gouda ahumado", "Queso cheddar", "Queso Pepper Jack", "Queso búfala"
+        ],
+        "frutas": [
+          "Fresas", "Uchuvas", "Uvas", "Kiwi", "Duraznos", "Mango"
+        ],
+        "complementos": [
+          "Ramonas", "Leños", "Tostadas", "Aceitunas", "Croissant", "Salsas", "Mix de frutos secos"
+        ],
+        "logo": "../img/QET_Mesa de trabajo 1 copia.png"
+      }
+    },
+    {
+      "producto": {
+        "id": 6,
+        "nombre": "Amarillo",
+        "habilidades": ["Tabla"],
+        "Precio": 249000,
+        "avatar": "../img/img_opti/tablas/amarillo.jpeg",
+        "descripcion": "Ideal para 7 personas",
+        "total_productos": 20,
+        "carnes": [
+          "Cábano", "Jamón", "Jamón serrano", "Salami", "Pernil de cerdo", "Rosas italianas"
+        ],
+        "quesos": [
+          "Queso de la casa", "Queso holandés", "Queso mozzarella", "Queso pera", 
+          "Queso gouda ahumado", "Queso cheddar", "Queso Pepper Jack", "Queso búfala"
+        ],
+        "frutas": [
+          "Fresas", "Uchuvas", "Uvas", "Kiwi", "Duraznos", "Mango"
+        ],
+        "complementos": [
+          "Ramonas", "Leños", "Tostadas", "Aceitunas", "Croissant", "Salsas", "Mix de frutos secos"
+        ],
+        "logo": "../img/QET_Mesa de trabajo 1 copia.png"
+      }
+    },
+    {
+      "producto": {
+        "id": 7,
+        "nombre": "Premium Baileys",
+        "habilidades": ["Tabla"],
+        "Precio": 251000,
+        "avatar": "../img/img_opti/tablas/baileys.jpeg",
+        "descripcion": "Ideal para 7 personas",
+        "total_productos": 20,
+        "carnes": [
+          "Cábano", "Jamón", "Jamón serrano", "Salami", "Pernil de cerdo", "Rosas italianas"
+        ],
+        "quesos": [
+          "Queso de la casa", "Queso holandés", "Queso mozzarella", "Queso pera", 
+          "Queso gouda ahumado", "Queso cheddar", "Queso Pepper Jack", "Queso búfala"
+        ],
+        "frutas": [
+          "Fresas", "Uchuvas", "Uvas", "Kiwi", "Duraznos", "Mango"
+        ],
+        "complementos": [
+          "Ramonas", "Leños", "Tostadas", "Aceitunas", "Croissant", "Salsas", "Mix de frutos secos"
+        ],
+        "logo": "../img/QET_Mesa de trabajo 1 copia.png"
+      }
+    },
+    {
+      "producto": {
+        "id": 8,
+        "nombre": "Premium Bombay",
+        "habilidades": ["Tabla"],
+        "Precio": 342000,
+        "avatar": "../img/img_opti/tablas/bombay.jpeg",
+        "descripcion": "Ideal para 7 personas",
+        "total_productos": 20,
+        "carnes": [
+          "Cábano", "Jamón", "Jamón serrano", "Salami", "Pernil de cerdo", "Rosas italianas"
+        ],
+        "quesos": [
+          "Queso de la casa", "Queso holandés", "Queso mozzarella", "Queso pera", 
+          "Queso gouda ahumado", "Queso cheddar", "Queso Pepper Jack", "Queso búfala"
+        ],
+        "frutas": [
+          "Fresas", "Uchuvas", "Uvas", "Kiwi", "Duraznos", "Mango"
+        ],
+        "complementos": [
+          "Ramonas", "Leños", "Tostadas", "Aceitunas", "Croissant", "Salsas", "Mix de frutos secos"
+        ],
+        "logo": "../img/QET_Mesa de trabajo 1 copia.png"
+      }
+    },
+    {
+      "producto": {
+        "id": 9,
+        "nombre": "Cerveza Alemana",
+        "habilidades": ["Tabla"],
+        "Precio": 108000,
+        "avatar": "../img/img_opti/tablas/cerveza_alemana.jpeg",
+        "descripcion": "Ideal para 4 personas",
+        "total_productos": 12,
+        "carnes": [
+          "Cábano", "Jamón", "Jamón serrano", "Salami", "Pernil de cerdo", "Rosas italianas"
+        ],
+        "quesos": [
+          "Queso de la casa", "Queso holandés", "Queso mozzarella", "Queso pera", 
+          "Queso gouda ahumado", "Queso cheddar", "Queso Pepper Jack", "Queso búfala"
+        ],
+        "frutas": [
+          "Fresas", "Uchuvas", "Uvas", "Kiwi", "Duraznos", "Mango"
+        ],
+        "complementos": [
+          "Ramonas", "Leños", "Tostadas", "Aceitunas", "Croissant", "Salsas", "Mix de frutos secos"
+        ],
+        "logo": "../img/QET_Mesa de trabajo 1 copia.png"
+      }
+    },
+    {
+      "producto": {
+        "id": 10,
+        "nombre": "Duo Jack",
+        "habilidades": ["Tabla"],
+        "Precio": 179000,
+        "avatar": "../img/img_opti/tablas/jack_duo.jpeg",
+        "descripcion": "Ideal para 4 personas",
+        "total_productos": 12,
+        "carnes": [
+          "Cábano", "Jamón", "Jamón serrano", "Salami", "Pernil de cerdo", "Rosas italianas"
+        ],
+        "quesos": [
+          "Queso de la casa", "Queso holandés", "Queso mozzarella", "Queso pera", 
+          "Queso gouda ahumado", "Queso cheddar", "Queso Pepper Jack", "Queso búfala"
+        ],
+        "frutas": [
+          "Fresas", "Uchuvas", "Uvas", "Kiwi", "Duraznos", "Mango"
+        ],
+        "complementos": [
+          "Ramonas", "Leños", "Tostadas", "Aceitunas", "Croissant", "Salsas", "Mix de frutos secos"
+        ],
+        "logo": "../img/QET_Mesa de trabajo 1 copia.png"
+      }
+    },
+    {
+      "producto": {
+        "id": 11,
+        "nombre": "Jack 2 Personas",
+        "habilidades": ["Tabla"],
+        "Precio": 178000,
+        "avatar": "../img/img_opti/tablas/jack.jpeg",
+        "descripcion": "Ideal para 2-4 personas",
+        "total_productos": 12,
+        "carnes": [
+          "Cábano", "Jamón", "Jamón serrano", "Salami", "Pernil de cerdo", "Rosas italianas"
+        ],
+        "quesos": [
+          "Queso de la casa", "Queso holandés", "Queso mozzarella", "Queso pera", 
+          "Queso gouda ahumado", "Queso cheddar", "Queso Pepper Jack", "Queso búfala"
+        ],
+        "frutas": [
+          "Fresas", "Uchuvas", "Uvas", "Kiwi", "Duraznos", "Mango"
+        ],
+        "complementos": [
+          "Ramonas", "Leños", "Tostadas", "Aceitunas", "Croissant", "Salsas", "Mix de frutos secos"
+        ],
+        "logo": "../img/QET_Mesa de trabajo 1 copia.png"
+      }
+    },
+    {
+      "producto": {
+        "id": 12,
+        "nombre": "Jager 2 Personas",
+        "habilidades": ["Tabla"],
+        "Precio": 179000,
+        "avatar": "../img/img_opti/tablas/jager.jpeg",
+        "descripcion": "Ideal para 2-4 personas",
+        "total_productos": 12,
+        "carnes": [
+          "Cábano", "Jamón", "Jamón serrano", "Salami", "Pernil de cerdo", "Rosas italianas"
+        ],
+        "quesos": [
+          "Queso de la casa", "Queso holandés", "Queso mozzarella", "Queso pera", 
+          "Queso gouda ahumado", "Queso cheddar", "Queso Pepper Jack", "Queso búfala"
+        ],
+        "frutas": [
+          "Fresas", "Uchuvas", "Uvas", "Kiwi", "Duraznos", "Mango"
+        ],
+        "complementos": [
+          "Ramonas", "Leños", "Tostadas", "Aceitunas", "Croissant", "Salsas", "Mix de frutos secos"
+        ],
+        "logo": "../img/QET_Mesa de trabajo 1 copia.png"
+      }
+    },
+    {
+      "producto": {
+        "id": 13,
+        "nombre": "Leyenda",
+        "habilidades": ["Tabla"],
+        "Precio": 78000,
+        "avatar": "../img/img_opti/tablas/leyenda.jpeg",
+        "descripcion": "Ideal para 2 personas",
+        "total_productos": 12,
+        "carnes": [
+          "Cábano", "Jamón", "Jamón serrano", "Salami", "Pernil de cerdo", "Rosas italianas"
+        ],
+        "quesos": [
+          "Queso de la casa", "Queso holandés", "Queso mozzarella", "Queso pera", 
+          "Queso gouda ahumado", "Queso cheddar", "Queso Pepper Jack", "Queso búfala"
+        ],
+        "frutas": [
+          "Fresas", "Uchuvas", "Uvas", "Kiwi", "Duraznos", "Mango"
+        ],
+        "complementos": [
+          "Ramonas", "Leños", "Tostadas", "Aceitunas", "Croissant", "Salsas", "Mix de frutos secos"
+        ],
+        "logo": "../img/QET_Mesa de trabajo 1 copia.png"
+      }
+    },
+    {
+      "producto": {
+        "id": 14,
+        "nombre": "Lujo Bottega",
+        "habilidades": ["Tabla"],
+        "Precio": 353000,
+        "avatar": "../img/img_opti/tablas/lujo_bottega.jpeg",
+        "descripcion": "Ideal para 2-4 personas",
+        "total_productos": 16,
+        "carnes": [
+          "Cábano", "Jamón", "Jamón serrano", "Salami", "Pernil de cerdo", "Rosas italianas"
+        ],
+        "quesos": [
+          "Queso de la casa", "Queso holandés", "Queso mozzarella", "Queso pera", 
+          "Queso gouda ahumado", "Queso cheddar", "Queso Pepper Jack", "Queso búfala"
+        ],
+        "frutas": [
+          "Fresas", "Uchuvas", "Uvas", "Kiwi", "Duraznos", "Mango"
+        ],
+        "complementos": [
+          "Ramonas", "Leños", "Tostadas", "Aceitunas", "Croissant", "Salsas", "Mix de frutos secos"
+        ],
+        "logo": "../img/QET_Mesa de trabajo 1 copia.png"
+      }
+    },
+    {
+      "producto": {
+        "id": 15,
+        "nombre": "Lujo Dubonet",
+        "habilidades": ["Tabla"],
+        "Precio": 233000,
+        "avatar": "../img/img_opti/tablas/lujo_dubonet.jpeg",
+        "descripcion": "Ideal para 2-4 personas",
+        "total_productos": 12,
+        "carnes": [
+          "Cábano", "Jamón", "Jamón serrano", "Salami", "Pernil de cerdo", "Rosas italianas"
+        ],
+        "quesos": [
+          "Queso de la casa", "Queso holandés", "Queso mozzarella", "Queso pera", 
+          "Queso gouda ahumado", "Queso cheddar", "Queso Pepper Jack", "Queso búfala"
+        ],
+        "frutas": [
+          "Fresas", "Uchuvas", "Uvas", "Kiwi", "Duraznos", "Mango"
+        ],
+        "complementos": [
+          "Ramonas", "Leños", "Tostadas", "Aceitunas", "Croissant", "Salsas", "Mix de frutos secos"
+        ],
+        "logo": "../img/QET_Mesa de trabajo 1 copia.png"
+      }
+    },
+    {
+      "producto": {
+        "id": 16,
+        "nombre": "Lujo Ron",
+        "habilidades": ["Tabla"],
+        "Precio": 251000,
+        "avatar": "../img/img_opti/tablas/lujo_ron.jpeg",
+        "descripcion": "Ideal para 2-4 personas",
+        "total_productos": 12,
+        "carnes": [
+          "Cábano", "Jamón", "Jamón serrano", "Salami", "Pernil de cerdo", "Rosas italianas"
+        ],
+        "quesos": [
+          "Queso de la casa", "Queso holandés", "Queso mozzarella", "Queso pera", 
+          "Queso gouda ahumado", "Queso cheddar", "Queso Pepper Jack", "Queso búfala"
+        ],
+        "frutas": [
+          "Fresas", "Uchuvas", "Uvas", "Kiwi", "Duraznos", "Mango"
+        ],
+        "complementos": [
+          "Ramonas", "Leños", "Tostadas", "Aceitunas", "Croissant", "Salsas", "Mix de frutos secos"
+        ],
+        "logo": "../img/QET_Mesa de trabajo 1 copia.png"
+      }
+    },
+    {
+      "producto": {
+        "id": 17,
+        "nombre": "Lujo Undurraga",
+        "habilidades": ["Tabla"],
+        "Precio": 219000,
+        "avatar": "../img/img_opti/tablas/lujo_vino.jpeg",
+        "descripcion": "Ideal para 2-4 personas",
+        "total_productos": 12,
+        "carnes": [
+          "Cábano", "Jamón", "Jamón serrano", "Salami", "Pernil de cerdo", "Rosas italianas"
+        ],
+        "quesos": [
+          "Queso de la casa", "Queso holandés", "Queso mozzarella", "Queso pera", 
+          "Queso gouda ahumado", "Queso cheddar", "Queso Pepper Jack", "Queso búfala"
+        ],
+        "frutas": [
+          "Fresas", "Uchuvas", "Uvas", "Kiwi", "Duraznos", "Mango"
+        ],
+        "complementos": [
+          "Ramonas", "Leños", "Tostadas", "Aceitunas", "Croissant", "Salsas", "Mix de frutos secos"
+        ],
+        "logo": "../img/QET_Mesa de trabajo 1 copia.png"
+      }
+    },
+    {
+      "producto": {
+        "id": 18,
+        "nombre": "Vino",
+        "habilidades": ["Tabla"],
+        "Precio": 219000,
+        "avatar": "../img/img_opti/tablas/lujo_vino2.jpeg",
+        "descripcion": "Ideal para 2-4 personas",
+        "total_productos": 12,
+        "carnes": [
+          "Cábano", "Jamón", "Jamón serrano", "Salami", "Pernil de cerdo", "Rosas italianas"
+        ],
+        "quesos": [
+          "Queso de la casa", "Queso holandés", "Queso mozzarella", "Queso pera", 
+          "Queso gouda ahumado", "Queso cheddar", "Queso Pepper Jack", "Queso búfala"
+        ],
+        "frutas": [
+          "Fresas", "Uchuvas", "Uvas", "Kiwi", "Duraznos", "Mango"
+        ],
+        "complementos": [
+          "Ramonas", "Leños", "Tostadas", "Aceitunas", "Croissant", "Salsas", "Mix de frutos secos"
+        ],
+        "logo": "../img/QET_Mesa de trabajo 1 copia.png"
+      }
+    },
+    {
+      "producto": {
+        "id": 19,
+        "nombre": "premium Antioqueño",
+        "habilidades": ["Tabla"],
+        "Precio": 204000,
+        "avatar": "../img/img_opti/tablas/premium_antioqueño.jpg",
+        "descripcion": "Ideal para 2-4 personas",
+        "total_productos": 12,
+        "carnes": [
+          "Cábano", "Jamón", "Jamón serrano", "Salami", "Pernil de cerdo", "Rosas italianas"
+        ],
+        "quesos": [
+          "Queso de la casa", "Queso holandés", "Queso mozzarella", "Queso pera", 
+          "Queso gouda ahumado", "Queso cheddar", "Queso Pepper Jack", "Queso búfala"
+        ],
+        "frutas": [
+          "Fresas", "Uchuvas", "Uvas", "Kiwi", "Duraznos", "Mango"
+        ],
+        "complementos": [
+          "Ramonas", "Leños", "Tostadas", "Aceitunas", "Croissant", "Salsas", "Mix de frutos secos"
+        ],
+        "logo": "../img/QET_Mesa de trabajo 1 copia.png"
+      }
+    },
+    {
+      "producto": {
+        "id": 20,
+        "nombre": "1 Persona",
+        "habilidades": ["Tabla"],
+        "Precio": 74000,
+        "avatar": "../img/img_opti/tablas/Tabla_1Beer.jpeg",
+        "descripcion": "Ideal para 1-2personas",
+        "total_productos": 8,
+        "carnes": [
+          "Cábano", "Jamón", "Jamón serrano", "Salami", "Pernil de cerdo", "Rosas italianas"
+        ],
+        "quesos": [
+          "Queso de la casa", "Queso holandés", "Queso mozzarella", "Queso pera", 
+          "Queso gouda ahumado", "Queso cheddar", "Queso Pepper Jack", "Queso búfala"
+        ],
+        "frutas": [
+          "Fresas", "Uchuvas", "Uvas", "Kiwi", "Duraznos", "Mango"
+        ],
+        "complementos": [
+          "Ramonas", "Leños", "Tostadas", "Aceitunas", "Croissant", "Salsas", "Mix de frutos secos"
+        ],
+        "logo": "../img/QET_Mesa de trabajo 1 copia.png"
+      }
+    }
+  ]
+  
