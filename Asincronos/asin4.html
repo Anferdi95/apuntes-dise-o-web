@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mouse encima imagen</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background-color: #2b2b2b;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background-image 0.5s ease-in-out, background-color 0.5s ease-in-out;
+      font-family: 'Times New Roman', Times, serif;
+    }
+    .contenedor {
+      display: grid;
+      grid-template-columns: repeat(3, auto); 
+      grid-gap: 20px 40px; 
+      text-align: center;
+    }
+    .texto {
+      font-size: 30px;
+      padding: 5px 15px;
+      color: white;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s;
+      user-select: none;
+    }
+    .texto:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="contenedor">
+    <div class="texto" data-img="https://www.bridgestone.com.co/content/dam/consumer/bst/la/co/tips/2022/tecnologia-de-llantas/deportivo.jpg">CARROS</div>
+    <div class="texto" data-img="https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/15665/production/_107435678_perro1.jpg.webp">PERROS</div>
+    <div class="texto" data-img="https://cdn.pixabay.com/photo/2017/11/09/21/41/cat-2934720_1280.jpg">GATOS</div>
+    <div class="texto" data-img="https://ojsfkgmllttijmptdbbn.supabase.co/storage/v1/object/public/article-media/10e99867-7f10-428a-8dcd-ca7d81963037/featured/tipos-de-motos.jpeg">MOTOS</div>
+    <div class="texto" data-img="https://media.cnn.com/api/v1/images/stellar/prod/cnne-1637493-gettyimages-520697762.jpg?q=w_1110,c_fill">VALENCIA</div>
+    <div class="texto" data-img="https://media.iatiseguros.com/wp-content/uploads/2018/03/04005252/es-seguro-viajar-a-colombia-3.jpg">COLOMBIA</div>
+  </div>
+
+  <script>
+    const textos = document.querySelectorAll('.texto');
+    const body = document.body;
+
+    textos.forEach(texto => {
+      texto.addEventListener('mouseenter', function() {
+        const img = this.getAttribute('data-img');
+        if (img) {
+          body.style.backgroundImage = `url('${img}')`;
+        }
+      });
+
+      texto.addEventListener('mouseleave', function() {
+        body.style.backgroundImage = '';
+        body.style.backgroundColor = '#2b2b2b'; 
+      });
+    });
+  </script>
+
+</body>
+</html>
